@@ -30,6 +30,9 @@ extension CircleButtonView: View {
                 .frame(width: markSize, height: markSize)
                 .imageScale(.large)
                 .foregroundColor(.cyan)
+                .frame(width: diameter, height: diameter)
+                .background(backGradient)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 .overlay {
                     Circle()
                         .stroke(Color.black, lineWidth: 2)
@@ -53,6 +56,11 @@ extension CircleButtonView {
     
     private var markOffset: Double {
         diameter * 5 / 160
+    }
+    
+    private var backGradient: LinearGradient {
+        LinearGradient(gradient: Gradient(colors: [Color("circle_button_back_top"), Color("circle_button_back_bottom")]),
+                       startPoint: .top, endPoint: .bottom)
     }
 }
 

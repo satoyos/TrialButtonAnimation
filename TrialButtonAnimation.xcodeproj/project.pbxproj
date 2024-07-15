@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
 		928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB842BF77C02001E28E2 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
 		928FEB822BF77C01001E28E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				928FEB862BF77C02001E28E2 /* Preview Content */,
 				92D934122C42131900E3B9E5 /* CircleView.swift */,
 				92D934142C42A7B800E3B9E5 /* CircleButtonView.swift */,
+				921388492C452FC80025F2E0 /* Colors.xcassets */,
 			);
 			path = TrialButtonAnimation;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */,
 				928FEB882BF77C02001E28E2 /* Preview Assets.xcassets in Resources */,
 				928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */,
 			);
