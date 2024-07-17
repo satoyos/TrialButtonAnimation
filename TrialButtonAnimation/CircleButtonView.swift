@@ -26,18 +26,13 @@ extension CircleButtonView: View {
         } label: {
             Image(systemName: name(of: type))
                 .resizable()
-                .padding(insets(of: type))
                 .frame(width: markSize, height: markSize)
-                .imageScale(.large)
+                .padding(insets(of: type))
                 .foregroundColor(.cyan)
                 .frame(width: diameter, height: diameter)
                 .background(backGradient)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .overlay {
-                    Circle()
-                        .stroke(Color.black, lineWidth: 2)
-                        .frame(width: diameter, height: diameter)
-                }
+                .background(Circle()             .fill(.background).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/))
         }
         .scaleEffect(isPressed ? 0.9 : 1)
         .animation(isPressed ? .linear : .interactiveSpring(response: 0.35, dampingFraction: 0.3), value: isPressed)
@@ -46,6 +41,7 @@ extension CircleButtonView: View {
                 .onChanged { _ in isPressed = true }
                 .onEnded { _ in isPressed = false }
         )
+        .accessibilityIdentifier(type.rawValue)
     }
 }
 
@@ -101,5 +97,6 @@ extension CircleButtonView {
 }
 
 #Preview {
-    CircleButtonView(type: .forward, diameter: 300)
+    CircleButtonView(type: .play
+                     , diameter: 300)
 }
