@@ -28,7 +28,7 @@ extension CircleButtonView: View {
                 .resizable()
                 .frame(width: markSize, height: markSize)
                 .padding(insets(of: type))
-                .foregroundColor(.cyan)
+                .foregroundColor(forgroundColor(of: type))
                 .frame(width: diameter, height: diameter)
                 .background(backGradient)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
@@ -70,20 +70,27 @@ extension CircleButtonView {
 }
 
 extension CircleButtonView {
-    private func labelConfig(of type: LabelType) -> (imageName: String, paddingInsets: EdgeInsets) {
+    private func labelConfig(of type: LabelType) -> (imageName: String, paddingInsets: EdgeInsets, color: Color) {
+        let playColor = Color("waiting_for_play")
+        let pauseColor = Color("waiting_for_pause")
+        
         switch type {
         case .play:
             return (imageName: "play.fill",
-                    paddingInsets: EdgeInsets(top: 0, leading: markOffset * 3, bottom: 0, trailing: -1 * markOffset))
+                    paddingInsets: EdgeInsets(top: 0, leading: markOffset * 3, bottom: 0, trailing: -1 * markOffset),
+                    color: playColor)
         case .pause:
             return (imageName: "pause.fill",
-                    paddingInsets: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                    paddingInsets: EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0),
+                    color: pauseColor)
         case .forward:
             return (imageName: "forward.fill",
-                    paddingInsets: EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: -1 * markOffset))
+                    paddingInsets: EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: -1 * markOffset),
+                    color: playColor)
         case .rewind:
             return (imageName: "backward.fill",
-                    paddingInsets: EdgeInsets(top: 0, leading: -1 * markOffset, bottom: 0, trailing: markOffset))
+                    paddingInsets: EdgeInsets(top: 0, leading: -1 * markOffset, bottom: 0, trailing: markOffset),
+                    color: playColor)
         }
     }
     
@@ -93,6 +100,10 @@ extension CircleButtonView {
     
     private func insets(of type: LabelType) ->  EdgeInsets {
         labelConfig(of: type).paddingInsets
+    }
+    
+    private func forgroundColor(of type: LabelType) -> Color {
+        labelConfig(of: type).color
     }
 }
 
