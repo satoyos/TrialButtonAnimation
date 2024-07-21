@@ -14,22 +14,14 @@
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
 		928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB842BF77C02001E28E2 /* Assets.xcassets */; };
 		928FEB882BF77C02001E28E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB872BF77C02001E28E2 /* Preview Assets.xcassets */; };
-		928FEB922BF77C02001E28E2 /* TrialButtonAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB912BF77C02001E28E2 /* TrialButtonAnimationTests.swift */; };
-		928FEB9C2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB9B2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift */; };
-		928FEB9E2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB9D2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift */; };
+		92A9B5352C4C93B700BEF03B /* ReciteViewButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5342C4C93B700BEF03B /* ReciteViewButtonViewModelTests.swift */; };
+		92A9B5372C4C95CC00BEF03B /* ReciteViewButton.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5362C4C95CC00BEF03B /* ReciteViewButton.ViewModel.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		928FEB8E2BF77C02001E28E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 928FEB752BF77C01001E28E2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 928FEB7C2BF77C01001E28E2;
-			remoteInfo = TrialButtonAnimation;
-		};
-		928FEB982BF77C02001E28E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 928FEB752BF77C01001E28E2 /* Project object */;
 			proxyType = 1;
@@ -48,10 +40,8 @@
 		928FEB842BF77C02001E28E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		928FEB872BF77C02001E28E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		928FEB8D2BF77C02001E28E2 /* TrialButtonAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		928FEB912BF77C02001E28E2 /* TrialButtonAnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationTests.swift; sourceTree = "<group>"; };
-		928FEB972BF77C02001E28E2 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		928FEB9B2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
-		928FEB9D2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92A9B5342C4C93B700BEF03B /* ReciteViewButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonViewModelTests.swift; sourceTree = "<group>"; };
+		92A9B5362C4C95CC00BEF03B /* ReciteViewButton.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButton.ViewModel.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,13 +55,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		928FEB8A2BF77C02001E28E2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		928FEB942BF77C02001E28E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,7 +79,6 @@
 			children = (
 				928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */,
 				928FEB8D2BF77C02001E28E2 /* TrialButtonAnimationTests.xctest */,
-				928FEB972BF77C02001E28E2 /* TrialButtonAnimationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +95,7 @@
 				921388492C452FC80025F2E0 /* Colors.xcassets */,
 				928FEB862BF77C02001E28E2 /* Preview Content */,
 				9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */,
+				92A9B5362C4C95CC00BEF03B /* ReciteViewButton.ViewModel.swift */,
 			);
 			path = TrialButtonAnimation;
 			sourceTree = "<group>";
@@ -128,7 +111,7 @@
 		928FEB902BF77C02001E28E2 /* TrialButtonAnimationTests */ = {
 			isa = PBXGroup;
 			children = (
-				928FEB912BF77C02001E28E2 /* TrialButtonAnimationTests.swift */,
+				92A9B5342C4C93B700BEF03B /* ReciteViewButtonViewModelTests.swift */,
 			);
 			path = TrialButtonAnimationTests;
 			sourceTree = "<group>";
@@ -136,8 +119,6 @@
 		928FEB9A2BF77C02001E28E2 /* TrialButtonAnimationUITests */ = {
 			isa = PBXGroup;
 			children = (
-				928FEB9B2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift */,
-				928FEB9D2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift */,
 			);
 			path = TrialButtonAnimationUITests;
 			sourceTree = "<group>";
@@ -180,24 +161,6 @@
 			productReference = 928FEB8D2BF77C02001E28E2 /* TrialButtonAnimationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		928FEB962BF77C02001E28E2 /* TrialButtonAnimationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 928FEBA72BF77C02001E28E2 /* Build configuration list for PBXNativeTarget "TrialButtonAnimationUITests" */;
-			buildPhases = (
-				928FEB932BF77C02001E28E2 /* Sources */,
-				928FEB942BF77C02001E28E2 /* Frameworks */,
-				928FEB952BF77C02001E28E2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				928FEB992BF77C02001E28E2 /* PBXTargetDependency */,
-			);
-			name = TrialButtonAnimationUITests;
-			productName = TrialButtonAnimationUITests;
-			productReference = 928FEB972BF77C02001E28E2 /* TrialButtonAnimationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,10 +176,7 @@
 					};
 					928FEB8C2BF77C02001E28E2 = {
 						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 928FEB7C2BF77C01001E28E2;
-					};
-					928FEB962BF77C02001E28E2 = {
-						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = 928FEB7C2BF77C01001E28E2;
 					};
 				};
@@ -236,7 +196,6 @@
 			targets = (
 				928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */,
 				928FEB8C2BF77C02001E28E2 /* TrialButtonAnimationTests */,
-				928FEB962BF77C02001E28E2 /* TrialButtonAnimationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,13 +218,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		928FEB952BF77C02001E28E2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,6 +229,7 @@
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
 				928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */,
 				92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */,
+				92A9B5372C4C95CC00BEF03B /* ReciteViewButton.ViewModel.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
 			);
@@ -286,16 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928FEB922BF77C02001E28E2 /* TrialButtonAnimationTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		928FEB932BF77C02001E28E2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				928FEB9E2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift in Sources */,
-				928FEB9C2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift in Sources */,
+				92A9B5352C4C93B700BEF03B /* ReciteViewButtonViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,11 +250,6 @@
 			isa = PBXTargetDependency;
 			target = 928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */;
 			targetProxy = 928FEB8E2BF77C02001E28E2 /* PBXContainerItemProxy */;
-		};
-		928FEB992BF77C02001E28E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */;
-			targetProxy = 928FEB982BF77C02001E28E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -497,6 +436,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4B4EJ2GHFC;
@@ -506,6 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sato0123.TrialButtonAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrialButtonAnimation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrialButtonAnimation";
@@ -517,6 +458,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4B4EJ2GHFC;
@@ -529,42 +471,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrialButtonAnimation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrialButtonAnimation";
-			};
-			name = Release;
-		};
-		928FEBA82BF77C02001E28E2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4B4EJ2GHFC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sato0123.TrialButtonAnimationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrialButtonAnimation;
-			};
-			name = Debug;
-		};
-		928FEBA92BF77C02001E28E2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4B4EJ2GHFC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sato0123.TrialButtonAnimationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TrialButtonAnimation;
 			};
 			name = Release;
 		};
@@ -594,15 +500,6 @@
 			buildConfigurations = (
 				928FEBA52BF77C02001E28E2 /* Debug */,
 				928FEBA62BF77C02001E28E2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		928FEBA72BF77C02001E28E2 /* Build configuration list for PBXNativeTarget "TrialButtonAnimationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				928FEBA82BF77C02001E28E2 /* Debug */,
-				928FEBA92BF77C02001E28E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
