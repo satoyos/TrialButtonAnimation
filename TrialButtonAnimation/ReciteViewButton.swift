@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CircleButtonView {
+struct ReciteViewButton {
     let type: LabelType
     let diameter: Double
     @State private var isPressed: Bool = false
@@ -19,7 +19,7 @@ struct CircleButtonView {
     }
 }
 
-extension CircleButtonView: View {
+extension ReciteViewButton: View {
     var body: some View {
         Button {
             print("Button Tapped")
@@ -45,7 +45,7 @@ extension CircleButtonView: View {
     }
 }
 
-extension CircleButtonView {
+extension ReciteViewButton {
     private var markSize: Double {
         diameter * 0.5
     }
@@ -60,7 +60,7 @@ extension CircleButtonView {
     }
 }
 
-extension CircleButtonView {
+extension ReciteViewButton {
     enum LabelType: String {
         case play
         case pause
@@ -69,7 +69,7 @@ extension CircleButtonView {
     }
 }
 
-extension CircleButtonView {
+extension ReciteViewButton {
     private func labelConfig(of type: LabelType) -> (imageName: String, paddingInsets: EdgeInsets, color: Color) {
         let playColor = Color("waiting_for_play")
         let pauseColor = Color("waiting_for_pause")
@@ -108,6 +108,6 @@ extension CircleButtonView {
 }
 
 #Preview {
-    CircleButtonView(type: .play
+    ReciteViewButton(type: .play
                      , diameter: 300)
 }

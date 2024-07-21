@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
+		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
+		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
 		928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB842BF77C02001E28E2 /* Assets.xcassets */; };
@@ -16,7 +18,7 @@
 		928FEB9C2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB9B2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift */; };
 		928FEB9E2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB9D2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
-		92D934152C42A7B800E3B9E5 /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* CircleButtonView.swift */; };
+		92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
+		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
 		928FEB822BF77C01001E28E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +53,7 @@
 		928FEB9B2BF77C02001E28E2 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		928FEB9D2BF77C02001E28E2 /* TrialButtonAnimationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		92D934142C42A7B800E3B9E5 /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +107,12 @@
 				928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */,
 				928FEB822BF77C01001E28E2 /* ContentView.swift */,
 				928FEB842BF77C02001E28E2 /* Assets.xcassets */,
-				928FEB862BF77C02001E28E2 /* Preview Content */,
 				92D934122C42131900E3B9E5 /* CircleView.swift */,
-				92D934142C42A7B800E3B9E5 /* CircleButtonView.swift */,
+				9213884B2C4A96E70025F2E0 /* MinSec.swift */,
+				92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */,
 				921388492C452FC80025F2E0 /* Colors.xcassets */,
+				928FEB862BF77C02001E28E2 /* Preview Content */,
+				9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */,
 			);
 			path = TrialButtonAnimation;
 			sourceTree = "<group>";
@@ -267,9 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */,
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
 				928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */,
-				92D934152C42A7B800E3B9E5 /* CircleButtonView.swift in Sources */,
+				92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */,
+				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
