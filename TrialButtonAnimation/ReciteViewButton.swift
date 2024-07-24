@@ -34,14 +34,27 @@ extension ReciteViewButton: View {
                 .frame(width: diameter, height: diameter)
                 .background(backGradient)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                .background(Circle()             .fill(.background).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/))
+                .background(Circle()
+                    .fill(.background).shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/))
+                // transaction below make Image swith WITHOUT animation!
+                .transaction { transaction in
+                    transaction.animation = nil
+                }
         }
+        
         .scaleEffect(isPressed ? 0.9 : 1)
-        .animation(isPressed ? .linear : .interactiveSpring(response: 0.35, dampingFraction: 0.3), value: isPressed)
         .simultaneousGesture(
             DragGesture(minimumDistance: 0)
-                .onChanged { _ in isPressed = true }
-                .onEnded { _ in isPressed = false }
+                .onChanged { _ in
+                    withAnimation(.linear) {
+                        isPressed = true
+                    }
+                }
+                .onEnded { _ in
+                    withAnimation(.interactiveSpring(response: 0.35, dampingFraction: 0.3)) {
+                        isPressed = false
+                    }
+                }
         )
         .accessibilityIdentifier(type.rawValue)
     }

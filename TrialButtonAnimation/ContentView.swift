@@ -11,7 +11,8 @@ struct ContentView: View {
 
     var body: some View {
 //        CircleView()
-        ReciteViewButton(type: .forward, diameter: 250) {}
+//        ReciteViewButton(type: .forward, diameter: 250) {}
+        RecitePlayButton(viewModel: .init(type: .play))
     }
 }
 
