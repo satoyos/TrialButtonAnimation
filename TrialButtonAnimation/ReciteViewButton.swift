@@ -11,18 +11,20 @@ struct ReciteViewButton {
     let type: LabelType
     let diameter: Double
     @State private var isPressed: Bool = false
+    let action: (() -> Void)?
     
-    init(type: LabelType = .play, diameter: Double = 200, isPressed: Bool = false) {
+    init(type: LabelType = .play, diameter: Double = 200, isPressed: Bool = false, action: (() -> Void)?) {
         self.type = type
         self.diameter = diameter
         self.isPressed = isPressed
+        self.action = action
     }
 }
 
 extension ReciteViewButton: View {
     var body: some View {
         Button {
-            print("Button Tapped")
+            action?()
         } label: {
             Image(systemName: name(of: type))
                 .resizable()
@@ -108,6 +110,5 @@ extension ReciteViewButton {
 }
 
 #Preview {
-    ReciteViewButton(type: .play
-                     , diameter: 300)
+    ReciteViewButton(type: .play, diameter: 300) {}
 }
