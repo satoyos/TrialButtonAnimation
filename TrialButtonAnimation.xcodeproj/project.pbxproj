@@ -17,6 +17,8 @@
 		92A9B53B2C4E6FB300BEF03B /* RecitePlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */; };
 		92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */; };
 		92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */; };
+		92A9B5452C53BE4900BEF03B /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5442C53BE4900BEF03B /* CountDownTimer.swift */; };
+		92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 		92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButton.swift; sourceTree = "<group>"; };
 		92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButton.ViewModel.swift; sourceTree = "<group>"; };
+		92A9B5442C53BE4900BEF03B /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
+		92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimerTests.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +103,7 @@
 				9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */,
 				92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */,
 				92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */,
+				92A9B5442C53BE4900BEF03B /* CountDownTimer.swift */,
 			);
 			path = TrialButtonAnimation;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */,
+				92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */,
 			);
 			path = TrialButtonAnimationTests;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,
+				92A9B5452C53BE4900BEF03B /* CountDownTimer.swift in Sources */,
 				92A9B53B2C4E6FB300BEF03B /* RecitePlayButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */,
+				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
