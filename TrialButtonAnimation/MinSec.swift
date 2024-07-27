@@ -17,10 +17,10 @@ struct MinSec {
 
     @EnvironmentObject var screenSizeStore: ScreenSizeStore
     
-    init(digitSize: CGFloat) {
+    init(digitSize: CGFloat, viewModel: ViewModel = .init(startTime: 60, interval: 1)) {
         self.digitSize = digitSize
         self.unitSize = digitSize / 4
-        self.viewModel = ViewModel(startTime: 60, interval: 1)
+        self.viewModel = viewModel
     }
 }
 

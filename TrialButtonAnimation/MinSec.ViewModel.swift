@@ -30,6 +30,10 @@ extension MinSec {
             timer.start()
         }
         
+        func stopTimer() {
+            timer.stop()
+        }
+        
         private func buildDataFlow() {
             timer.$remainTime
                 .dropFirst()

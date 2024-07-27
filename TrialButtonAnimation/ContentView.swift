@@ -10,9 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-//        CircleView()
-//        ReciteViewButton(type: .forward, diameter: 250) {}
-        RecitePlayButton(viewModel: .init(type: .play))
+        MemorizeTimer(viewModel: .init(minutes: 11))
     }
 }
 
