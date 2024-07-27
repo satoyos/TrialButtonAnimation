@@ -23,13 +23,13 @@ class CountDownTimer: ObservableObject {
     }
     
     func start() {
-        timer = Timer.scheduledTimer(withTimeInterval: intarval, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: intarval, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
             self.remainTime -= CGFloat(self.intarval)
             self.isRunning = true
             
             if self.remainTime <= 0 {
                 self.stopAneEraseTimer()
-//                self.remainTime = CountDownTimer.initialRemainTime
             }
         }
     }
