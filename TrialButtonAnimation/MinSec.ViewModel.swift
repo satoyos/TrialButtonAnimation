@@ -20,8 +20,7 @@ extension MinSec {
             self.startTime = startTime
             self.interval = interval
             self.timer = CountDownTimer(startTime: startTime, intarval: interval)
-            self.timeTexts = (min: minString(from: startTime),
-                          sec: secString(from: startTime))
+            self.timeTexts = timeTexts(of: startTime)
             buildDataFlow()
         }
         
@@ -46,10 +45,13 @@ extension MinSec {
                 .dropFirst()
                 .sink { [weak self] value in
                     guard let self = self else { return }
-                    self.timeTexts = (min: minString(from: value),
-                                  sec: secString(from: value))
+                    self.timeTexts = timeTexts(of: value)
                 }
                 .store(in: &cancellables)
+        }
+        
+        private func timeTexts(of time: CGFloat) -> (min: String, sec: String) {
+            (min: minString(from: time), sec: secString(from: time))
         }
         
         private func minString(from remainTime: CGFloat) -> String {
