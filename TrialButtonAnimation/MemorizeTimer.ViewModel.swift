@@ -12,7 +12,7 @@ import Combine
 extension MemorizeTimer {
     class ViewModel {
         let minutes: CGFloat
-        @ObservedObject var timeViewModel: MinSec.ViewModel
+        let timeViewModel: MinSec.ViewModel
         @ObservedObject var buttonViewModel: RecitePlayButton.ViewModel
         private var cancellables = Set<AnyCancellable>()
         

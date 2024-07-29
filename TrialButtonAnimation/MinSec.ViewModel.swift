@@ -10,8 +10,7 @@ import Combine
 
 extension MinSec {
     class ViewModel: ObservableObject {
-        @Published private(set) var minText: String = "00"
-        @Published private(set) var secText: String = "00"
+        @Published private(set) var timeTexts: (min: String, sec: String) = ("00", "00")
         private var timer: CountDownTimer
         private var startTime: CGFloat
         private var interval: CGFloat
@@ -21,9 +20,17 @@ extension MinSec {
             self.startTime = startTime
             self.interval = interval
             self.timer = CountDownTimer(startTime: startTime, intarval: interval)
-            self.minText = minString(from: startTime)
-            self.secText = secString(from: startTime)
+            self.timeTexts = (min: minString(from: startTime),
+                          sec: secString(from: startTime))
             buildDataFlow()
+        }
+        
+        var minText: String {
+            timeTexts.min
+        }
+        
+        var secText: String {
+            timeTexts.sec
         }
         
         func startTimer() {
@@ -39,8 +46,8 @@ extension MinSec {
                 .dropFirst()
                 .sink { [weak self] value in
                     guard let self = self else { return }
-                    self.minText = minString(from: value)
-                    self.secText = secString(from: value)
+                    self.timeTexts = (min: minString(from: value),
+                                  sec: secString(from: value))
                 }
                 .store(in: &cancellables)
         }

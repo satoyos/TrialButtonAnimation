@@ -29,23 +29,16 @@ final class MinSecViewModelTests: XCTestCase {
         // when
         viewModel.startTimer()
         // then
-        let expectation1 = XCTestExpectation(description: "minText changes correctly!")
-        viewModel.$minText
+        let expectation = XCTestExpectation(description: "Min and Sec text change correctly!")
+        viewModel.$timeTexts
             .dropFirst()
             .sink { value in
-                XCTAssertEqual(value, "0")
-                expectation1.fulfill()
+                XCTAssertEqual(value.min, "0")
+                XCTAssertEqual(value.sec, "59")
+                expectation.fulfill()
             }
             .store(in: &cancellables)
-        let expectation2 = XCTestExpectation(description: "secText changes correctly!")
-        viewModel.$secText
-            .dropFirst()
-            .sink { value in
-                XCTAssertEqual(value, "59")
-                expectation2.fulfill()
-            }
-            .store(in: &cancellables)
-        wait(for: [expectation1, expectation2], timeout: 1.1)
+        wait(for: [expectation], timeout: 1.1)
     }
 
 }

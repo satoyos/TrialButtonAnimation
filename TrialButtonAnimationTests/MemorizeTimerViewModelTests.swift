@@ -28,12 +28,12 @@ final class MemorizeTimerViewModelTests: XCTestCase {
         var cancellables = Set<AnyCancellable>()
         let expectation1 = XCTestExpectation(description: "setText, minText, button type are all changing correctly")
         buttonViewModel.playButtonTapped()
-        timerViewModel.$secText
+        timerViewModel.$timeTexts
             .dropFirst()
             .print("in Unit Test: ")
             .sink { value in
-                XCTAssertEqual(value, "59")
-                XCTAssertEqual(timerViewModel.minText, "2")
+                XCTAssertEqual(value.sec, "59")
+                XCTAssertEqual(value.min, "2")
                 XCTAssertEqual(buttonViewModel.type, .pause)
                 expectation1.fulfill()
             }
