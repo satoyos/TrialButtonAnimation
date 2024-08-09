@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        MemorizeTimer(viewModel: .init(minutes: 11))
+        MemorizeTimer(viewModel: .init(minutes: 3))
     }
 }
 

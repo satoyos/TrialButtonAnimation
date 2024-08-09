@@ -50,6 +50,6 @@ extension MinSec: View {
 }
 
 #Preview {
-    MinSec(digitSize: 100)
+    MinSec(digitSize: 130)
         .environmentObject(ScreenSizeStore())
 }

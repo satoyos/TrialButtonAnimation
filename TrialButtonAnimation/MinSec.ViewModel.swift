@@ -7,6 +7,9 @@
 
 import Foundation
 import Combine
+import AVFoundation
+
+private let player2minites = AudioPlayerFactory.shared.preparePlayer(folder: "audio/sasara", file: "2minutesLeft", title: "競技開始2分前")
 
 extension MinSec {
     class ViewModel: ObservableObject {
@@ -15,13 +18,17 @@ extension MinSec {
         private var startTime: CGFloat
         private var interval: CGFloat
         private var cancellables = Set<AnyCancellable>()
+        private let action2minLeft: () -> Void
+
         
-        init(startTime: CGFloat, interval: CGFloat) {
+        init(startTime: CGFloat, interval: CGFloat, action2minLeft: @escaping () -> Void = declare2minutesLeft) {
             self.startTime = startTime
             self.interval = interval
+            self.action2minLeft = action2minLeft
             self.timer = CountDownTimer(startTime: startTime, intarval: interval)
             self.timeTexts = timeTexts(of: startTime)
             buildDataFlow()
+            AudioPlayerFactory.shared.setupAudioSession()
         }
         
         var minText: String {
@@ -45,7 +52,11 @@ extension MinSec {
                 .dropFirst()
                 .sink { [weak self] value in
                     guard let self = self else { return }
-                    self.timeTexts = timeTexts(of: value)
+                    let timeTexts = timeTexts(of: value)
+                    if timeTexts == ("2", "00") {
+                        self.action2minLeft()
+                    }
+                    self.timeTexts = timeTexts
                 }
                 .store(in: &cancellables)
         }
@@ -60,6 +71,11 @@ extension MinSec {
         
         private func secString(from remainTime: CGFloat) -> String {
             String(format: "%02d", Int(remainTime) % 60)
+        }
+        
+        static private func declare2minutesLeft() {
+            player2minites.currentTime = 0.0
+            player2minites.play()
         }
     }
 }
