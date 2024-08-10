@@ -2,7 +2,7 @@
 //  TrialButtonAnimationUITests.swift
 //  TrialButtonAnimationUITests
 //
-//  Created by Yoshifumi Sato on 2024/05/17.
+//  Created by Yoshifumi Sato on 2024/08/10.
 //
 
 import XCTest
@@ -22,20 +22,29 @@ final class TrialButtonAnimationUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testInitialUI() {
+        // given
         let app = XCUIApplication()
+        // when
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // then
+        let waitingForPlayButton = app.buttons["play"].firstMatch
+        XCTAssert(waitingForPlayButton.exists)
+    }
+    
+    func testWhenPlayButtonTappedItTurnsIntoPauseButton() {
+        // given
+        let app = XCUIApplication()
+        // when
+        app.launch()
+        // then
+        let waitingForPlayButton = app.buttons["play"].firstMatch
+        XCTAssert(waitingForPlayButton.exists)
+        // when
+        waitingForPlayButton.tap()
+        // then
+        XCTAssert(app.buttons["pause"].exists)
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+    
 }

@@ -26,12 +26,20 @@
 		92A9B5512C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */; };
 		92C0DA182C660DC1004C8966 /* AudioPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */; };
 		92C0DA292C6629EF004C8966 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 92C0DA282C6629EF004C8966 /* audio */; };
+		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		928FEB8E2BF77C02001E28E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 928FEB752BF77C01001E28E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 928FEB7C2BF77C01001E28E2;
+			remoteInfo = TrialButtonAnimation;
+		};
+		92C0DA342C674971004C8966 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 928FEB752BF77C01001E28E2 /* Project object */;
 			proxyType = 1;
@@ -62,6 +70,8 @@
 		92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTimer.ViewModel.swift; sourceTree = "<group>"; };
 		92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerFactory.swift; sourceTree = "<group>"; };
 		92C0DA282C6629EF004C8966 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
+		92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +91,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92C0DA2B2C674971004C8966 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +107,7 @@
 				928FEB7F2BF77C01001E28E2 /* TrialButtonAnimation */,
 				928FEB902BF77C02001E28E2 /* TrialButtonAnimationTests */,
 				928FEB9A2BF77C02001E28E2 /* TrialButtonAnimationUITests */,
+				92C0DA2F2C674971004C8966 /* TrialButtonAnimationUITests */,
 				928FEB7E2BF77C01001E28E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +117,7 @@
 			children = (
 				928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */,
 				928FEB8D2BF77C02001E28E2 /* TrialButtonAnimationTests.xctest */,
+				92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +188,14 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		92C0DA2F2C674971004C8966 /* TrialButtonAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */,
+			);
+			path = TrialButtonAnimationUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,6 +234,24 @@
 			productReference = 928FEB8D2BF77C02001E28E2 /* TrialButtonAnimationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		92C0DA2D2C674971004C8966 /* TrialButtonAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92C0DA382C674971004C8966 /* Build configuration list for PBXNativeTarget "TrialButtonAnimationUITests" */;
+			buildPhases = (
+				92C0DA2A2C674971004C8966 /* Sources */,
+				92C0DA2B2C674971004C8966 /* Frameworks */,
+				92C0DA2C2C674971004C8966 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92C0DA352C674971004C8966 /* PBXTargetDependency */,
+			);
+			name = TrialButtonAnimationUITests;
+			productName = TrialButtonAnimationUITests;
+			productReference = 92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,6 +268,10 @@
 					928FEB8C2BF77C02001E28E2 = {
 						CreatedOnToolsVersion = 15.4;
 						LastSwiftMigration = 1540;
+						TestTargetID = 928FEB7C2BF77C01001E28E2;
+					};
+					92C0DA2D2C674971004C8966 = {
+						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 928FEB7C2BF77C01001E28E2;
 					};
 				};
@@ -242,6 +291,7 @@
 			targets = (
 				928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */,
 				928FEB8C2BF77C02001E28E2 /* TrialButtonAnimationTests */,
+				92C0DA2D2C674971004C8966 /* TrialButtonAnimationUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +309,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		928FEB8B2BF77C02001E28E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92C0DA2C2C674971004C8966 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,6 +356,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92C0DA2A2C674971004C8966 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -306,6 +371,11 @@
 			isa = PBXTargetDependency;
 			target = 928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */;
 			targetProxy = 928FEB8E2BF77C02001E28E2 /* PBXContainerItemProxy */;
+		};
+		92C0DA352C674971004C8966 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */;
+			targetProxy = 92C0DA342C674971004C8966 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -530,6 +600,40 @@
 			};
 			name = Release;
 		};
+		92C0DA362C674971004C8966 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4B4EJ2GHFC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sato0123.TrialButtonAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrialButtonAnimation;
+			};
+			name = Debug;
+		};
+		92C0DA372C674971004C8966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4B4EJ2GHFC;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sato0123.TrialButtonAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrialButtonAnimation;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -556,6 +660,15 @@
 			buildConfigurations = (
 				928FEBA52BF77C02001E28E2 /* Debug */,
 				928FEBA62BF77C02001E28E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92C0DA382C674971004C8966 /* Build configuration list for PBXNativeTarget "TrialButtonAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C0DA362C674971004C8966 /* Debug */,
+				92C0DA372C674971004C8966 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
