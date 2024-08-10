@@ -25,5 +25,5 @@ extension MemorizeTimer: View {
 }
 
 #Preview {
-    MemorizeTimer(viewModel: .init(minutes: 3))
+    MemorizeTimer(viewModel: .init(totalSec: 121))
 }
