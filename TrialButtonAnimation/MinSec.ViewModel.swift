@@ -9,7 +9,6 @@ import Foundation
 import Combine
 import AVFoundation
 
-private let player2minites = AudioPlayerFactory.shared.preparePlayer(folder: "audio/sasara", file: "2minutesLeft", title: "競技開始2分前")
 
 extension MinSec {
     class ViewModel: ObservableObject {
@@ -19,6 +18,7 @@ extension MinSec {
         private var interval: CGFloat
         private var cancellables = Set<AnyCancellable>()
         private let action2minLeft: () -> Void
+        static let player2minites = AudioPlayerFactory.shared.preparePlayer(folder: "audio/sasara", file: "2minutesLeft", title: "競技開始2分前")
 
         
         init(startTime: CGFloat, interval: CGFloat, action2minLeft: @escaping () -> Void = declare2minutesLeft) {

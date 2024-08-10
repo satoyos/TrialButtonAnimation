@@ -31,7 +31,10 @@ class AudioPlayerFactory {
           // それでも失敗するようなら、どうしようもない。
           //
 //          assertionFailure("AudioSessionの初期設定時エラー: \(error)")
+            
         }
+        // 初回再生時のロードによる遅延を回避するために、一度カラ準備しておく。
+        _ = AudioPlayerFactory.shared.preparePlayer(folder: "audio/misc", file: "250-milliseconds-of-silence", ofType: "mp3", title: "無音(250ms)")
     }
     
     func prepareOpeningPlayer(folder: String) -> AVAudioPlayer {
@@ -39,10 +42,10 @@ class AudioPlayerFactory {
         return player
     }
     
-    func preparePlayer(folder: String, file: String, title: String?) -> AVAudioPlayer {
+    func preparePlayer(folder: String, file: String, ofType ext: String = "m4a", title: String?) -> AVAudioPlayer {
         let player: AVAudioPlayer
         
-        guard let path = Bundle.main.path(forResource: folder + "/" + file, ofType: "m4a") else {
+        guard let path = Bundle.main.path(forResource: folder + "/" + file, ofType: ext) else {
             fatalError("音源ファイルが見つかりません")
         }
         do {
