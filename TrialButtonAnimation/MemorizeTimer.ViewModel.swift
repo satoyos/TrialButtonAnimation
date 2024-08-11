@@ -20,8 +20,15 @@ extension MemorizeTimer {
         private var cancellables = Set<AnyCancellable>()
         
         init(totalSec: CGFloat, action2minLeft: @escaping () -> Void = announce2minutesLeft) {
-            self.totalSec = totalSec
-            self.timeViewModel = .init(startTime: totalSec, interval: 1)
+            if let secStr = ProcessInfo.processInfo.environment["MEMORIZE_TIME_IN_SEC"],
+                let secDouble = Double(secStr) {
+                print("*** secStr in environment -> \(secStr)")
+                self.totalSec = CGFloat(secDouble)
+            } else {
+                print("xxx The environment variable is not set")
+                self.totalSec = totalSec
+            }
+            self.timeViewModel = .init(startTime: self.totalSec, interval: 1)
             self.buttonViewModel = .init(type: .play)
             self.action2minLeft = action2minLeft
             buildDataFlow()

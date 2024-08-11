@@ -32,6 +32,16 @@ final class TrialButtonAnimationUITests: XCTestCase {
         XCTAssert(waitingForPlayButton.exists)
     }
     
+    func testInitWithEnvironmentVariable() {
+        // given
+        let app = XCUIApplication()
+        app.launchEnvironment = ["MEMORIZE_TIME_IN_SEC": "59"]
+        // when
+        app.launch()
+        // then
+        XCTAssert(app.staticTexts["59"].exists)
+    }
+    
     func testWhenPlayButtonTappedItTurnsIntoPauseButton() {
         // given
         let app = XCUIApplication()
