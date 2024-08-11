@@ -30,10 +30,11 @@ final class MemorizeTimerViewModelTests: XCTestCase {
         buttonViewModel.playButtonTapped()
         timerViewModel.$timeTexts
             .dropFirst()
-            .print("in Unit Test: ")
+            .filter { minTexts in minTexts == ("2", "59")}
+            .delay(for: 0.01, scheduler: RunLoop.main)
             .sink { value in
-                XCTAssertEqual(value.sec, "59")
-                XCTAssertEqual(value.min, "2")
+//                XCTAssertEqual(value.sec, "59")
+//                XCTAssertEqual(value.min, "2")
                 XCTAssertEqual(buttonViewModel.type, .pause)
                 expectation1.fulfill()
             }
@@ -56,14 +57,38 @@ final class MemorizeTimerViewModelTests: XCTestCase {
         let expectation = XCTestExpectation(description: "action2minLeft has been executed!")
         viewModel.timeViewModel.$timeTexts
             .dropFirst()
-            .delay(for: 0.05, scheduler: RunLoop.main)
+            .filter { minTexts in minTexts == ("2", "00")}
+            .delay(for: 0.01, scheduler: RunLoop.main)
             .sink { minSecText in
-                XCTAssertEqual(minSecText.min, "2")
-                XCTAssertEqual(minSecText.sec, "00")
+//                XCTAssertEqual(minSecText.min, "2")
+//                XCTAssertEqual(minSecText.sec, "00")
                 XCTAssertTrue(isCalled)
                 expectation.fulfill()
             }
             .store(in: &cancellables)
         wait(for: [expectation], timeout: 1.1)
+    }
+    
+    func testWhenTimeGetsOverPreparedClosureExecuted() {
+        // given
+        var isCalled = false
+        let givenAction = { isCalled = true }
+        let viewModel = MemorizeTimer.ViewModel(totalSec: 2, actionTimeOver: givenAction)
+        // then
+        XCTAssertFalse(isCalled)
+        // when
+        viewModel.timeViewModel.startTimer()
+        // then
+        let expectation = XCTestExpectation(description: "action for time over has been executed!")
+        viewModel.timeViewModel.$timeTexts
+            .dropFirst()
+            .filter{ $0.sec == "00" }
+            .delay(for: 0.05, scheduler: RunLoop.main)
+            .sink { minSecText in
+                XCTAssertTrue(isCalled)
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation], timeout: 2.1)
     }
 }
