@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MemorizeTimer {
-    let viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
     
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
@@ -20,10 +20,13 @@ extension MemorizeTimer: View {
         VStack {
             MinSec(digitSize: 100, viewModel: viewModel.timeViewModel)
             RecitePlayButton(diameter: 150, viewModel: viewModel.buttonViewModel)
+                .disabled(viewModel.isButtonDisabled)
         }
     }
 }
 
 #Preview {
-    MemorizeTimer(viewModel: .init(totalSec: 121))
+    MemorizeTimer(
+        viewModel: .init(totalSec: 11,
+                         completion: {print("** All finished **")}))
 }
