@@ -11,6 +11,7 @@ struct ContentView: View {
 
     var body: some View {
         MemorizeTimer(viewModel: .init(minutes: 3))
+            .environmentObject(ScreenSizeStore())
     }
 }
 

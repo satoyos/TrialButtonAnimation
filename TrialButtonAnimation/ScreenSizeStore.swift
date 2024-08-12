@@ -17,6 +17,7 @@ final class ScreenSizeStore: ObservableObject {
     init() {
         self.screenWidth = UIScreen.main.bounds.width
         self.screenHeight = UIScreen.main.bounds.height
+        print("*** Screen Size: width -> \(screenWidth), height -> \(screenHeight)")
     }
     
     func update(width: CGFloat, height: CGFloat) {
