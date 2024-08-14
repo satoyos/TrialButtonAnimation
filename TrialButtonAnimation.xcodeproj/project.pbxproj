@@ -10,6 +10,7 @@
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
+		926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
 		928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB842BF77C02001E28E2 /* Assets.xcassets */; };
@@ -28,7 +29,7 @@
 		92C0DA292C6629EF004C8966 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 92C0DA282C6629EF004C8966 /* audio */; };
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
-		92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */; };
+		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
+		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
 		928FEB822BF77C01001E28E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButton.swift; sourceTree = "<group>"; };
+		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +139,8 @@
 				928FEB862BF77C02001E28E2 /* Preview Content */,
 				92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */,
 				92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */,
-				92D934142C42A7B800E3B9E5 /* ReciteViewButton.swift */,
+				92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */,
+				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
 				9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */,
 				928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */,
 				92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */,
@@ -335,7 +338,8 @@
 				92C0DA182C660DC1004C8966 /* AudioPlayerFactory.swift in Sources */,
 				92A9B5512C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift in Sources */,
 				928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */,
-				92D934152C42A7B800E3B9E5 /* ReciteViewButton.swift in Sources */,
+				926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */,
+				92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,

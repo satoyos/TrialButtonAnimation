@@ -9,10 +9,10 @@ import Combine
 
 extension RecitePlayButton {
     class ViewModel: ObservableObject {
-        @Published private(set) var type: ReciteViewButton.LabelType
+        @Published private(set) var type: ReciteViewGeneralButton.LabelType
         private(set) var isWaitingForPlay: Bool
         
-        init(type: ReciteViewButton.LabelType = .play) {
+        init(type: ReciteViewGeneralButton.LabelType = .play) {
             self.type = type
             self.isWaitingForPlay = type == .play ? true : false
         }
