@@ -28,7 +28,7 @@ extension MemorizeTimer: View {
     }
     
     private var buttonDiameter: Double {
-        screenSizeStore.screenWidth * 150.0 / 400.0
+        screenSizeStore.screenWidth * 120.0 / 400.0
     }
     
     private var digitSize: CGFloat {
