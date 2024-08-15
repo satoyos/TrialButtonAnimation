@@ -20,7 +20,7 @@ extension ReciteViewButtonStyle: ButtonStyle {
         configuration.label
             .frame(width: markSize, height: markSize)
             .padding(insets(of: type))
-            .foregroundColor(forgroundColor(of: type))
+            .foregroundColor(isEnabled ? forgroundColor(of: type) : .gray)
             .frame(width: diameter, height: diameter)
             .background(backGradient)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
