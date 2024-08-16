@@ -41,6 +41,7 @@ extension MemorizeTimer {
             self.action2minLeft = action2minLeft ?? announce2minutesLeft
             self.actionTimeOver = actionTimeOver ?? announceMemorizeTimeIsOver
             buildDataFlow()
+            AudioPlayerFactory.shared.setupAudioSession()
         }
         
         convenience init(minutes: CGFloat) {
