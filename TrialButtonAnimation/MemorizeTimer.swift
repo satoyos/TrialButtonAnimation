@@ -27,6 +27,7 @@ extension MemorizeTimer: View {
         }
         .onAppear{
             UIApplication.shared.isIdleTimerDisabled = true
+            print("[screenSize] width: \(screenSizeStore.screenWidth), height: \(screenSizeStore.screenHeight)")
         }
         .onDisappear {
             UIApplication.shared.isIdleTimerDisabled = false
@@ -44,7 +45,7 @@ extension MemorizeTimer: View {
 
 #Preview {
     MemorizeTimer(
-        viewModel: .init(totalSec: 11,
+        viewModel: .init(totalSec: 15 * 60,
                          completion: {print("** All finished **")}))
     .environmentObject(ScreenSizeStore())
 }
