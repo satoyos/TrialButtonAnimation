@@ -7,12 +7,30 @@
 
 import SwiftUI
 
-struct Sec2F: View {
+struct Sec2F {
+    let digitSize: CGFloat
+    let unitSize: CGFloat
+    @ObservedObject private var viewModel: ViewModel
+    
+    init(digitSize: CGFloat, viewModel: ViewModel = .init(startTime: 2.00, interval: 0.02)) {
+        self.digitSize = digitSize
+        self.viewModel = viewModel
+        self.unitSize = digitSize / 4
+    }
+}
+
+extension Sec2F: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .bottom, spacing: 0) {
+            Text(viewModel.secText)
+                .monospacedDigit()
+                .font(.system(size: digitSize, weight: .medium))
+            Text("秒")
+                .font(.system(size: unitSize))
+        }
     }
 }
 
 #Preview {
-    Sec2F()
+    Sec2F(digitSize: 100)
 }
