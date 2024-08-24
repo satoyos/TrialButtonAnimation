@@ -11,7 +11,7 @@ import Combine
 extension Sec2F {
     class ViewModel: ObservableObject {
         @Published private(set) var secText: String
-        private let startTime: CGFloat
+        private(set) var startTime: CGFloat
         private let interval: CGFloat
         private var timer: CountDownTimer
         private var cancellables = Set<AnyCancellable>()
@@ -40,6 +40,12 @@ extension Sec2F {
         
         func startTimer() {
             timer.start()
+        }
+        
+        func changeStartTime(to newTime: CGFloat) {
+            self.startTime = newTime
+            self.secText = Self.strOf(time: newTime)
+            print("newTime: \(newTime)")
         }
         
     }
