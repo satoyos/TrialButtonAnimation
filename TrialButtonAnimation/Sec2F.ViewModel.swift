@@ -41,12 +41,5 @@ extension Sec2F {
         func startTimer() {
             timer.start()
         }
-        
-        func changeStartTime(to newTime: CGFloat) {
-            self.startTime = newTime
-            self.secText = Self.strOf(time: newTime)
-            print("newTime: \(newTime)")
-        }
-        
     }
 }
