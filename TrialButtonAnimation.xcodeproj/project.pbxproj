@@ -10,6 +10,7 @@
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
+		9236F9F42C7B10960091F1E3 /* SecTimerWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236F9F32C7B10960091F1E3 /* SecTimerWithButton.swift */; };
 		926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
@@ -58,6 +59,7 @@
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
+		9236F9F32C7B10960091F1E3 /* SecTimerWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButton.swift; sourceTree = "<group>"; };
 		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				92FDCC242C74AABC00B77262 /* Sec2F.ViewModel.swift */,
 				92B083852C79C53F0017C9CC /* DurationSetting.swift */,
 				92B083872C79C96B0017C9CC /* DurationSetting.ViewModel.swift */,
+				9236F9F32C7B10960091F1E3 /* SecTimerWithButton.swift */,
 			);
 			path = TrialButtonAnimation;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				92A9B5512C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift in Sources */,
 				928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */,
 				926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */,
+				9236F9F42C7B10960091F1E3 /* SecTimerWithButton.swift in Sources */,
 				92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
