@@ -20,8 +20,10 @@ struct SecTimerWithButton {
 extension SecTimerWithButton: View {
     var body: some View {
         VStack {
-            Text(String(format: "%.2F", startTime))
-                .font(.largeTitle)
+//            Text(String(format: "%.2F", startTime))
+//                .font(.largeTitle)
+            Sec2F(digitSize: 80, viewModel: viewModel.timeViewModel)
+            // このSliderにstepを設定したら、ボタンを押した後のカウントダウンが表示されなくなる。バグ？
             Slider(value: Binding(
                 get: {
                     startTime
@@ -31,10 +33,10 @@ extension SecTimerWithButton: View {
                     viewModel.updateStartTime(to: newValue)
                 }), in: 1.5 ... 3.0)
             .padding(.horizontal)
-            Sec2F(digitSize: 80, viewModel: viewModel.timeViewModel)
             Button(viewModel.buttonText) {
                 viewModel.timeViewModel.startTimer()
             }
+            .padding(.vertical)
         }
     }
 }
