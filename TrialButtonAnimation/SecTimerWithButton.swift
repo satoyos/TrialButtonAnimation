@@ -9,11 +9,10 @@ import SwiftUI
 
 struct SecTimerWithButton {
     @ObservedObject private var viewModel: ViewModel
-    private let digitSize: Double
+    @EnvironmentObject var screenSizeStore: ScreenSizeStore
     
     init(startTime: Double, digitSize: Double) {
         self.viewModel = ViewModel(startTime: startTime)
-        self.digitSize = digitSize
     }
 }
 
@@ -39,8 +38,13 @@ extension SecTimerWithButton: View {
             Spacer()
         }
     }
+    
+    private var digitSize: Double {
+        screenSizeStore.screenWidth / 5.0
+    }
 }
 
 #Preview {
     SecTimerWithButton(startTime: 2.3, digitSize: 120)
+    .environmentObject(ScreenSizeStore())
 }
