@@ -39,7 +39,7 @@ extension MemorizeTimer: View {
     }
     
     private var digitSize: CGFloat {
-        screenSizeStore.screenWidth * 100.0 / 400.0
+        screenSizeStore.screenWidth * 100.0 / 500.0 
     }
 }
 
