@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SecTimerWithButton {
     @State private var startTime: Double
-    private var viewModel: ViewModel
+    @ObservedObject private var viewModel: ViewModel
     
     init(startTime: Double) {
         self.startTime = startTime
@@ -20,10 +20,7 @@ struct SecTimerWithButton {
 extension SecTimerWithButton: View {
     var body: some View {
         VStack {
-//            Text(String(format: "%.2F", startTime))
-//                .font(.largeTitle)
             Sec2F(digitSize: 80, viewModel: viewModel.timeViewModel)
-            // このSliderにstepを設定したら、ボタンを押した後のカウントダウンが表示されなくなる。バグ？
             Slider(value: Binding(
                 get: {
                     startTime
@@ -31,10 +28,10 @@ extension SecTimerWithButton: View {
                 set: { newValue in
                     self.startTime = newValue
                     viewModel.updateStartTime(to: newValue)
-                }), in: 1.5 ... 3.0)
+                }), in: 1.5 ... 3.0, step: 0.02)
             .padding(.horizontal)
             Button(viewModel.buttonText) {
-                viewModel.timeViewModel.startTimer()
+                viewModel.startTimer()
             }
             .padding(.vertical)
         }
