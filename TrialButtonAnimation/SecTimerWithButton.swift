@@ -11,7 +11,7 @@ struct SecTimerWithButton {
     @ObservedObject private var viewModel: ViewModel
     @EnvironmentObject var screenSizeStore: ScreenSizeStore
     
-    init(startTime: Double, digitSize: Double) {
+    init(startTime: Double) {
         self.viewModel = ViewModel(startTime: startTime)
     }
 }
@@ -45,6 +45,6 @@ extension SecTimerWithButton: View {
 }
 
 #Preview {
-    SecTimerWithButton(startTime: 2.3, digitSize: 120)
+    SecTimerWithButton(startTime: 2.3)
     .environmentObject(ScreenSizeStore())
 }
