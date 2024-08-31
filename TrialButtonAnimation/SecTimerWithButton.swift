@@ -22,7 +22,7 @@ extension SecTimerWithButton: View {
         
         VStack(spacing: digitSize / 4) {
             Spacer()
-            Sec2F(digitSize: 80, viewModel: viewModel.timeViewModel)
+            Sec2F(digitSize: digitSize, viewModel: viewModel.timeViewModel)
             Slider(value: Binding(
                 get: {
                     viewModel.startTime
@@ -42,5 +42,5 @@ extension SecTimerWithButton: View {
 }
 
 #Preview {
-    SecTimerWithButton(startTime: 2.3, digitSize: 80)
+    SecTimerWithButton(startTime: 2.3, digitSize: 120)
 }
