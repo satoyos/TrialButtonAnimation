@@ -21,7 +21,7 @@ extension SecTimerWithButton: View {
             Sec2F(digitSize: 80, viewModel: viewModel.timeViewModel)
             Slider(value: Binding(
                 get: {
-                    viewModel.timeViewModel.startTime
+                    viewModel.startTime
                 },
                 set: { newValue in
                     viewModel.updateStartTime(to: newValue)
