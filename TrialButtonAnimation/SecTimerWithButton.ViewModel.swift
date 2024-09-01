@@ -47,7 +47,7 @@ extension SecTimerWithButton {
         }
         
         func startTrialCountDown() {
-            player1.prepareToPlay()
+            player1.currentTime = 0.0
             player1.play()
         }
         
