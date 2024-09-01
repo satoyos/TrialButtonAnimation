@@ -31,7 +31,8 @@ extension SecTimerWithButton: View {
                 }), in: 1.5 ... 3.0, step: 0.02)
             .padding(.horizontal, digitSize / 2)
             Button(viewModel.buttonText) {
-                viewModel.startTimer()
+//                viewModel.startTimer()
+                viewModel.startTrialCountDown()
             }
             .padding(.top, digitSize / 1.5)
             Spacer()

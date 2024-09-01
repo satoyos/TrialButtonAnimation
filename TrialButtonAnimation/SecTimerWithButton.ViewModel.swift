@@ -6,6 +6,7 @@
 //
 
 import Combine
+import AVFoundation
 
 extension SecTimerWithButton {
     class ViewModel: ObservableObject {
@@ -13,11 +14,28 @@ extension SecTimerWithButton {
         private(set) var startTime: Double
         @Published private(set) var timeViewModel: Sec2F.ViewModel
         private var cancellables = Set<AnyCancellable>()
+        let player1: AVAudioPlayer
+        let player2: AVAudioPlayer
         
-        init(startTime: Double) {
+        enum HalfPoem: String {
+            case h001a
+            case h001b
+            case h002a
+        }
+        
+        init(startTime: Double, halfPoem1: HalfPoem = .h001a, halfPoem2: HalfPoem = .h001b) {
             self.startTime = startTime
             self.timeViewModel = .init(startTime: startTime, interval: 0.02)
+            self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
+            self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
             
+            AudioPlayerFactory.shared.setupAudioSession()
+        }
+        
+        private static func fetchInabaPlayer(of halfPoem: HalfPoem) -> AVAudioPlayer {
+            let filename = String(halfPoem.rawValue.dropFirst())
+            print("fileName -> \(filename)")
+            return AudioPlayerFactory.shared.preparePlayer(folder: "audio/inaba", file: filename, title: filename)
         }
         
         func updateStartTime(to newTime: Double) {
@@ -28,5 +46,13 @@ extension SecTimerWithButton {
         func startTimer() {
             timeViewModel.startTimer()
         }
+        
+        func startTrialCountDown() {
+            player1.prepareToPlay()
+            player1.play()
+        }
+        
     }
+    
+    
 }
