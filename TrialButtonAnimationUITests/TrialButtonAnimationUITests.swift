@@ -10,11 +10,11 @@ import XCTest
 final class TrialButtonAnimationUITests: XCTestCase {
 
     override func setUpWithError() throws {
-        
-        throw XCTSkip("ContentViewをSecTimerWithButtonに変更したので、こちらのテスト群はスキップ！")
-        
         continueAfterFailure = false
 
+        ////
+        throw XCTSkip("ContentViewをSecTimerWithButtonに変更したので、こちらのテスト群はスキップ！")
+        ////
         
     }
 
