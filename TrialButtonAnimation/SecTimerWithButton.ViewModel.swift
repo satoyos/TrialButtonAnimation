@@ -10,7 +10,7 @@ import AVFoundation
 
 extension SecTimerWithButton {
     class ViewModel: ObservableObject {
-        let buttonText = "カウントダウン開始"
+        let buttonText = "試しに聞いてみる"
         private(set) var startTime: Double
         @Published private(set) var timeViewModel: Sec2F.ViewModel
         private var cancellables = Set<AnyCancellable>()
