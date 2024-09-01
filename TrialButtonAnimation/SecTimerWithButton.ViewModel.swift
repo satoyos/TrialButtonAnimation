@@ -34,7 +34,6 @@ extension SecTimerWithButton {
         
         private static func fetchInabaPlayer(of halfPoem: HalfPoem) -> AVAudioPlayer {
             let filename = String(halfPoem.rawValue.dropFirst())
-            print("fileName -> \(filename)")
             return AudioPlayerFactory.shared.preparePlayer(folder: "audio/inaba", file: filename, title: filename)
         }
         
