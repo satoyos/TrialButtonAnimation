@@ -52,6 +52,17 @@ extension SecTimerWithButton {
             player1.play()
         }
         
+        func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+            switch player {
+            case player1:
+                startTimer()
+            case player2:
+                print("player2 completed playing")
+            default:
+                break
+            }
+        }
+        
     }
     
     
