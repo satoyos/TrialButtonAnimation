@@ -9,7 +9,7 @@ import Combine
 import AVFoundation
 
 extension SecTimerWithButton {
-    class ViewModel: ObservableObject {
+    class ViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let buttonText = "試しに聞いてみる"
         private(set) var startTime: Double
         @Published private(set) var timeViewModel: Sec2F.ViewModel
@@ -28,7 +28,7 @@ extension SecTimerWithButton {
             self.timeViewModel = .init(startTime: startTime, interval: 0.02)
             self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
             self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
-            
+            super.init()
             AudioPlayerFactory.shared.setupAudioSession()
         }
         
@@ -47,6 +47,7 @@ extension SecTimerWithButton {
         }
         
         func startTrialCountDown() {
+            player1.delegate = self
             player1.currentTime = 0.0
             player1.play()
         }
