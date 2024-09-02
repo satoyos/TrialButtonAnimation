@@ -28,7 +28,7 @@ extension SecTimerWithButton: View {
                 },
                 set: { newValue in
                     viewModel.updateStartTime(to: newValue)
-                }), in: 1.5 ... 3.0, step: 0.02)
+                }), in: 0.5 ... 3.0, step: 0.02)
             .padding(.horizontal, digitSize / 2)
             Button(viewModel.buttonText) {
 //                viewModel.startTimer()
