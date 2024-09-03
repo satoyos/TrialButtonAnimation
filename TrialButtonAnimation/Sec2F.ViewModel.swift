@@ -14,7 +14,6 @@ extension Sec2F {
         private(set) var startTime: CGFloat
         private let interval: CGFloat
         private var timer: CountDownTimer
-        private var cancellables = Set<AnyCancellable>()
         
         init(startTime: CGFloat, interval: CGFloat) {
             self.startTime = startTime
@@ -32,10 +31,7 @@ extension Sec2F {
             timer.$remainTime
                 .dropFirst()
                 .map{Self.strOf(time: $0)}
-                .sink { [weak self] string in
-                    self?.secText = string
-                }
-                .store(in: &cancellables)
+                .assign(to: &$secText)
         }
         
         func startTimer() {
