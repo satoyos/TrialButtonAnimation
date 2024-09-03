@@ -30,9 +30,12 @@ class CountDownTimer: ObservableObject {
         timer = Timer.scheduledTimer(withTimeInterval: intarval, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             self.remainTime -= CGFloat(self.intarval)
-            self.isRunning = true
+            if self.isRunning == false {
+                self.isRunning = true
+            }
             
             if self.remainTime <= 0 {
+                self.isRunning = false
                 self.remainTime = 0.0
                 self.stopAneEraseTimer()
             }

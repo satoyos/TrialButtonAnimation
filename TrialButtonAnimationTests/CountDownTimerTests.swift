@@ -10,6 +10,7 @@ import XCTest
 import Combine
 
 final class CountDownTimerTests: XCTestCase {
+    var cancellables = Set<AnyCancellable>()
 
     func testInitCountDownTimer() {
         // given
@@ -19,11 +20,12 @@ final class CountDownTimerTests: XCTestCase {
         XCTAssertFalse(timer.isRunning)
     }
 
-    func testRunningCountDownTimer() {
+    func testRunningCountDownTimerChangesRemainTime() {
         // given
         let timer = CountDownTimer(startTime: 3.0, intarval: 1.0)
-        var cancellables = Set<AnyCancellable>()
         let expectetion = XCTestExpectation(description: "Timer is reducing remain time correctly.")
+        // then
+        XCTAssertFalse(timer.isRunning)
         // when
         timer.start()
         // then
@@ -36,6 +38,41 @@ final class CountDownTimerTests: XCTestCase {
             }
             .store(in: &cancellables)
         wait(for: [expectetion], timeout: 1.1)
+    }
+    
+    func testRunningCountDownTimerChagnesRunningFlag() {
+        // given
+        let timer = CountDownTimer(startTime: 2.0, intarval: 0.02)
+        let expectation2 = XCTestExpectation(description: "Timer is running just after start")
+        // when
+        timer.start()
+        // then
+        timer.$isRunning
+            .print("for exp2:")
+            .dropFirst()
+            .sink { bool in
+                XCTAssertTrue(bool)
+                expectation2.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation2], timeout: 0.1)
+    }
+    
+    func testWhenCountDownCompletedRunningFlagGetsFalse() {
+        // given
+        let timer = CountDownTimer(startTime: 0.3, intarval: 0.02)
+        let expectation3 = XCTestExpectation(description: "Timer is not rugging after count down get end")
+        // when
+        timer.start()
+        timer.$isRunning
+            .print("for exp3:")
+            .dropFirst(2)
+            .sink { bool in
+                XCTAssertFalse(bool)
+                expectation3.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation3], timeout: 0.4)
         
     }
 }
