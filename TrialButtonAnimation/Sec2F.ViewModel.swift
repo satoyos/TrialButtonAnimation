@@ -11,6 +11,7 @@ import Combine
 extension Sec2F {
     class ViewModel: ObservableObject {
         @Published private(set) var secText: String
+        @Published private(set) var isTimerRunning: Bool
         private(set) var startTime: CGFloat
         private let interval: CGFloat
         private var timer: CountDownTimer
@@ -20,6 +21,7 @@ extension Sec2F {
             self.interval = interval
             self.secText = Self.strOf(time: startTime)
             self.timer = CountDownTimer(startTime: startTime, intarval: interval)
+            self.isTimerRunning = timer.isRunning
             buildPipeline()
         }
         
@@ -32,6 +34,9 @@ extension Sec2F {
                 .dropFirst()
                 .map{Self.strOf(time: $0)}
                 .assign(to: &$secText)
+            
+            timer.$isRunning
+                .assign(to: &$isTimerRunning)
         }
         
         func startTimer() {
