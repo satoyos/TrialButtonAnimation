@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 extension Sec2F {
     class ViewModel: ObservableObject {
