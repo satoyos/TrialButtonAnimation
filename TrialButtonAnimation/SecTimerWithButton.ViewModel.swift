@@ -5,14 +5,14 @@
 //  Created by Yoshifumi Sato on 2024/08/25.
 //
 
-import Combine
+// import Combine
 import AVFoundation
 
 extension SecTimerWithButton {
     class ViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let buttonText = "試しに聞いてみる"
         @Published private(set) var timeViewModel: Sec2F.ViewModel
-        private var cancellables = Set<AnyCancellable>()
+//        private var cancellables = Set<AnyCancellable>()
         let player1: AVAudioPlayer
         let player2: AVAudioPlayer
         
