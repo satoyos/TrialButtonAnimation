@@ -11,11 +11,14 @@ import AVFoundation
 extension SecTimerWithButton {
     class ViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let buttonText = "試しに聞いてみる"
-        private(set) var startTime: Double
         @Published private(set) var timeViewModel: Sec2F.ViewModel
         private var cancellables = Set<AnyCancellable>()
         let player1: AVAudioPlayer
         let player2: AVAudioPlayer
+        
+        var startTime: Double {
+            timeViewModel.startTime
+        }
         
         enum HalfPoem: String {
             case h001a
@@ -24,7 +27,6 @@ extension SecTimerWithButton {
         }
         
         init(startTime: Double, halfPoem1: HalfPoem = .h001a, halfPoem2: HalfPoem = .h001b) {
-            self.startTime = startTime
             self.timeViewModel = .init(startTime: startTime, interval: 0.02)
             self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
             self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
@@ -38,8 +40,7 @@ extension SecTimerWithButton {
         }
         
         func updateStartTime(to newTime: Double) {
-            self.startTime = newTime
-            self.timeViewModel = .init(startTime: startTime, interval: 0.02)
+            self.timeViewModel = .init(startTime: newTime, interval: 0.02)
         }
         
         func startTimer() {
