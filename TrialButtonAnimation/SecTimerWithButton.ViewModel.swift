@@ -12,7 +12,7 @@ extension SecTimerWithButton {
     class ViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let buttonText = "試しに聞いてみる"
         @Published private(set) var timeViewModel: Sec2F.ViewModel
-//        private var cancellables = Set<AnyCancellable>()
+        @Published private(set) var isTimerRunning: Bool
         let player1: AVAudioPlayer
         let player2: AVAudioPlayer
         
@@ -27,16 +27,24 @@ extension SecTimerWithButton {
         }
         
         init(startTime: Double, halfPoem1: HalfPoem = .h001a, halfPoem2: HalfPoem = .h001b) {
-            self.timeViewModel = .init(startTime: startTime, interval: 0.02)
+            let timeViewModel = Sec2F.ViewModel(startTime: startTime, interval: 0.02)
+            self.timeViewModel = timeViewModel
+            self.isTimerRunning = timeViewModel.isTimerRunning
             self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
             self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
             super.init()
+            buildPipeline()
             AudioPlayerFactory.shared.setupAudioSession()
         }
         
         private static func fetchInabaPlayer(of halfPoem: HalfPoem) -> AVAudioPlayer {
             let filename = String(halfPoem.rawValue.dropFirst())
             return AudioPlayerFactory.shared.preparePlayer(folder: "audio/inaba", file: filename, title: filename)
+        }
+        
+        private func buildPipeline() {
+            timeViewModel.$isTimerRunning
+                .assign(to: &$isTimerRunning)
         }
         
         func updateStartTime(to newTime: Double) {

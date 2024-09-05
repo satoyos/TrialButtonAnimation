@@ -36,7 +36,7 @@
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
-		92F98F792C82E95A003E57D1 /* SecTimerWithButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F98F782C82E95A003E57D1 /* SecTimerWithButtonTests.swift */; };
+		92F98F792C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 		92FDCC232C749AAC00B77262 /* Sec2FViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC222C749AAC00B77262 /* Sec2FViewModelTests.swift */; };
 		92FDCC252C74AABC00B77262 /* Sec2F.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC242C74AABC00B77262 /* Sec2F.ViewModel.swift */; };
@@ -92,7 +92,7 @@
 		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
-		92F98F782C82E95A003E57D1 /* SecTimerWithButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButtonTests.swift; sourceTree = "<group>"; };
+		92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 		92FDCC222C749AAC00B77262 /* Sec2FViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2FViewModelTests.swift; sourceTree = "<group>"; };
 		92FDCC242C74AABC00B77262 /* Sec2F.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.ViewModel.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 				92A9B5482C54872C00BEF03B /* MinSecViewModelTests.swift */,
 				92A9B54E2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift */,
 				92FDCC222C749AAC00B77262 /* Sec2FViewModelTests.swift */,
-				92F98F782C82E95A003E57D1 /* SecTimerWithButtonTests.swift */,
+				92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */,
 			);
 			path = TrialButtonAnimationTests;
 			sourceTree = "<group>";
@@ -402,7 +402,7 @@
 				92FDCC232C749AAC00B77262 /* Sec2FViewModelTests.swift in Sources */,
 				92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */,
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
-				92F98F792C82E95A003E57D1 /* SecTimerWithButtonTests.swift in Sources */,
+				92F98F792C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
