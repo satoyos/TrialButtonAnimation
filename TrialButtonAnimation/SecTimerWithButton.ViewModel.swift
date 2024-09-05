@@ -13,6 +13,7 @@ extension SecTimerWithButton {
         let buttonText = "試しに聞いてみる"
         @Published private(set) var timeViewModel: Sec2F.ViewModel
         @Published private(set) var isTimerRunning: Bool
+        @Published private(set) var isUserActionDisabled = false
         let player1: AVAudioPlayer
         let player2: AVAudioPlayer
         
@@ -56,6 +57,7 @@ extension SecTimerWithButton {
         }
         
         func startTrialCountDown() {
+            self.isUserActionDisabled = true
             player1.delegate = self
             player1.currentTime = 0.0
             player1.play()

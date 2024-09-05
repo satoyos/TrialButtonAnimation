@@ -128,7 +128,6 @@
 			children = (
 				928FEB7F2BF77C01001E28E2 /* TrialButtonAnimation */,
 				928FEB902BF77C02001E28E2 /* TrialButtonAnimationTests */,
-				928FEB9A2BF77C02001E28E2 /* TrialButtonAnimationUITests */,
 				92C0DA2F2C674971004C8966 /* TrialButtonAnimationUITests */,
 				928FEB7E2BF77C01001E28E2 /* Products */,
 			);
@@ -194,13 +193,6 @@
 				92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */,
 			);
 			path = TrialButtonAnimationTests;
-			sourceTree = "<group>";
-		};
-		928FEB9A2BF77C02001E28E2 /* TrialButtonAnimationUITests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TrialButtonAnimationUITests;
 			sourceTree = "<group>";
 		};
 		92967FB52C85CB4D00493989 /* protocols */ = {

@@ -66,7 +66,6 @@ final class SecTimerWithButtonTests: XCTestCase {
         // then
         let expectation = XCTestExpectation(description: "'isTimerRuggning' flag returns to be false")
         viewModel.$isTimerRunning
-            .print("in ReturnFalse Test:")
             .dropFirst(2)
             .sink { bool in
                 XCTAssertFalse(bool)
@@ -74,5 +73,28 @@ final class SecTimerWithButtonTests: XCTestCase {
             }
             .store(in: &cancellables)
         wait(for: [expectation], timeout: 0.3)
+    }
+    
+    func testWhenButtonTappedUserActionsGetDisabled() {
+        // given
+        let viewModel = SecTimerWithButton.ViewModel(startTime: 0.2)
+        // then
+        XCTAssertFalse(viewModel.isUserActionDisabled)
+        // when
+        viewModel.startTrialCountDown()
+        // then
+        let expectation = XCTestExpectation(description: "User action gets disabled")
+        viewModel.$isUserActionDisabled
+            .print("in Test:")
+            .sink { bool in
+                XCTAssertTrue(bool)
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation], timeout: 0.1)
+    }
+    
+    func testWhenPlayer2FinishedUserActionsGetEnabled() {
+        XCTSkip("SUT is not implemented yet.")
     }
 }

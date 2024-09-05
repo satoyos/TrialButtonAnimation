@@ -29,11 +29,12 @@ extension SecTimerWithButton: View {
                 set: { newValue in
                     viewModel.updateStartTime(to: newValue)
                 }), in: 0.5 ... 3.0, step: 0.02)
+            .disabled(viewModel.isUserActionDisabled)
             .padding(.horizontal, digitSize / 2)
             Button(viewModel.buttonText) {
-//                viewModel.startTimer()
                 viewModel.startTrialCountDown()
             }
+            .disabled(viewModel.isUserActionDisabled)
             .padding(.top, digitSize / 1.5)
             Spacer()
             Spacer()
