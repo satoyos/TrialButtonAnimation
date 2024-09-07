@@ -49,6 +49,5 @@ class CountDownTimer: ObservableObject {
     private func stopAneEraseTimer() {
         self.timer?.invalidate()
         self.timer = nil
-        self.isRunning = false
     }
 }
