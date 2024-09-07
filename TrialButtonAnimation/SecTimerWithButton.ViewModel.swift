@@ -7,6 +7,7 @@
 
 // import Combine
 import AVFoundation
+import Combine
 
 extension SecTimerWithButton {
     class ViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
@@ -16,6 +17,7 @@ extension SecTimerWithButton {
         @Published private(set) var isUserActionDisabled = false
         let player1: AVAudioPlayer
         let player2: AVAudioPlayer
+        private var cancellables = Set<AnyCancellable>()
         
         var startTime: Double {
             timeViewModel.startTime
@@ -34,7 +36,7 @@ extension SecTimerWithButton {
             self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
             self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
             super.init()
-            buildPipeline()
+//            buildPipeline()
             AudioPlayerFactory.shared.setupAudioSession()
         }
         
@@ -46,6 +48,16 @@ extension SecTimerWithButton {
         private func buildPipeline() {
             timeViewModel.$isTimerRunning
                 .assign(to: &$isTimerRunning)
+            
+            timeViewModel.$isTimerRunning
+                .print("isTimerRugging[2] in SecTimer.ViewModel")
+                .dropFirst() // drop first "false"
+                .filter { $0 == false }
+                .sink { [weak self] _ in
+                    guard let self = self else { return }
+                    self.startPlaying(self.player2)
+                }
+                .store(in: &cancellables)
         }
         
         func updateStartTime(to newTime: Double) {
@@ -53,14 +65,13 @@ extension SecTimerWithButton {
         }
         
         func startTimer() {
+            buildPipeline()
             timeViewModel.startTimer()
         }
         
         func startTrialCountDown() {
             self.isUserActionDisabled = true
-            player1.delegate = self
-            player1.currentTime = 0.0
-            player1.play()
+            startPlaying(player1)
         }
         
         func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
@@ -72,6 +83,12 @@ extension SecTimerWithButton {
             default:
                 break
             }
+        }
+        
+        private func startPlaying(_ player: AVAudioPlayer) {
+            player.delegate = self
+            player.currentTime = 0.0
+            player.play()
         }
         
     }
