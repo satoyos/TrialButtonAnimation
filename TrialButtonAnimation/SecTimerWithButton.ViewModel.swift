@@ -36,7 +36,6 @@ extension SecTimerWithButton {
             self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
             self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
             super.init()
-//            buildPipeline()
             AudioPlayerFactory.shared.setupAudioSession()
         }
         
@@ -79,7 +78,7 @@ extension SecTimerWithButton {
             case player1:
                 startTimer()
             case player2:
-                print("player2 completed playing")
+                trialFinished()
             default:
                 break
             }
@@ -91,7 +90,9 @@ extension SecTimerWithButton {
             player.play()
         }
         
+        private func trialFinished() {
+            updateStartTime(to: startTime)
+            self.isUserActionDisabled = false
+        }
     }
-    
-    
 }

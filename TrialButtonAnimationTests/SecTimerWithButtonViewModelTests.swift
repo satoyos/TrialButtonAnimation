@@ -85,7 +85,6 @@ final class SecTimerWithButtonTests: XCTestCase {
         // then
         let expectation = XCTestExpectation(description: "User action gets disabled")
         viewModel.$isUserActionDisabled
-            .print("in Test:")
             .sink { bool in
                 XCTAssertTrue(bool)
                 expectation.fulfill()
@@ -95,6 +94,20 @@ final class SecTimerWithButtonTests: XCTestCase {
     }
     
     func testWhenPlayer2FinishedUserActionsGetEnabled() {
-        XCTSkip("SUT is not implemented yet.")
+        let viewModel = SecTimerWithButton.ViewModel(startTime: 0.2)
+        // when
+        viewModel.startTrialCountDown()
+        // then
+        // then
+        let expectation = XCTestExpectation(description: "User action gets back enabled")
+        viewModel.$isUserActionDisabled
+            .print("in Test")
+            .dropFirst()
+            .filter { $0 == false }
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation], timeout: 20)
     }
 }
