@@ -10,9 +10,11 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-//        MemorizeTimer(viewModel: .init(minutes: 3))
-        SecTimerWithButton(startTime: 2.0)
-            .environmentObject(ScreenSizeStore())
+        NavigationView {
+            MenuList(settings: Settings())
+        }
+        .navigationTitle("画面一覧")
+        .environmentObject(ScreenSizeStore())
     }
 }
 
