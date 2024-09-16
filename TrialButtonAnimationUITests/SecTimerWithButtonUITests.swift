@@ -17,6 +17,10 @@ final class SecTimerWithButtonUITests: XCTestCase {
     }
     
     func testWhenButtonisTappedCountDownStarts() throws {
+        // when
+        let cell = app.cells.staticTexts["歌の間隔"].firstMatch
+//        XCTAssert(cell.exists)
+        cell.tap()
         // then
         let slider = app.sliders.firstMatch
         XCTAssert(slider.exists)
