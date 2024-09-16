@@ -40,8 +40,8 @@ extension MemorizeTimer {
             super.init()
             self.action2minLeft = action2minLeft ?? announce2minutesLeft
             self.actionTimeOver = actionTimeOver ?? announceMemorizeTimeIsOver
-            buildDataFlow()
             AudioPlayerFactory.shared.setupAudioSession()
+            buildDataFlow()
         }
         
         convenience init(minutes: CGFloat) {
@@ -63,7 +63,7 @@ extension MemorizeTimer {
             
             timeViewModel.$timeTexts
                 .dropFirst()
-                .print("In Memorize Timer:")
+//                .print("In Memorize Timer:")
                 .sink { [weak self] timeTexts in
                     switch timeTexts {
                     case ("2", "00"):

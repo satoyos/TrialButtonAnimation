@@ -27,7 +27,6 @@ extension MemorizeTimer: View {
         }
         .onAppear{
             UIApplication.shared.isIdleTimerDisabled = true
-            print("[screenSize] width: \(screenSizeStore.screenWidth), height: \(screenSizeStore.screenHeight)")
         }
         .onDisappear {
             UIApplication.shared.isIdleTimerDisabled = false
@@ -39,7 +38,7 @@ extension MemorizeTimer: View {
     }
     
     private var digitSize: CGFloat {
-        screenSizeStore.screenWidth * 100.0 / 500.0 
+        screenSizeStore.screenWidth * 100.0 / 500.0
     }
 }
 

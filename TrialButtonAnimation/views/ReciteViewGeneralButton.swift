@@ -1,6 +1,6 @@
 //
-//  CircleButtonView.swift
-//  TrialButtonAnimation
+//  ReciteViewGeneralButton.swift
+//  Shuffle100
 //
 //  Created by Yoshifumi Sato on 2024/07/13.
 //
@@ -10,13 +10,13 @@ import SwiftUI
 struct ReciteViewGeneralButton {
     let type: LabelType
     let diameter: Double
-    @State private var _isPressed: Bool = false
+    @State private var isPressed: Bool = false
     let action: (() -> Void)?
     
     init(type: LabelType = .play, diameter: Double = 200, isPressed: Bool = false, action: (() -> Void)?) {
         self.type = type
         self.diameter = diameter
-        self._isPressed = isPressed
+        self.isPressed = isPressed
         self.action = action
     }
 }
@@ -30,17 +30,17 @@ extension ReciteViewGeneralButton: View {
                 .resizable()
         }
         .buttonStyle(ReciteViewButtonStyle(type: type, diameter: diameter))
-        .scaleEffect(_isPressed ? 0.9 : 1)
+        .scaleEffect(isPressed ? 0.9 : 1)
         .simultaneousGesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { _ in
                     withAnimation(.linear) {
-                        _isPressed = true
+                        isPressed = true
                     }
                 }
                 .onEnded { _ in
                     withAnimation(.interactiveSpring(response: 0.35, dampingFraction: 0.3)) {
-                        _isPressed = false
+                        isPressed = false
                     }
                 }
         )
