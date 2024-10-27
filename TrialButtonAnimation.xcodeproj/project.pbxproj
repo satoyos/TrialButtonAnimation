@@ -48,6 +48,8 @@
 		92967FF72C8D8C1300493989 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FF62C8D8C1300493989 /* MenuSection.swift */; };
 		92967FF92C8D8FBA00493989 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FF82C8D8FBA00493989 /* MenuDataSource.swift */; };
 		92967FFB2C8D91D800493989 /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FFA2C8D91D800493989 /* MenuList.swift */; };
+		9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296800C2C97FB3E00493989 /* LaunchPageUITests.swift */; };
+		929A60212C97FF4300D17EFD /* pages in Resources */ = {isa = PBXBuildFile; fileRef = 9296800E2C97FDC300493989 /* pages */; };
 		92A9B53B2C4E6FB300BEF03B /* RecitePlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */; };
 		92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */; };
 		92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */; };
@@ -132,6 +134,9 @@
 		92967FF62C8D8C1300493989 /* MenuSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		92967FF82C8D8FBA00493989 /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
 		92967FFA2C8D91D800493989 /* MenuList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
+		9296800C2C97FB3E00493989 /* LaunchPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPageUITests.swift; sourceTree = "<group>"; };
+		9296800E2C97FDC300493989 /* pages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pages; sourceTree = "<group>"; };
+		929A60232C98014D00D17EFD /* TrialButtonAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TrialButtonAnimation.xcodeproj; sourceTree = "<group>"; };
 		92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButton.swift; sourceTree = "<group>"; };
 		92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButton.ViewModel.swift; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 		928FEB742BF77C01001E28E2 = {
 			isa = PBXGroup;
 			children = (
+				929A60232C98014D00D17EFD /* TrialButtonAnimation.xcodeproj */,
 				928FEB7F2BF77C01001E28E2 /* TrialButtonAnimation */,
 				928FEB902BF77C02001E28E2 /* TrialButtonAnimationTests */,
 				92C0DA2F2C674971004C8966 /* TrialButtonAnimationUITests */,
@@ -338,6 +344,11 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		929A60242C98014D00D17EFD /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		92C0DA162C660CD6004C8966 /* audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,9 +368,11 @@
 		92C0DA2F2C674971004C8966 /* TrialButtonAnimationUITests */ = {
 			isa = PBXGroup;
 			children = (
+				9296800E2C97FDC300493989 /* pages */,
 				92967FB52C85CB4D00493989 /* protocols */,
 				92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */,
 				92967FB32C85C92800493989 /* SecTimerWithButtonUITests.swift */,
+				9296800C2C97FB3E00493989 /* LaunchPageUITests.swift */,
 			);
 			path = TrialButtonAnimationUITests;
 			sourceTree = "<group>";
@@ -455,6 +468,12 @@
 			mainGroup = 928FEB742BF77C01001E28E2;
 			productRefGroup = 928FEB7E2BF77C01001E28E2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 929A60242C98014D00D17EFD /* Products */;
+					ProjectRef = 929A60232C98014D00D17EFD /* TrialButtonAnimation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				928FEB7C2BF77C01001E28E2 /* TrialButtonAnimation */,
@@ -487,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929A60212C97FF4300D17EFD /* pages in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +589,7 @@
 				92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */,
 				92967FB72C85CB7B00493989 /* WaitInUITest.swift in Sources */,
 				92967FB42C85C92800493989 /* SecTimerWithButtonUITests.swift in Sources */,
+				9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
