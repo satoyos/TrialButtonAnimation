@@ -61,7 +61,6 @@
 		92A9B54F2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B54E2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift */; };
 		92A9B5512C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */; };
 		92B083862C79C53F0017C9CC /* DurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B083852C79C53F0017C9CC /* DurationSetting.swift */; };
-		92B083882C79C96B0017C9CC /* DurationSetting.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B083872C79C96B0017C9CC /* DurationSetting.ViewModel.swift */; };
 		92C0DA182C660DC1004C8966 /* AudioPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */; };
 		92C0DA292C6629EF004C8966 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 92C0DA282C6629EF004C8966 /* audio */; };
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
@@ -148,7 +147,6 @@
 		92A9B54E2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTimerViewModelTests.swift; sourceTree = "<group>"; };
 		92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTimer.ViewModel.swift; sourceTree = "<group>"; };
 		92B083852C79C53F0017C9CC /* DurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSetting.swift; sourceTree = "<group>"; };
-		92B083872C79C96B0017C9CC /* DurationSetting.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSetting.ViewModel.swift; sourceTree = "<group>"; };
 		92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerFactory.swift; sourceTree = "<group>"; };
 		92C0DA282C6629EF004C8966 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,7 +290,6 @@
 		92967FBB2C8C4B5900493989 /* viewModels */ = {
 			isa = PBXGroup;
 			children = (
-				92B083872C79C96B0017C9CC /* DurationSetting.ViewModel.swift */,
 				92A9B54A2C5487EA00BEF03B /* MinSec.ViewModel.swift */,
 				92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */,
 				92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */,
@@ -546,7 +543,6 @@
 				92967FF92C8D8FBA00493989 /* MenuDataSource.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
-				92B083882C79C96B0017C9CC /* DurationSetting.ViewModel.swift in Sources */,
 				92967FEF2C8D403100493989 /* MenuItem.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,
 				92967FE52C8D366A00493989 /* UIFontExtension.swift in Sources */,
