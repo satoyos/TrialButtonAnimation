@@ -39,13 +39,23 @@ final class Sec2FViewModel: ViewModelObject {
         let timer = CountDownTimer(startTime: startTime, intarval: interval)
         output.secText = Self.strOf(time: startTime)
         
+        timer.$remainTime
+            .map(Self.strOf)
+            .assign(to: \.secText, on: output)
+            .store(in: &cancellables)
+            
+        input.$startTimerRequest
+            .sink { _ in
+                timer.start()
+            }
+            .store(in: &cancellables)
+        
         self.input = input
         self.binding = binding
         self.output = output
         self.timer = timer
 //        self.startTime = startTime
 //        self.interval = interval
-        
         
     }
     
