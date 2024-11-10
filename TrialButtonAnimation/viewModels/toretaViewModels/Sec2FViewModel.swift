@@ -20,7 +20,7 @@ final class Sec2FViewModel: ViewModelObject {
     final class Output: OutputObject {
         @Published fileprivate(set) var secText = ""
         
-        @Published private(set) var isTimerRunning = false
+        @Published fileprivate(set) var isTimerRunning = false
     }
     
     let input: Input
@@ -43,12 +43,17 @@ final class Sec2FViewModel: ViewModelObject {
             .map(Self.strOf)
             .assign(to: \.secText, on: output)
             .store(in: &cancellables)
+        
+        timer.$isRunning
+            .assign(to: \.isTimerRunning, on: output)
+            .store(in: &cancellables)
             
         input.$startTimerRequest
             .sink { _ in
                 timer.start()
             }
             .store(in: &cancellables)
+        
         
         self.input = input
         self.binding = binding
