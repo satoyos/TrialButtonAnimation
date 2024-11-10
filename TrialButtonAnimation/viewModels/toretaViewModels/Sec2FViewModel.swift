@@ -26,7 +26,7 @@ final class Sec2FViewModel: ViewModelObject {
     let input: Input
     @BindableObject private(set) var binding: Binding
     let output: Output
-//    private(set) var startTime: Double
+    private(set) var startTime: Double
 //    private let interval: Double
     private var timer: CountDownTimer
     
@@ -59,7 +59,7 @@ final class Sec2FViewModel: ViewModelObject {
         self.binding = binding
         self.output = output
         self.timer = timer
-//        self.startTime = startTime
+        self.startTime = startTime
 //        self.interval = interval
         
     }
