@@ -73,8 +73,6 @@
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
 		92F98F792C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
-		92FDCC232C749AAC00B77262 /* Sec2FViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC222C749AAC00B77262 /* Sec2FViewModelTests.swift */; };
-		92FDCC252C74AABC00B77262 /* Sec2F.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC242C74AABC00B77262 /* Sec2F.ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,8 +163,6 @@
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
 		92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
-		92FDCC222C749AAC00B77262 /* Sec2FViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2FViewModelTests.swift; sourceTree = "<group>"; };
-		92FDCC242C74AABC00B77262 /* Sec2F.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,7 +268,6 @@
 				92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */,
 				92A9B5482C54872C00BEF03B /* MinSecViewModelTests.swift */,
 				92A9B54E2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift */,
-				92FDCC222C749AAC00B77262 /* Sec2FViewModelTests.swift */,
 				92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */,
 				92967FF22C8D48FF00493989 /* MenuRowViewModelTests.swift */,
 			);
@@ -305,7 +300,6 @@
 				92A9B54A2C5487EA00BEF03B /* MinSec.ViewModel.swift */,
 				92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */,
 				92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */,
-				92FDCC242C74AABC00B77262 /* Sec2F.ViewModel.swift */,
 				9236F9F52C7B12E10091F1E3 /* SecTimerWithButton.ViewModel.swift */,
 				92967FF42C8D49A900493989 /* MenuRow.ViewModel.swift */,
 			);
@@ -600,7 +594,6 @@
 				92967FD32C8D359300493989 /* Poem.swift in Sources */,
 				92967FDC2C8D359300493989 /* Poem100.swift in Sources */,
 				92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */,
-				92FDCC252C74AABC00B77262 /* Sec2F.ViewModel.swift in Sources */,
 				92A9B5452C53BE4900BEF03B /* CountDownTimer.swift in Sources */,
 				92A9B53B2C4E6FB300BEF03B /* RecitePlayButton.swift in Sources */,
 				92967FD52C8D359300493989 /* PoemsSelectesState.swift in Sources */,
@@ -613,7 +606,6 @@
 			files = (
 				92A9B54F2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift in Sources */,
 				92A9B5492C54872C00BEF03B /* MinSecViewModelTests.swift in Sources */,
-				92FDCC232C749AAC00B77262 /* Sec2FViewModelTests.swift in Sources */,
 				92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */,
 				92967FF32C8D48FF00493989 /* MenuRowViewModelTests.swift in Sources */,
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
