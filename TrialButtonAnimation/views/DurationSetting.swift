@@ -14,7 +14,7 @@ struct DurationSetting {
 extension DurationSetting: View {
     var body: some View {
         VStack {
-            let sec2fViewModel = Sec2F.ViewModel(startTime: sliderValue, interval: 0.02)
+            let sec2fViewModel = Sec2FViewModel(startTime: sliderValue, interval: 0.02)
             Sec2F(digitSize: 100, viewModel: sec2fViewModel)
             Slider(value: Binding(
                 get: {
@@ -25,7 +25,7 @@ extension DurationSetting: View {
         
                 .padding(.horizontal)
             Button("試しに聞いてみる") {
-                sec2fViewModel.startTimer()
+                sec2fViewModel.input.startTimerRequest.send()
             }
         }
     }

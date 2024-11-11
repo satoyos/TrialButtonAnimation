@@ -12,7 +12,7 @@ import Combine
 extension SecTimerWithButton {
     class ViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let buttonText = "試しに聞いてみる"
-        @Published private(set) var timeViewModel: Sec2F.ViewModel
+        @Published private(set) var timeViewModel: Sec2FViewModel
         @Published private(set) var isTimerRunning: Bool
         @Published private(set) var isUserActionDisabled = false
         let player1: AVAudioPlayer
@@ -30,9 +30,9 @@ extension SecTimerWithButton {
         }
         
         init(startTime: Double, halfPoem1: HalfPoem = .h001a, halfPoem2: HalfPoem = .h001b) {
-            let timeViewModel = Sec2F.ViewModel(startTime: startTime, interval: 0.02)
+            let timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
             self.timeViewModel = timeViewModel
-            self.isTimerRunning = timeViewModel.isTimerRunning
+            self.isTimerRunning = timeViewModel.output.isTimerRunning
             self.player1 = Self.fetchInabaPlayer(of: halfPoem1)
             self.player2 = Self.fetchInabaPlayer(of: halfPoem2)
             super.init()
@@ -45,10 +45,10 @@ extension SecTimerWithButton {
         }
         
         private func buildPipeline() {
-            timeViewModel.$isTimerRunning
+            timeViewModel.output.$isTimerRunning
                 .assign(to: &$isTimerRunning)
             
-            timeViewModel.$isTimerRunning
+            timeViewModel.output.$isTimerRunning
                 .print("isTimerRugging[2] in SecTimer.ViewModel")
                 .dropFirst() // drop first "false"
                 .filter { $0 == false }
@@ -65,7 +65,7 @@ extension SecTimerWithButton {
         
         func startTimer() {
             buildPipeline()
-            timeViewModel.startTimer()
+            timeViewModel.input.startTimerRequest.send()
         }
         
         func startTrialCountDown() {

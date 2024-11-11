@@ -10,9 +10,9 @@ import Combine
 final class Sec2FViewModel: ViewModelObject {
     
     final class Input: InputObject {
-        @Published private(set) var startTimerRequest = PassthroughSubject<Void, Never>()
+        let startTimerRequest = PassthroughSubject<Void, Never>()
         
-        @Published private(set) var stopTimerRequest = PassthroughSubject<Void, Never>()
+        let stopTimerRequest = PassthroughSubject<Void, Never>()
     }
     
     final class Binding: BindingObject { }
@@ -48,7 +48,7 @@ final class Sec2FViewModel: ViewModelObject {
             .assign(to: \.isTimerRunning, on: output)
             .store(in: &cancellables)
             
-        input.$startTimerRequest
+        input.startTimerRequest
             .sink { _ in
                 timer.start()
             }

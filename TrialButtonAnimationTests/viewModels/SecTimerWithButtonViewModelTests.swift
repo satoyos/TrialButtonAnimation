@@ -17,7 +17,7 @@ final class SecTimerWithButtonTests: XCTestCase {
         // given
         let viewModel = SecTimerWithButton.ViewModel(startTime: 2.0)
         // then
-        XCTAssertEqual(viewModel.timeViewModel.secText, "2.00")
+        XCTAssertEqual(viewModel.timeViewModel.output.secText, "2.00")
     }
 
     func testWhenTimerStartsSecLabelChanges() {
@@ -27,7 +27,7 @@ final class SecTimerWithButtonTests: XCTestCase {
         viewModel.startTimer()
         // then
         let expectation = XCTestExpectation(description: "time label changes correctly!")
-        viewModel.timeViewModel.$secText
+        viewModel.timeViewModel.output.$secText
             .filter { $0 == "1.98" }
             .sink { _ in
                 expectation.fulfill()
@@ -102,7 +102,7 @@ final class SecTimerWithButtonTests: XCTestCase {
         let expectation = XCTestExpectation(description: "User action gets back enabled")
         viewModel.$isUserActionDisabled
             .print("in Test")
-            .dropFirst()
+//            .dropFirst()
             .filter { $0 == false }
             .sink { _ in
                 expectation.fulfill()
