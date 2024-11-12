@@ -55,6 +55,8 @@
 		929DB8B82CDEF98300609B7B /* MemorizeTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DB8B72CDEF95700609B7B /* MemorizeTimerViewModel.swift */; };
 		929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */; };
 		929DB8BE2CDF4AB000609B7B /* Sec2FViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */; };
+		929DB8C02CE372E300609B7B /* DurationSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DB8BF2CE372A600609B7B /* DurationSettingViewModel.swift */; };
+		929DB8C22CE3737400609B7B /* DurationSettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929DB8C12CE3737400609B7B /* DurationSettingViewModelTests.swift */; };
 		92A9B53B2C4E6FB300BEF03B /* RecitePlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */; };
 		92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */; };
 		92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */; };
@@ -144,6 +146,8 @@
 		929DB8B72CDEF95700609B7B /* MemorizeTimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTimerViewModel.swift; sourceTree = "<group>"; };
 		929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2FViewModelTests_toreta.swift; sourceTree = "<group>"; };
 		929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2FViewModel.swift; sourceTree = "<group>"; };
+		929DB8BF2CE372A600609B7B /* DurationSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSettingViewModel.swift; sourceTree = "<group>"; };
+		929DB8C12CE3737400609B7B /* DurationSettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSettingViewModelTests.swift; sourceTree = "<group>"; };
 		92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButton.swift; sourceTree = "<group>"; };
 		92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecitePlayButton.ViewModel.swift; sourceTree = "<group>"; };
@@ -364,6 +368,7 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				929DB8BF2CE372A600609B7B /* DurationSettingViewModel.swift */,
 				929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */,
 				929DB8702CD5F5AB00609B7B /* protocols */,
 				929DB8B72CDEF95700609B7B /* MemorizeTimerViewModel.swift */,
@@ -375,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */,
+				929DB8C12CE3737400609B7B /* DurationSettingViewModelTests.swift */,
 			);
 			path = toretaViewModels;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 				92967FEF2C8D403100493989 /* MenuItem.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,
 				92967FE52C8D366A00493989 /* UIFontExtension.swift in Sources */,
+				929DB8C02CE372E300609B7B /* DurationSettingViewModel.swift in Sources */,
 				92967FDA2C8D359300493989 /* DigitsNumberFactory.swift in Sources */,
 				92967FE72C8D366A00493989 /* String-extension.swift in Sources */,
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,
@@ -605,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92A9B54F2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift in Sources */,
+				929DB8C22CE3737400609B7B /* DurationSettingViewModelTests.swift in Sources */,
 				92A9B5492C54872C00BEF03B /* MinSecViewModelTests.swift in Sources */,
 				92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */,
 				92967FF32C8D48FF00493989 /* MenuRowViewModelTests.swift in Sources */,
