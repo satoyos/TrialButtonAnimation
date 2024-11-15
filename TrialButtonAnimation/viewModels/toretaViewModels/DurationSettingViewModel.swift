@@ -9,7 +9,8 @@ import Combine
 
 final class DurationSettingViewModel: ViewModelObject {
     final class Input: InputObject {
-        
+        let startTimerRequest = PassthroughSubject<Void, Never>()
+        let startTrialCountDownRequest = PassthroughSubject<Void, Never>()
     }
     
     final class Binding: BindingObject {
@@ -17,7 +18,9 @@ final class DurationSettingViewModel: ViewModelObject {
     }
     
     final class Output: OutputObject {
-        @Published var secText: String = ""
+        @Published fileprivate(set) var secText: String = ""
+        @Published fileprivate(set) var isTimerRunning = false
+        @Published fileprivate(set) var isUserActionDisabled = false
     }
     
     let input: Input
@@ -37,12 +40,25 @@ final class DurationSettingViewModel: ViewModelObject {
             .assign(to: \.secText, on: output)
             .store(in: &cancellables)
         
+        timeViewModel.output.$isTimerRunning
+            .assign(to: \.isTimerRunning, on: output)
+            .store(in: &cancellables)
+        
+        input.startTimerRequest
+            .sink { _ in
+                timeViewModel.input.startTimerRequest.send()
+            }
+            .store(in: &cancellables)
+        
+        
+        
         self.input = input
         self.binding = binding
         self.output = output
         self.timeViewModel = timeViewModel
 
     }
+    
     
 
 }
