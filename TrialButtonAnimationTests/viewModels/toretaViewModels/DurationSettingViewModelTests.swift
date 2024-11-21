@@ -74,7 +74,6 @@ final class DurationSettingViewModelTests: XCTestCase {
     }
     
     func testWhenButtonTappedUserActionsGetDisabled() throws {
-        throw XCTSkip("Try this test after implementing audio-functions in DurationSettingViewModel")
         // given
         let viewModel = DurationSettingViewModel(startTime: 0.2)
         // then
@@ -91,5 +90,20 @@ final class DurationSettingViewModelTests: XCTestCase {
             .store(in: &cancellables)
         wait(for: [expectation], timeout: 0.1)
     }
-    
+ 
+    func testWhenPlayer2FinishedUserActionsGetEnabled() {
+        let viewModel = DurationSettingViewModel(startTime: 0.2)
+        // when
+        viewModel.input.startTrialCountDownRequest.send()
+        // then
+        let expectation = XCTestExpectation(description: "User action gets back enabled")
+        viewModel.output.$isUserActionDisabled
+            .print("in Test")
+            .filter { $0 == false }
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation], timeout: 20)
+    }
 }

@@ -27,6 +27,7 @@ final class DurationSettingViewModel: ViewModelObject {
     @BindableObject private(set) var binding: Binding
     let output: Output
     private var timeViewModel: Sec2FViewModel
+    private let audioHandler: DurationSettingAudioHandler
     
     private var cancellables: Set<AnyCancellable> = []
     
@@ -34,7 +35,8 @@ final class DurationSettingViewModel: ViewModelObject {
         let input = Input()
         let binding = Binding()
         let output = Output()
-        let timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
+        var timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
+        let audioHandler = DurationSettingAudioHandler()
         
         timeViewModel.output.$secText
             .assign(to: \.secText, on: output)
@@ -50,12 +52,38 @@ final class DurationSettingViewModel: ViewModelObject {
             }
             .store(in: &cancellables)
         
+        input.startTrialCountDownRequest
+            .sink { _ in
+                output.isUserActionDisabled = true
+                audioHandler.player1FinishedAction = { 
+                    timeViewModel.input.startTimerRequest.send()
+                }
+                audioHandler.startPlayer1()
+            }
+            .store(in: &cancellables)
         
+        output.$isTimerRunning
+            .dropFirst() // Drop First "false"
+            .filter { $0 == false }
+            .sink { _ in
+                audioHandler.player2FinishedAction = {
+                    //
+                    // ToDo: ↓↓ Does this work? It must be confirmed
+                    //          Sec2F must be reest if this works.
+                    //
+                    timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
+                    //
+                    output.isUserActionDisabled = false
+                }
+                audioHandler.startPlayer2()
+            }
+            .store(in: &cancellables)
         
         self.input = input
         self.binding = binding
         self.output = output
         self.timeViewModel = timeViewModel
+        self.audioHandler = audioHandler
 
     }
     
