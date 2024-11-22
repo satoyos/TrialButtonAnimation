@@ -76,4 +76,25 @@ final class Sec2FViewModelTests_toreta: XCTestCase {
             .store(in: &cancellables)
         wait(for: [expectation], timeout: 0.1)
     }
+    
+    func testWhenGettingRequestToResetSecTextChangesToGivenTime() {
+        // given
+        let viewModel = Sec2FViewModel(startTime: 0.1, interval: 0.02)
+        // when
+        viewModel.input.startTimerRequest.send()
+        // then
+        let expectation1 = XCTestExpectation(description: "Count down completed")
+        viewModel.output.$secText
+            .sink { text in
+                if text == "0.00" {
+                    expectation1.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation1], timeout: 0.15)
+        // when
+        viewModel.input.resetTimerRequest.send(1.0)
+        // then
+        XCTAssertEqual(viewModel.output.secText, "1.00")
+    }
 }

@@ -11,8 +11,8 @@ final class Sec2FViewModel: ViewModelObject {
     
     final class Input: InputObject {
         let startTimerRequest = PassthroughSubject<Void, Never>()
-        
-        let stopTimerRequest = PassthroughSubject<Void, Never>()
+//        let stopTimerRequest = PassthroughSubject<Void, Never>()
+        let resetTimerRequest = PassthroughSubject<Double, Never>()
     }
     
     final class Binding: BindingObject { }
@@ -51,6 +51,12 @@ final class Sec2FViewModel: ViewModelObject {
         input.startTimerRequest
             .sink { _ in
                 timer.start()
+            }
+            .store(in: &cancellables)
+        
+        input.resetTimerRequest
+            .sink { newTime in
+                timer.reset(to: newTime)
             }
             .store(in: &cancellables)
         

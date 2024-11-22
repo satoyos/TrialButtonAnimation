@@ -67,12 +67,7 @@ final class DurationSettingViewModel: ViewModelObject {
             .filter { $0 == false }
             .sink { _ in
                 audioHandler.player2FinishedAction = {
-                    //
-                    // ToDo: ↓↓ Does this work? It must be confirmed
-                    //          Sec2F must be reest if this works.
-                    //
-                    timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
-                    //
+                    timeViewModel.input.resetTimerRequest.send(startTime)                    
                     output.isUserActionDisabled = false
                 }
                 audioHandler.startPlayer2()

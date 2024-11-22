@@ -75,4 +75,14 @@ final class CountDownTimerTests: XCTestCase {
         wait(for: [expectation3], timeout: 0.4)
         
     }
+    
+    func testWhehGettingRequestToRestTimerMustGetRest() {
+        // given
+        let timer = CountDownTimer(startTime: 0.3, intarval: 0.02)
+        // when
+        timer.start()
+        timer.reset(to: 1.0)
+        // then
+        XCTAssertEqual(timer.remainTime, 1.0)
+    }
 }

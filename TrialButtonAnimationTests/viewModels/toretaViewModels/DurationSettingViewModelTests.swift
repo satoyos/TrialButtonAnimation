@@ -91,19 +91,25 @@ final class DurationSettingViewModelTests: XCTestCase {
         wait(for: [expectation], timeout: 0.1)
     }
  
-    func testWhenPlayer2FinishedUserActionsGetEnabled() {
+    func testWhenPlayer2FinishedUserActionsGetEnabledAndTimeLabelMustBeReset() {
         let viewModel = DurationSettingViewModel(startTime: 0.2)
+        // then
+        XCTAssertEqual(viewModel.output.secText, "0.20")
         // when
         viewModel.input.startTrialCountDownRequest.send()
         // then
-        let expectation = XCTestExpectation(description: "User action gets back enabled")
+        let expectation1 = XCTestExpectation(description: "User action gets back enabled")
+        let expectation2 = XCTestExpectation(description: "Time label must be reset")
         viewModel.output.$isUserActionDisabled
             .print("in Test")
             .filter { $0 == false }
             .sink { _ in
-                expectation.fulfill()
+                expectation1.fulfill()
+                if viewModel.output.secText == "0.20" {
+                    expectation2.fulfill()
+                }
             }
             .store(in: &cancellables)
-        wait(for: [expectation], timeout: 20)
+        wait(for: [expectation1, expectation2], timeout: 20)
     }
 }
