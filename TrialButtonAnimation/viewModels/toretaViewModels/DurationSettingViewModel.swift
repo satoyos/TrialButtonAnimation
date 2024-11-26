@@ -14,7 +14,8 @@ final class DurationSettingViewModel: ViewModelObject {
     }
     
     final class Binding: BindingObject {
-        
+        // セットするDuration
+        @Published var startTime: Double = 0.0
     }
     
     final class Output: OutputObject {
@@ -26,7 +27,7 @@ final class DurationSettingViewModel: ViewModelObject {
     let input: Input
     @BindableObject private(set) var binding: Binding
     let output: Output
-    private var timeViewModel: Sec2FViewModel
+    private(set) var timeViewModel: Sec2FViewModel
     private let audioHandler: DurationSettingAudioHandler
     
     private var cancellables: Set<AnyCancellable> = []
@@ -35,7 +36,7 @@ final class DurationSettingViewModel: ViewModelObject {
         let input = Input()
         let binding = Binding()
         let output = Output()
-        var timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
+        let timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
         let audioHandler = DurationSettingAudioHandler()
         
         timeViewModel.output.$secText
@@ -71,6 +72,13 @@ final class DurationSettingViewModel: ViewModelObject {
                     output.isUserActionDisabled = false
                 }
                 audioHandler.startPlayer2()
+            }
+            .store(in: &cancellables)
+        
+        binding.$startTime
+            .dropFirst()
+            .sink { time in
+                timeViewModel.input.resetTimerRequest.send(time)
             }
             .store(in: &cancellables)
         

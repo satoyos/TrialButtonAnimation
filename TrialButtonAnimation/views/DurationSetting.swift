@@ -8,29 +8,33 @@
 import SwiftUI
 
 struct DurationSetting {
-    @State private var sliderValue: Double = 2.0
+    @ObservedObject private var viewModel: DurationSettingViewModel
+    @EnvironmentObject var screenSizeStore: ScreenSizeStore
+
+    init(startTime: Double) {
+        self.viewModel = DurationSettingViewModel(startTime: startTime)
+    }
 }
 
 extension DurationSetting: View {
     var body: some View {
-        VStack {
-            let sec2fViewModel = Sec2FViewModel(startTime: sliderValue, interval: 0.02)
-            Sec2F(digitSize: 100, viewModel: sec2fViewModel)
-            Slider(value: Binding(
-                get: {
-                    sliderValue
-                }, set: { newValue in
-                    self.sliderValue = newValue
-                }), in: 1.5 ... 3.0, step: 0.02 )
+        VStack(spacing: digitSize / 4) {
+            Sec2F(digitSize: 100, viewModel: viewModel.timeViewModel)
+            Slider(value: viewModel.$binding.startTime, in: 1.5 ... 3.0, step: 0.02 )
         
                 .padding(.horizontal)
             Button("試しに聞いてみる") {
-                sec2fViewModel.input.startTimerRequest.send()
+                viewModel.input.startTrialCountDownRequest.send()
             }
         }
+    }
+    
+    private var digitSize: Double {
+        screenSizeStore.screenWidth / 5.0
     }
 }
 
 #Preview {
-    DurationSetting()
+    DurationSetting(startTime: 2.1)
+        .environmentObject(ScreenSizeStore())
 }

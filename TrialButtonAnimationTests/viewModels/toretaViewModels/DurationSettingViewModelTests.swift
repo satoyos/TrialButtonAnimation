@@ -112,4 +112,16 @@ final class DurationSettingViewModelTests: XCTestCase {
             .store(in: &cancellables)
         wait(for: [expectation1, expectation2], timeout: 20)
     }
+    
+    func testChangingStartTimeMakesSecTimerChange() {
+        // given
+        let viewModel = DurationSettingViewModel(startTime: 2.0)
+        // then
+        XCTAssertEqual(viewModel.output.secText, "2.00")
+        // when
+        viewModel.binding.startTime = 1.0
+        // then
+        XCTAssertEqual(viewModel.output.secText, "1.00")
+        
+    }
 }
