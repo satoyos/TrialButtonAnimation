@@ -39,6 +39,8 @@ final class DurationSettingViewModel: ViewModelObject {
         let timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
         let audioHandler = DurationSettingAudioHandler()
         
+        binding.startTime = startTime
+        
         timeViewModel.output.$secText
             .assign(to: \.secText, on: output)
             .store(in: &cancellables)
@@ -68,7 +70,7 @@ final class DurationSettingViewModel: ViewModelObject {
             .filter { $0 == false }
             .sink { _ in
                 audioHandler.player2FinishedAction = {
-                    timeViewModel.input.resetTimerRequest.send(startTime)                    
+                    timeViewModel.input.resetTimerRequest.send(binding.startTime)                    
                     output.isUserActionDisabled = false
                 }
                 audioHandler.startPlayer2()

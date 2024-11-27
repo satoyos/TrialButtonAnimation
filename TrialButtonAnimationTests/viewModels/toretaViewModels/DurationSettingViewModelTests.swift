@@ -17,6 +17,7 @@ final class DurationSettingViewModelTests: XCTestCase {
         let viewModel = DurationSettingViewModel(startTime: 2.0)
         // then
         XCTAssertEqual(viewModel.output.secText, "2.00")
+        XCTAssertEqual(viewModel.binding.startTime, 2.0)
     }
 
     func testWhenTimerStartsSecLabelChanges() {
