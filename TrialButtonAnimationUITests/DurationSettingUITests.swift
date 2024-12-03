@@ -36,5 +36,24 @@ final class DurationSettingUITests: XCTestCase {
         waitToAppear(for: app.staticTexts["0.00"], timeout: 10.0)
     }
     
+    func testWhenDurationChangedWithSliderAndBackToParentViewDurationValueGetChanged() {
+        // when
+        let cell = app.cells.staticTexts["歌の間隔"].firstMatch
+        cell.tap()
+        // then
+        let slider = app.sliders.firstMatch
+        XCTAssert(slider.exists)
+        // when
+        slider.adjust(toNormalizedSliderPosition: 0.00)
+        // then
+        XCTAssert(app.staticTexts["0.50"].exists)
+        // when
+        let backButton = app.buttons["Back"]
+        backButton.tap()
+        // then
+        XCTAssert(cell.exists)
+        let durationLabel = cell.staticTexts["0.50"]
+        XCTAssert(durationLabel.exists)
+    }
     
 }
