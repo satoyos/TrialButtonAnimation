@@ -10,8 +10,6 @@
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
-		9236F9F42C7B10960091F1E3 /* SecTimerWithButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236F9F32C7B10960091F1E3 /* SecTimerWithButton.swift */; };
-		9236F9F62C7B12E10091F1E3 /* SecTimerWithButton.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236F9F52C7B12E10091F1E3 /* SecTimerWithButton.ViewModel.swift */; };
 		926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
@@ -75,7 +73,6 @@
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
-		92F98F792C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,8 +97,6 @@
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
-		9236F9F32C7B10960091F1E3 /* SecTimerWithButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButton.swift; sourceTree = "<group>"; };
-		9236F9F52C7B12E10091F1E3 /* SecTimerWithButton.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButton.ViewModel.swift; sourceTree = "<group>"; };
 		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
@@ -169,7 +164,6 @@
 		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
-		92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,7 +270,6 @@
 				92A9B53E2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift */,
 				92A9B5482C54872C00BEF03B /* MinSecViewModelTests.swift */,
 				92A9B54E2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift */,
-				92F98F782C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift */,
 				92967FF22C8D48FF00493989 /* MenuRowViewModelTests.swift */,
 			);
 			path = viewModels;
@@ -296,7 +289,6 @@
 				92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */,
 				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
 				92FDCC202C7497DF00B77262 /* Sec2F.swift */,
-				9236F9F32C7B10960091F1E3 /* SecTimerWithButton.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -308,7 +300,6 @@
 				92A9B54A2C5487EA00BEF03B /* MinSec.ViewModel.swift */,
 				92A9B5402C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift */,
 				92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */,
-				9236F9F52C7B12E10091F1E3 /* SecTimerWithButton.ViewModel.swift */,
 				92967FF42C8D49A900493989 /* MenuRow.ViewModel.swift */,
 			);
 			path = viewModels;
@@ -569,7 +560,6 @@
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
 				92A9B54B2C5487EA00BEF03B /* MinSec.ViewModel.swift in Sources */,
 				92967FD22C8D359300493989 /* RecitingConfig.swift in Sources */,
-				9236F9F62C7B12E10091F1E3 /* SecTimerWithButton.ViewModel.swift in Sources */,
 				92967FFB2C8D91D800493989 /* MenuList.swift in Sources */,
 				92967FE42C8D366A00493989 /* Array+Diff.swift in Sources */,
 				92967FCD2C8D359300493989 /* SelectedState100.swift in Sources */,
@@ -585,7 +575,6 @@
 				928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */,
 				92967FF52C8D49A900493989 /* MenuRow.ViewModel.swift in Sources */,
 				926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */,
-				9236F9F42C7B10960091F1E3 /* SecTimerWithButton.swift in Sources */,
 				92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */,
 				92967FF92C8D8FBA00493989 /* MenuDataSource.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
@@ -626,7 +615,6 @@
 				92967FF32C8D48FF00493989 /* MenuRowViewModelTests.swift in Sources */,
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
-				92F98F792C82E95A003E57D1 /* SecTimerWithButtonViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
