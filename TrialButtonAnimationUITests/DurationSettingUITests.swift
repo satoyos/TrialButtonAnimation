@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class SecTimerWithButtonUITests: XCTestCase {
+final class DurationSettingUITests: XCTestCase {
     let app = XCUIApplication()
 
     override func setUpWithError() throws {

@@ -17,7 +17,7 @@
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
 		928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB842BF77C02001E28E2 /* Assets.xcassets */; };
 		928FEB882BF77C02001E28E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 928FEB872BF77C02001E28E2 /* Preview Assets.xcassets */; };
-		92967FB42C85C92800493989 /* SecTimerWithButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FB32C85C92800493989 /* SecTimerWithButtonUITests.swift */; };
+		92967FB42C85C92800493989 /* DurationSettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FB32C85C92800493989 /* DurationSettingUITests.swift */; };
 		92967FB72C85CB7B00493989 /* WaitInUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FB62C85CB7B00493989 /* WaitInUITest.swift */; };
 		92967FCD2C8D359300493989 /* SelectedState100.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FBD2C8D359200493989 /* SelectedState100.swift */; };
 		92967FCE2C8D359300493989 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92967FBE2C8D359200493989 /* GameConfig.swift */; };
@@ -109,7 +109,7 @@
 		928FEB842BF77C02001E28E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		928FEB872BF77C02001E28E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		928FEB8D2BF77C02001E28E2 /* TrialButtonAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92967FB32C85C92800493989 /* SecTimerWithButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTimerWithButtonUITests.swift; sourceTree = "<group>"; };
+		92967FB32C85C92800493989 /* DurationSettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSettingUITests.swift; sourceTree = "<group>"; };
 		92967FB62C85CB7B00493989 /* WaitInUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitInUITest.swift; sourceTree = "<group>"; };
 		92967FBD2C8D359200493989 /* SelectedState100.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedState100.swift; sourceTree = "<group>"; };
 		92967FBE2C8D359200493989 /* GameConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
@@ -413,7 +413,7 @@
 				9296800E2C97FDC300493989 /* pages */,
 				92967FB52C85CB4D00493989 /* protocols */,
 				92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */,
-				92967FB32C85C92800493989 /* SecTimerWithButtonUITests.swift */,
+				92967FB32C85C92800493989 /* DurationSettingUITests.swift */,
 				9296800C2C97FB3E00493989 /* LaunchPageUITests.swift */,
 			);
 			path = TrialButtonAnimationUITests;
@@ -636,7 +636,7 @@
 			files = (
 				92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */,
 				92967FB72C85CB7B00493989 /* WaitInUITest.swift in Sources */,
-				92967FB42C85C92800493989 /* SecTimerWithButtonUITests.swift in Sources */,
+				92967FB42C85C92800493989 /* DurationSettingUITests.swift in Sources */,
 				9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

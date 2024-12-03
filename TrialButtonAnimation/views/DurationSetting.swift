@@ -20,7 +20,7 @@ extension DurationSetting: View {
     var body: some View {
         VStack(spacing: digitSize / 4) {
             Sec2F(digitSize: 100, viewModel: viewModel.timeViewModel)
-            Slider(value: viewModel.$binding.startTime, in: 1.5 ... 3.0, step: 0.02 )
+            Slider(value: viewModel.$binding.startTime, in: 0.5 ... 2.0, step: 0.02 )
         
                 .padding(.horizontal)
             Button("試しに聞いてみる") {
@@ -35,6 +35,6 @@ extension DurationSetting: View {
 }
 
 #Preview {
-    DurationSetting(startTime: 2.1)
+    DurationSetting(startTime: 1.1)
         .environmentObject(ScreenSizeStore())
 }

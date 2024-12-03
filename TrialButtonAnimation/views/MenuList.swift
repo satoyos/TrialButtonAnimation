@@ -30,9 +30,9 @@ extension MenuList: View {
         )
     }
     
-    private var navLinkToSecTimerWithButton: NavigationLink<MenuRow, SecTimerWithButton> {
+    private var navLinkToSecTimerWithButton: NavigationLink<MenuRow, DurationSetting> {
         NavigationLink(
-            destination: SecTimerWithButton(startTime: Double(settings.interval)),
+            destination: DurationSetting(startTime: Double(settings.interval)),
             label: {
                 let item = MenuItem(title: "歌の間隔", value: Double(settings.interval))
                 MenuRow(viewModel: .init(item: item))
