@@ -1,10 +1,19 @@
 import SwiftUI
+import Combine
 
 struct MenuList {
-    private let settings: Settings
+    @ObservedObject private var settingsWrapper: SettingsPublishingWrapper
+    private var cancellables = Set<AnyCancellable>()
     
     init(settings: Settings) {
-        self.settings = settings
+        self.settingsWrapper = SettingsPublishingWrapper(settings: settings)
+        
+//        settingsWrapper.somethingChanged
+//            .print("IN PIPELINE")
+//            .sink { [self] _ in print("settingsWrapper.interval -> \(self.settingsWrapper.interval)")
+//            }
+//            .store(in: &cancellables)
+        
     }
 }
 
@@ -32,9 +41,9 @@ extension MenuList: View {
     
     private var navLinkToSecTimerWithButton: NavigationLink<MenuRow, DurationSetting> {
         NavigationLink(
-            destination: DurationSetting(startTime: Double(settings.interval)),
+            destination: DurationSetting(startTime: Double(settingsWrapper.interval), settingsWrapper: settingsWrapper),
             label: {
-                let item = MenuItem(title: "歌の間隔", value: Double(settings.interval))
+                let item = MenuItem(title: "歌の間隔", value: Double(settingsWrapper.interval))
                 MenuRow(viewModel: .init(item: item))
             }
         )

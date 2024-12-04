@@ -10,9 +10,11 @@ import SwiftUI
 struct DurationSetting {
     @ObservedObject private var viewModel: DurationSettingViewModel
     @EnvironmentObject var screenSizeStore: ScreenSizeStore
+    private let settingsWrapper: SettingsPublishingWrapper
 
-    init(startTime: Double) {
+    init(startTime: Double, settingsWrapper: SettingsPublishingWrapper = SettingsPublishingWrapper(settings: Settings())) {
         self.viewModel = DurationSettingViewModel(startTime: startTime)
+        self.settingsWrapper = settingsWrapper
     }
 }
 
@@ -26,6 +28,9 @@ extension DurationSetting: View {
             Button("試しに聞いてみる") {
                 viewModel.input.startTrialCountDownRequest.send()
             }
+        }
+        .onDisappear {
+            settingsWrapper.interval = Float(viewModel.binding.startTime)
         }
     }
     

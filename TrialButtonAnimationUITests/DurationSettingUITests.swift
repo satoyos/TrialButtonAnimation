@@ -52,7 +52,7 @@ final class DurationSettingUITests: XCTestCase {
         backButton.tap()
         // then
         XCTAssert(cell.exists)
-        let durationLabel = cell.staticTexts["0.50"]
+        let durationLabel = app.staticTexts["0.50"]
         XCTAssert(durationLabel.exists)
     }
     
