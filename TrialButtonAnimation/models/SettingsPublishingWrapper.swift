@@ -8,7 +8,6 @@
 import Combine
 
 final class SettingsPublishingWrapper: ObservableObject {
-    @Published private(set) var somethingChanged = PassthroughSubject<Void, Never>()
     private let settings: Settings
     
     init(settings: Settings) {
@@ -21,7 +20,6 @@ final class SettingsPublishingWrapper: ObservableObject {
         }
         set(t) {
             settings.interval = t
-            somethingChanged.send()
             objectWillChange.send()
         }
     }

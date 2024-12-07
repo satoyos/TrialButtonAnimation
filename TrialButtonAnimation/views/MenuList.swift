@@ -8,12 +8,6 @@ struct MenuList {
     init(settings: Settings) {
         self.settingsWrapper = SettingsPublishingWrapper(settings: settings)
         
-//        settingsWrapper.somethingChanged
-//            .print("IN PIPELINE")
-//            .sink { [self] _ in print("settingsWrapper.interval -> \(self.settingsWrapper.interval)")
-//            }
-//            .store(in: &cancellables)
-        
     }
 }
 

@@ -24,7 +24,7 @@ final class SettingsPublishingWrapperTests: XCTestCase {
         let settings = Settings()
         let wrapper = SettingsPublishingWrapper(settings: settings)
         var notified = false
-        wrapper.somethingChanged
+        wrapper.objectWillChange
             .print("In Pipline")
             .sink { _ in
                 notified = true
