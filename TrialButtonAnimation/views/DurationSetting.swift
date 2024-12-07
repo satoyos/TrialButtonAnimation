@@ -10,11 +10,11 @@ import SwiftUI
 struct DurationSetting {
     @ObservedObject private var viewModel: DurationSettingViewModel
     @EnvironmentObject var screenSizeStore: ScreenSizeStore
-    private let settingsWrapper: SettingsPublishingWrapper
+    private let settings: Settings
 
-    init(startTime: Double, settingsWrapper: SettingsPublishingWrapper = SettingsPublishingWrapper(settings: Settings())) {
+    init(startTime: Double, settings: Settings = .init()) {
         self.viewModel = DurationSettingViewModel(startTime: startTime)
-        self.settingsWrapper = settingsWrapper
+        self.settings = settings
     }
 }
 
@@ -30,7 +30,7 @@ extension DurationSetting: View {
             }
         }
         .onDisappear {
-            settingsWrapper.interval = Float(viewModel.binding.startTime)
+            settings.interval = Float(viewModel.binding.startTime)
         }
     }
     

@@ -10,8 +10,6 @@
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
-		926646282D004AB0008319B1 /* SettingsPublishingWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926646272D004AB0008319B1 /* SettingsPublishingWrapperTests.swift */; };
-		9266462A2D004B38008319B1 /* SettingsPublishingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926646292D004B2C008319B1 /* SettingsPublishingWrapper.swift */; };
 		926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
@@ -99,8 +97,6 @@
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
-		926646272D004AB0008319B1 /* SettingsPublishingWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPublishingWrapperTests.swift; sourceTree = "<group>"; };
-		926646292D004B2C008319B1 /* SettingsPublishingWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPublishingWrapper.swift; sourceTree = "<group>"; };
 		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
@@ -263,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */,
-				926646272D004AB0008319B1 /* SettingsPublishingWrapperTests.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -313,7 +308,6 @@
 		92967FBC2C8C4B9400493989 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				926646292D004B2C008319B1 /* SettingsPublishingWrapper.swift */,
 				92967FC92C8D359300493989 /* Bool100.swift */,
 				92967FCA2C8D359300493989 /* DigitsNumberFactory.swift */,
 				92967FC02C8D359200493989 /* FiveColors.swift */,
@@ -556,7 +550,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9266462A2D004B38008319B1 /* SettingsPublishingWrapper.swift in Sources */,
 				9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */,
 				92967FD42C8D359300493989 /* StoreManager.swift in Sources */,
 				92967FE62C8D366A00493989 /* Array+Shuffled.swift in Sources */,
@@ -616,7 +609,6 @@
 			files = (
 				929DB8C62CE9DE3B00609B7B /* DurationSettingAudioHandlerTests.swift in Sources */,
 				92A9B54F2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift in Sources */,
-				926646282D004AB0008319B1 /* SettingsPublishingWrapperTests.swift in Sources */,
 				929DB8C22CE3737400609B7B /* DurationSettingViewModelTests.swift in Sources */,
 				92A9B5492C54872C00BEF03B /* MinSecViewModelTests.swift in Sources */,
 				92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */,
