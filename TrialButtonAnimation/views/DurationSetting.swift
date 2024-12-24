@@ -12,7 +12,7 @@ struct DurationSetting {
     @EnvironmentObject var screenSizeStore: ScreenSizeStore
     private let settings: Settings
     
-    @Environment(\.isPresented) var isPresented
+    @Environment(\.isPresented) private var isPresented
 
     init(startTime: Double, settings: Settings = .init()) {
         self.viewModel = DurationSettingViewModel(startTime: startTime)
