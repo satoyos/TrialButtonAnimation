@@ -32,6 +32,7 @@ extension DurationSetting: View {
             }
         }
         .onChange(of: isPresented) {
+            guard !isPresented else { return }
             settings.interval = Float(viewModel.binding.startTime)
         }
     }
