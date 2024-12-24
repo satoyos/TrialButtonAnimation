@@ -11,6 +11,8 @@ struct DurationSetting {
     @ObservedObject private var viewModel: DurationSettingViewModel
     @EnvironmentObject var screenSizeStore: ScreenSizeStore
     private let settings: Settings
+    
+    @Environment(\.isPresented) var isPresented
 
     init(startTime: Double, settings: Settings = .init()) {
         self.viewModel = DurationSettingViewModel(startTime: startTime)
@@ -29,7 +31,7 @@ extension DurationSetting: View {
                 viewModel.input.startTrialCountDownRequest.send()
             }
         }
-        .onDisappear {
+        .onChange(of: isPresented) {
             settings.interval = Float(viewModel.binding.startTime)
         }
     }
