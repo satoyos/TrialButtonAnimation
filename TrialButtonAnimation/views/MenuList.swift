@@ -18,7 +18,8 @@ extension MenuList: View {
             // 複雑なことはやめて、メニューの中身はここに書く！
             Section(header: Text("画面")) {
                 navLinkToMemorizeTimer
-                navLinkToSecTimerWithButton
+                navLinkToInterPoemDurationSetting
+                NavLinkToKamiShimoDurationSetting
             }
         }
     }
@@ -33,7 +34,7 @@ extension MenuList: View {
         )
     }
     
-    private var navLinkToSecTimerWithButton: NavigationLink<MenuRow, InterPoemDurationSetting> {
+    private var navLinkToInterPoemDurationSetting: NavigationLink<MenuRow, InterPoemDurationSetting> {
         NavigationLink(
             destination: InterPoemDurationSetting(durationType: .twoPoems, startTime: Double(settings.interval), settings: settings),
             label: {
@@ -41,6 +42,15 @@ extension MenuList: View {
                 MenuRow(viewModel: .init(item: item))
             }
         )
+    }
+    
+    private var NavLinkToKamiShimoDurationSetting: NavigationLink<MenuRow, KamiShimoDurationSetting> {
+        NavigationLink(
+            destination: KamiShimoDurationSetting(durationType: .kamiShimo, startTime: Double(settings.kamiShimoInterval), settings: settings),
+            label: {
+                let item = MenuItem(title: "上の句と下の句の間隔", value: Double(settings.kamiShimoInterval))
+                MenuRow(viewModel: .init(item: item))
+            })
     }
 }
 

@@ -73,6 +73,7 @@ final class Settings: Codable, ObservableObject {
             return recitingConfig.kamiShimoInterval
         }
         set(t) {
+            objectWillChange.send()
             recitingConfig.kamiShimoInterval = t
         }
     }
