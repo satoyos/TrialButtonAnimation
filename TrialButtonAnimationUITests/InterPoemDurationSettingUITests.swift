@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class DurationSettingUITests: XCTestCase {
+final class InterPoemDurationSettingUITests: XCTestCase {
     let app = XCUIApplication()
 
     override func setUpWithError() throws {
