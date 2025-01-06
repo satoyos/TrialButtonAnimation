@@ -1,6 +1,6 @@
 //
 //  DurationSettingViewModel.swift
-//  TrialButtonAnimation
+//  Shuffle100
 //
 //  Created by Yoshifumi Sato on 2024/11/12.
 //
@@ -29,15 +29,20 @@ final class DurationSettingViewModel: ViewModelObject {
     let output: Output
     private(set) var timeViewModel: Sec2FViewModel
     private let audioHandler: DurationSettingAudioHandler
-    
     private var cancellables: Set<AnyCancellable> = []
     
-    init(startTime: Double) {
+    init(durationType: DurationSettingType,
+         startTime: Double,
+         singer: Singer = Singers.defaultSinger) {
         let input = Input()
         let binding = Binding()
         let output = Output()
         let timeViewModel = Sec2FViewModel(startTime: startTime, interval: 0.02)
-        let audioHandler = DurationSettingAudioHandler()
+        let (halfPoem1, halfPoem2) = durationType.halfPoems
+        let audioHandler = DurationSettingAudioHandler(
+                halfPoem1: halfPoem1,
+                halfPoem2: halfPoem2,
+                folderPath: singer.path)
         
         binding.startTime = startTime
         
@@ -91,7 +96,4 @@ final class DurationSettingViewModel: ViewModelObject {
         self.audioHandler = audioHandler
 
     }
-    
-    
-
 }

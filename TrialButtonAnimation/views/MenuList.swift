@@ -33,9 +33,9 @@ extension MenuList: View {
         )
     }
     
-    private var navLinkToSecTimerWithButton: NavigationLink<MenuRow, DurationSetting> {
+    private var navLinkToSecTimerWithButton: NavigationLink<MenuRow, InterPoemDurationSetting> {
         NavigationLink(
-            destination: DurationSetting(startTime: Double(settings.interval), settings: settings),
+            destination: InterPoemDurationSetting(durationType: .twoPoems, startTime: Double(settings.interval), settings: settings),
             label: {
                 let item = MenuItem(title: "歌の間隔", value: Double(settings.interval))
                 MenuRow(viewModel: .init(item: item))
