@@ -33,7 +33,7 @@ extension KamiShimoDurationSetting: View {
         }
     }
     
-    private func reflectSliderValueToSettings() {
+    func reflectSliderValueToSettings() {
         settings.kamiShimoInterval = Float(viewModel.binding.startTime)
     }
 }

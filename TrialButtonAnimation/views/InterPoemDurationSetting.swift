@@ -32,7 +32,7 @@ extension InterPoemDurationSetting: View {
         }
     }
     
-    private func reflectSliderValueToSettings() {
+    func reflectSliderValueToSettings() {
         settings.interval = Float(viewModel.binding.startTime)
     }
 }
