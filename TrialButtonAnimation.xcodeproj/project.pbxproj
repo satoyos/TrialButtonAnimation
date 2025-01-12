@@ -310,6 +310,7 @@
 		92967FBA2C8C4ADA00493989 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				925648D42D32518200688D8B /* DurationSetting.swift */,
 				925648B72D2BC24B00688D8B /* InterPoemDurationSetting.swift */,
 				925648B82D2BC24B00688D8B /* KamiShimoDurationSetting.swift */,
 				92D934122C42131900E3B9E5 /* CircleView.swift */,
@@ -322,7 +323,6 @@
 				92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */,
 				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
 				92FDCC202C7497DF00B77262 /* Sec2F.swift */,
-				925648D42D32518200688D8B /* DurationSetting.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
