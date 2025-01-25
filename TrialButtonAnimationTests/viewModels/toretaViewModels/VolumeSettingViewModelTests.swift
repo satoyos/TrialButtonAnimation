@@ -16,6 +16,7 @@ final class VolumeSettingViewModelTests: XCTestCase {
         let viewModel = VolumeSettingViewModel(volume: 0.5)
         
         XCTAssertEqual(viewModel.binding.volume, 0.5)
+        XCTAssertEqual(viewModel.output.ratioText, " 50")
     }
 
 }

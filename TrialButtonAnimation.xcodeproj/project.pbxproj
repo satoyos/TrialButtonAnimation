@@ -80,6 +80,7 @@
 		92C0DA182C660DC1004C8966 /* AudioPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */; };
 		92C0DA292C6629EF004C8966 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 92C0DA282C6629EF004C8966 /* audio */; };
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
+		92CD114E2D44D9BC007788D2 /* VolumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
@@ -180,6 +181,7 @@
 		92C0DA282C6629EF004C8966 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
+		92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSetting.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
@@ -235,7 +237,9 @@
 				92C0DA2F2C674971004C8966 /* TrialButtonAnimationUITests */,
 				928FEB7E2BF77C01001E28E2 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		928FEB7E2BF77C01001E28E2 /* Products */ = {
 			isa = PBXGroup;
@@ -327,6 +331,7 @@
 				92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */,
 				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
 				92FDCC202C7497DF00B77262 /* Sec2F.swift */,
+				92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				92967FD22C8D359300493989 /* RecitingConfig.swift in Sources */,
 				92967FFB2C8D91D800493989 /* MenuList.swift in Sources */,
 				92967FE42C8D366A00493989 /* Array+Diff.swift in Sources */,
+				92CD114E2D44D9BC007788D2 /* VolumeSetting.swift in Sources */,
 				92967FCD2C8D359300493989 /* SelectedState100.swift in Sources */,
 				92967FD62C8D359300493989 /* PoemSupplier.swift in Sources */,
 				925648D52D32518200688D8B /* DurationSetting.swift in Sources */,
