@@ -81,6 +81,7 @@
 		92C0DA292C6629EF004C8966 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 92C0DA282C6629EF004C8966 /* audio */; };
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
 		92CD114E2D44D9BC007788D2 /* VolumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */; };
+		92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
@@ -182,6 +183,7 @@
 		92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSetting.swift; sourceTree = "<group>"; };
+		92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModelFixture.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		925648CB2D2BC86E00688D8B /* fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */,
 				925648CA2D2BC86E00688D8B /* DurationSettingViewModel+Fixtures.swift */,
 			);
 			path = fixtures;
@@ -669,6 +672,7 @@
 				92967FF32C8D48FF00493989 /* MenuRowViewModelTests.swift in Sources */,
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
 				925648C82D2BC84200688D8B /* DurationSettingViewModelTests.swift in Sources */,
+				92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */,
 				925648C92D2BC84200688D8B /* DurationSettingAudioHandlerTests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
 				925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */,

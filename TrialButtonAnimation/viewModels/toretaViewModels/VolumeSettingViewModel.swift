@@ -9,10 +9,12 @@ import Combine
 
 final class VolumeSettingViewModel: ViewModelObject {
   final class Input: InputObject {
+    let startTestRecitingRequest = PassthroughSubject<Void, Never>()
   }
   
   final class Output: OutputObject {
-    @Published var ratioText = "0"
+    @Published fileprivate(set) var ratioText = "0"
+    @Published fileprivate(set) var isButtonDisabled = false
   }
   
   final class Binding: BindingObject {
@@ -31,11 +33,16 @@ final class VolumeSettingViewModel: ViewModelObject {
     let output = Output()
     
     binding.volume = volume
-//    output.ratioText = Self.percentStrOf(ratio: volume)
     
     binding.$volume
       .map { Self.percentStrOf(ratio: $0) }
       .assign(to: \.ratioText, on: output)
+      .store(in: &cancellables)
+    
+    input.startTestRecitingRequest
+      .sink { _ in
+        output.isButtonDisabled = true
+      }
       .store(in: &cancellables)
     
     self.input = input

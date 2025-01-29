@@ -33,12 +33,23 @@ extension VolumeSetting: View {
       }
       Text("%")
         .font(.system(size: unitSize, weight: .medium))
-      
-      
     }
+    .padding()
+    
+    Slider(value: viewModel.$binding.volume, in: 0.01 ... 1.0, step: 0.01)
+      .padding(.horizontal)
+    
+    Button("試しに聞いてみる") {
+      viewModel.input.startTestRecitingRequest.send()
+    }
+    .buttonStyle(.borderedProminent)
+    .foregroundStyle(Color.white)
+    .padding(.top)
+    .disabled(viewModel.output.isButtonDisabled)
+    
   }
 }
 
 #Preview {
-  VolumeSetting(volume: 1)
+  VolumeSetting(volume: 0.5)
 }
