@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct VolumeSetting {
-  let digitSize: CGFloat
-  let unitSize: CGFloat
   @ObservedObject private var viewModel: VolumeSettingViewModel
+  @EnvironmentObject var screenSizeStore: ScreenSizeStore
   
-  init(digitSize: CGFloat    = 100, volume: Double) {
-    self.viewModel = .init(volume: volume)
-    self.digitSize = digitSize
-    self.unitSize = digitSize / 4
+  init(viewModel: VolumeSettingViewModel) {
+    self.viewModel = viewModel
   }
 }
 
@@ -32,7 +29,7 @@ extension VolumeSetting: View {
           .font(.system(size: digitSize, weight: .medium))
       }
       Text("%")
-        .font(.system(size: unitSize, weight: .medium))
+        .font(.system(size: digitSize / 4, weight: .medium))
     }
     .padding()
     
@@ -48,8 +45,15 @@ extension VolumeSetting: View {
     .disabled(viewModel.output.isButtonDisabled)
     
   }
+  
+  private var digitSize: Double {
+      screenSizeStore.screenWidth / 5.0
+  }
 }
 
 #Preview {
-  VolumeSetting(volume: 0.5)
+  VolumeSetting(viewModel: .init(
+    volume: 0.5,
+    singer: Singers.defaultSinger))
+    .environmentObject(ScreenSizeStore())
 }

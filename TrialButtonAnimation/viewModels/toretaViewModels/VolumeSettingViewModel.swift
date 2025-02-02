@@ -24,13 +24,18 @@ final class VolumeSettingViewModel: ViewModelObject {
   let input: Input
   @BindableObject private(set) var binding: Binding
   let output: Output
-  
+  private let audioHandler: DurationSettingAudioHandler
+
   private var cancellables: Set<AnyCancellable> = []
   
-  init(volume: Double) {
+  init(volume: Double, singer: Singer) {
     let input = Input()
     let binding = Binding()
     let output = Output()
+    let audioHandler = DurationSettingAudioHandler(
+      halfPoem1: .h001a, halfPoem2: .h001b, folderPath: singer.path
+    )
+    
     
     binding.volume = volume
     
@@ -39,15 +44,26 @@ final class VolumeSettingViewModel: ViewModelObject {
       .assign(to: \.ratioText, on: output)
       .store(in: &cancellables)
     
+    binding.$volume
+      .sink { vol in
+        audioHandler.player1.volume = Float(vol)
+      }
+      .store(in: &cancellables)
+    
     input.startTestRecitingRequest
       .sink { _ in
         output.isButtonDisabled = true
+        audioHandler.player1FinishedAction = {
+          output.isButtonDisabled = false
+        }
+        audioHandler.startPlayer1()
       }
       .store(in: &cancellables)
     
     self.input = input
     self.binding = binding
     self.output = output
+    self.audioHandler = audioHandler
   }
   
   private static func percentStrOf(ratio: Double) -> String {

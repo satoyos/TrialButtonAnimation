@@ -8,7 +8,13 @@
 @testable import TrialButtonAnimation
 
 extension VolumeSettingViewModel {
-  static func fixture(volume: Double = 0.8) -> VolumeSettingViewModel {
-    .init(volume: volume)
+  static func fixture(
+    volume: Double = 0.8,
+    singer: Singer = Singers.defaultSinger
+  ) -> VolumeSettingViewModel {
+    .init(
+      volume: volume,
+      singer: singer
+    )
   }
 }

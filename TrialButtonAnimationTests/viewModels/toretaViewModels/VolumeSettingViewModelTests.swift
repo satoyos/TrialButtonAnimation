@@ -14,7 +14,7 @@ final class VolumeSettingViewModelTests: XCTestCase {
   
     func testInitViewModel() {
         // given
-        let viewModel = VolumeSettingViewModel(volume: 0.5)
+      let viewModel = VolumeSettingViewModel.fixture(volume: 0.5)
         
         XCTAssertEqual(viewModel.binding.volume, 0.5)
         XCTAssertEqual(viewModel.output.ratioText, " 50")
@@ -47,15 +47,15 @@ final class VolumeSettingViewModelTests: XCTestCase {
     
     // ToDo: Implement Production code to pass the test below.
     
-//    let expectation = XCTestExpectation(description: "'isButtonDisabled' flag turns back to false")
-//    viewModel.output.$isButtonDisabled
-//      .dropFirst()
-//      .sink { bool in
-//        XCTAssertFalse(bool)
-//        expectation.fulfill()
-//      }
-//      .store(in: &cancellables)
-//    wait(for: [expectation], timeout: 4.0)
+    let expectation = XCTestExpectation(description: "'isButtonDisabled' flag turns back to false")
+    viewModel.output.$isButtonDisabled
+      .dropFirst()
+      .sink { bool in
+        XCTAssertFalse(bool)
+        expectation.fulfill()
+      }
+      .store(in: &cancellables)
+    wait(for: [expectation], timeout: 12.0)
   }
 
 }
