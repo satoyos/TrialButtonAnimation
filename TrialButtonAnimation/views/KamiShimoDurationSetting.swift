@@ -15,10 +15,12 @@ struct KamiShimoDurationSetting {
     // To catch event: navigation back to Parent View of SwiftUI
     @Environment(\.isPresented) private var isPresented
     
-    init(startTime: Double, settings: Settings) {
+    init(startTime givenTime: Float? = nil,
+         settings: Settings) {
+        let startTime = givenTime ?? settings.kamiShimoInterval
         self.viewModel = .init(
             durationType: .kamiShimo,
-            startTime: startTime,
+            startTime: Double(startTime),
             singer: Singers.fetchSingerFrom(settings))
         self.settings = settings
     }

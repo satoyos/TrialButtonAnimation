@@ -37,7 +37,7 @@ extension MenuList: View {
     
     private var navLinkToInterPoemDurationSetting: NavigationLink<MenuRow, InterPoemDurationSetting> {
         NavigationLink(
-            destination: InterPoemDurationSetting(startTime: Double(settings.interval), settings: settings),
+            destination: InterPoemDurationSetting(settings: settings),
             label: {
                 let item = MenuItem(title: "歌の間隔", value: Double(settings.interval))
                 MenuRow(viewModel: .init(item: item))
@@ -47,7 +47,7 @@ extension MenuList: View {
     
     private var NavLinkToKamiShimoDurationSetting: NavigationLink<MenuRow, KamiShimoDurationSetting> {
         NavigationLink(
-            destination: KamiShimoDurationSetting( startTime: Double(settings.kamiShimoInterval), settings: settings),
+            destination: KamiShimoDurationSetting(  settings: settings),
             label: {
                 let item = MenuItem(title: "上の句と下の句の間隔", value: Double(settings.kamiShimoInterval))
                 MenuRow(viewModel: .init(item: item))
