@@ -15,9 +15,11 @@ struct VolumeSetting {
   // To catch event: navigation back to Parent View of SwiftUI
   @Environment(\.isPresented) private var isPresented
   
-  init(viewModel: VolumeSettingViewModel, settings: Settings) {
-    self.viewModel = viewModel
+  init(settings: Settings) {
     self.settings = settings
+    self.viewModel = .init(
+      volume: Double(settings.volume),
+      singer: Singers.fetchSingerFrom(settings))
   }
 }
 
@@ -67,9 +69,6 @@ extension VolumeSetting: View {
 }
 
 #Preview {
-  VolumeSetting(viewModel: .init(
-    volume: 0.5,
-    singer: Singers.defaultSinger),
-                settings: Settings())
+  VolumeSetting(settings: Settings())
     .environmentObject(ScreenSizeStore())
 }

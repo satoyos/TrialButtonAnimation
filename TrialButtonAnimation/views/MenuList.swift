@@ -56,10 +56,7 @@ extension MenuList: View {
   
   private var NavLinkToVolumeSetting: NavigationLink<MenuRow, VolumeSetting> {
     NavigationLink(
-      destination: VolumeSetting(viewModel:
-          .init(volume: Double(settings.volume),
-                singer: Singers.fetchSingerFrom(settings)),
-                        settings: settings),
+      destination: VolumeSetting(                settings: settings),
       label: {
         let item = MenuItem(title: "音量調整", value: Double(settings.volume))
         MenuRow(viewModel: .init(item: item))
