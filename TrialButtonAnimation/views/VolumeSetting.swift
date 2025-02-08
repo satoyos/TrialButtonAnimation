@@ -8,44 +8,59 @@
 import SwiftUI
 
 struct VolumeSetting {
+  let settings: Settings
   @ObservedObject private var viewModel: VolumeSettingViewModel
   @EnvironmentObject var screenSizeStore: ScreenSizeStore
+
+  // To catch event: navigation back to Parent View of SwiftUI
+  @Environment(\.isPresented) private var isPresented
   
-  init(viewModel: VolumeSettingViewModel) {
+  init(viewModel: VolumeSettingViewModel, settings: Settings) {
     self.viewModel = viewModel
+    self.settings = settings
   }
 }
 
 extension VolumeSetting: View {
   var body: some View {
-    HStack(alignment: .bottom, spacing: 0) {
-      ZStack(alignment: .trailing) {
-        Text("100")
-          .monospacedDigit()
-          .font(.system(size: digitSize+8, weight: .medium))
-          .opacity(0)
-        Text(viewModel.output.ratioText)
-          .monospacedDigit()
-          .font(.system(size: digitSize, weight: .medium))
+    VStack {
+      HStack(alignment: .bottom, spacing: 0) {
+        ZStack(alignment: .trailing) {
+          Text("100")
+            .monospacedDigit()
+            .font(.system(size: digitSize+8, weight: .medium))
+            .opacity(0)
+          Text(viewModel.output.ratioText)
+            .monospacedDigit()
+            .font(.system(size: digitSize, weight: .medium))
+        }
+        Text("%")
+          .font(.system(size: digitSize / 4, weight: .medium))
       }
-      Text("%")
-        .font(.system(size: digitSize / 4, weight: .medium))
+      .padding()
+      
+      Slider(value: viewModel.$binding.volume, in: 0.01 ... 1.0, step: 0.01)
+        .padding(.horizontal)
+      
+      Button("試しに聞いてみる") {
+        viewModel.input.startTestRecitingRequest.send()
+      }
+      .buttonStyle(.borderedProminent)
+      .foregroundStyle(Color.white)
+      .padding(.top, digitSize * 0.5)
+      .disabled(viewModel.output.isButtonDisabled)
     }
-    .padding()
-    
-    Slider(value: viewModel.$binding.volume, in: 0.01 ... 1.0, step: 0.01)
-      .padding(.horizontal)
-    
-    Button("試しに聞いてみる") {
-      viewModel.input.startTestRecitingRequest.send()
+    .onChange(of: isPresented) {
+      guard !isPresented else { return }
+      reflectSliderValueToSettings()
     }
-    .buttonStyle(.borderedProminent)
-    .foregroundStyle(Color.white)
-    .padding(.top)
-    .disabled(viewModel.output.isButtonDisabled)
     
   }
-  
+
+  func reflectSliderValueToSettings() {
+    settings.volume = Float(viewModel.binding.volume)
+  }
+
   private var digitSize: Double {
       screenSizeStore.screenWidth / 5.0
   }
@@ -54,6 +69,7 @@ extension VolumeSetting: View {
 #Preview {
   VolumeSetting(viewModel: .init(
     volume: 0.5,
-    singer: Singers.defaultSinger))
+    singer: Singers.defaultSinger),
+                settings: Settings())
     .environmentObject(ScreenSizeStore())
 }

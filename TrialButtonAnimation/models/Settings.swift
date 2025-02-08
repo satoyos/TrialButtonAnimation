@@ -54,7 +54,8 @@ final class Settings: Codable, ObservableObject {
             return recitingConfig.volume
         }
         set(v) {
-            recitingConfig.volume = v
+          objectWillChange.send()
+          recitingConfig.volume = v
         }
     }
     
