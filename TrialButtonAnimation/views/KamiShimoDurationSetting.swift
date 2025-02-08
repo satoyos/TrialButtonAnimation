@@ -31,11 +31,17 @@ extension KamiShimoDurationSetting: View {
         DurationSetting(viewModel: viewModel)
         .onChange(of: isPresented) {
             guard !isPresented else { return }
-            reflectSliderValueToSettings()
+            tasksForLeavingThisView()
         }
     }
-    
-    func reflectSliderValueToSettings() {
+  
+    func tasksForLeavingThisView() {
+        reflectSliderValueToSettings()
+        viewModel.stopReciting()
+    }
+
+
+    private func reflectSliderValueToSettings() {
         settings.kamiShimoInterval = Float(viewModel.binding.startTime)
     }
 }

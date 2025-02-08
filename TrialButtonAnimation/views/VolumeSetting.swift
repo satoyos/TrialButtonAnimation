@@ -56,12 +56,17 @@ extension VolumeSetting: View {
     }
     .onChange(of: isPresented) {
       guard !isPresented else { return }
-      reflectSliderValueToSettings()
+      tasksForLeavingThisView()
     }
     
   }
+  
+  func tasksForLeavingThisView() {
+    reflectSliderValueToSettings()
+    viewModel.stopReciting()
+  }
 
-  func reflectSliderValueToSettings() {
+  private func reflectSliderValueToSettings() {
     settings.volume = Float(viewModel.binding.volume)
   }
 

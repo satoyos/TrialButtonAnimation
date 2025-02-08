@@ -30,11 +30,16 @@ extension InterPoemDurationSetting: View {
         DurationSetting(viewModel: viewModel)
         .onChange(of: isPresented) {
             guard !isPresented else { return }
-            reflectSliderValueToSettings()
+            tasksForLeavingThisView()
         }
     }
+  
+    func tasksForLeavingThisView() {
+        reflectSliderValueToSettings()
+        viewModel.stopReciting()
+    }
     
-    func reflectSliderValueToSettings() {
+    private func reflectSliderValueToSettings() {
         settings.interval = Float(viewModel.binding.startTime)
     }
 }

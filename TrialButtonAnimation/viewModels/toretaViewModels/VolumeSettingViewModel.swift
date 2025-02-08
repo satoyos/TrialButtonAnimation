@@ -70,3 +70,9 @@ final class VolumeSettingViewModel: ViewModelObject {
       String(format: "% 3d", Int(ratio * 100))
   }
 }
+
+extension VolumeSettingViewModel {
+  func stopReciting() {
+    audioHandler.stopAllPlayers()
+  }
+}

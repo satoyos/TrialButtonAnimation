@@ -97,3 +97,9 @@ final class DurationSettingViewModel: ViewModelObject {
 
     }
 }
+
+extension DurationSettingViewModel {
+  func stopReciting() {
+    audioHandler.stopAllPlayers()
+  }
+}
