@@ -39,6 +39,7 @@ extension VolumeSetting: View {
         }
         Text("%")
           .font(.system(size: digitSize / 4, weight: .medium))
+          .padding(.trailing, digitSize / 2)
       }
       .padding()
       
