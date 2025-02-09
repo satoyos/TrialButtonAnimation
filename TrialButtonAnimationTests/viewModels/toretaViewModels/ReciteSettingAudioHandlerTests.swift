@@ -1,5 +1,5 @@
 //
-//  DurationSettingAudioHandlerTests.swift
+//  ReciteSettingAudioHandlerTests.swift
 //  Shuffle100Tests
 //
 //  Created by Yoshifumi Sato on 2024/11/17.
@@ -8,7 +8,7 @@
 @testable import TrialButtonAnimation
 import XCTest
 
-final class DurationSettingAudioHandlerTests: XCTestCase {
+final class ReciteSettingAudioHandlerTests: XCTestCase {
     let folderPath = "audio/inaba"
 
     func testInit() throws {

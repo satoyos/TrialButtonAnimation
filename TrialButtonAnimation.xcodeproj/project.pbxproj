@@ -19,7 +19,7 @@
 		925648C32D2BC3F100688D8B /* SingerFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648C22D2BC3F100688D8B /* SingerFetching.swift */; };
 		925648C52D2BC63300688D8B /* Singers.json in Resources */ = {isa = PBXBuildFile; fileRef = 925648C42D2BC63300688D8B /* Singers.json */; };
 		925648C82D2BC84200688D8B /* DurationSettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648C62D2BC84200688D8B /* DurationSettingViewModelTests.swift */; };
-		925648C92D2BC84200688D8B /* DurationSettingAudioHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648C72D2BC84200688D8B /* DurationSettingAudioHandlerTests.swift */; };
+		925648C92D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648C72D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift */; };
 		925648CC2D2BC86E00688D8B /* DurationSettingViewModel+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648CA2D2BC86E00688D8B /* DurationSettingViewModel+Fixtures.swift */; };
 		925648D02D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648CF2D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift */; };
 		925648D52D32518200688D8B /* DurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648D42D32518200688D8B /* DurationSetting.swift */; };
@@ -118,7 +118,7 @@
 		925648C22D2BC3F100688D8B /* SingerFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerFetching.swift; sourceTree = "<group>"; };
 		925648C42D2BC63300688D8B /* Singers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Singers.json; sourceTree = "<group>"; };
 		925648C62D2BC84200688D8B /* DurationSettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSettingViewModelTests.swift; sourceTree = "<group>"; };
-		925648C72D2BC84200688D8B /* DurationSettingAudioHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSettingAudioHandlerTests.swift; sourceTree = "<group>"; };
+		925648C72D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteSettingAudioHandlerTests.swift; sourceTree = "<group>"; };
 		925648CA2D2BC86E00688D8B /* DurationSettingViewModel+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DurationSettingViewModel+Fixtures.swift"; sourceTree = "<group>"; };
 		925648CF2D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamiShimoDurationSettingUITests.swift; sourceTree = "<group>"; };
 		925648D42D32518200688D8B /* DurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSetting.swift; sourceTree = "<group>"; };
@@ -425,7 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				925648C62D2BC84200688D8B /* DurationSettingViewModelTests.swift */,
-				925648C72D2BC84200688D8B /* DurationSettingAudioHandlerTests.swift */,
+				925648C72D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift */,
 				929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */,
 				925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */,
 			);
@@ -676,7 +676,7 @@
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
 				925648C82D2BC84200688D8B /* DurationSettingViewModelTests.swift in Sources */,
 				92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */,
-				925648C92D2BC84200688D8B /* DurationSettingAudioHandlerTests.swift in Sources */,
+				925648C92D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
 				925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */,
 			);
