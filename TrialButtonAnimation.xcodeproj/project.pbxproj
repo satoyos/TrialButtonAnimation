@@ -14,7 +14,7 @@
 		925648B92D2BC24B00688D8B /* InterPoemDurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648B72D2BC24B00688D8B /* InterPoemDurationSetting.swift */; };
 		925648BA2D2BC24B00688D8B /* KamiShimoDurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648B82D2BC24B00688D8B /* KamiShimoDurationSetting.swift */; };
 		925648BD2D2BC27E00688D8B /* DurationSettingViewModel 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */; };
-		925648BE2D2BC27E00688D8B /* DurationSettingAudioHandler 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648BB2D2BC27E00688D8B /* DurationSettingAudioHandler 2.swift */; };
+		925648BE2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648BB2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift */; };
 		925648C12D2BC32700688D8B /* DurationSettingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648C02D2BC32700688D8B /* DurationSettingType.swift */; };
 		925648C32D2BC3F100688D8B /* SingerFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648C22D2BC3F100688D8B /* SingerFetching.swift */; };
 		925648C52D2BC63300688D8B /* Singers.json in Resources */ = {isa = PBXBuildFile; fileRef = 925648C42D2BC63300688D8B /* Singers.json */; };
@@ -112,7 +112,7 @@
 		924275D62D574F45001D5940 /* VolumeSettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingUITests.swift; sourceTree = "<group>"; };
 		925648B72D2BC24B00688D8B /* InterPoemDurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPoemDurationSetting.swift; sourceTree = "<group>"; };
 		925648B82D2BC24B00688D8B /* KamiShimoDurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamiShimoDurationSetting.swift; sourceTree = "<group>"; };
-		925648BB2D2BC27E00688D8B /* DurationSettingAudioHandler 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DurationSettingAudioHandler 2.swift"; sourceTree = "<group>"; };
+		925648BB2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReciteSettingAudioHandler 2.swift"; sourceTree = "<group>"; };
 		925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DurationSettingViewModel 2.swift"; sourceTree = "<group>"; };
 		925648C02D2BC32700688D8B /* DurationSettingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSettingType.swift; sourceTree = "<group>"; };
 		925648C22D2BC3F100688D8B /* SingerFetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingerFetching.swift; sourceTree = "<group>"; };
@@ -412,7 +412,6 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				925648BB2D2BC27E00688D8B /* DurationSettingAudioHandler 2.swift */,
 				925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */,
 				929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */,
 				925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */,
@@ -436,6 +435,7 @@
 		92C0DA162C660CD6004C8966 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				925648BB2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift */,
 				92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */,
 			);
 			path = audio;
@@ -657,7 +657,7 @@
 				92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */,
 				925648C12D2BC32700688D8B /* DurationSettingType.swift in Sources */,
 				925648BD2D2BC27E00688D8B /* DurationSettingViewModel 2.swift in Sources */,
-				925648BE2D2BC27E00688D8B /* DurationSettingAudioHandler 2.swift in Sources */,
+				925648BE2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift in Sources */,
 				92A9B5452C53BE4900BEF03B /* CountDownTimer.swift in Sources */,
 				92A9B53B2C4E6FB300BEF03B /* RecitePlayButton.swift in Sources */,
 				92967FD52C8D359300493989 /* PoemsSelectesState.swift in Sources */,

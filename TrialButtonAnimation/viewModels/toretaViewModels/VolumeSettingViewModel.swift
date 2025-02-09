@@ -24,7 +24,7 @@ final class VolumeSettingViewModel: ViewModelObject {
   let input: Input
   @BindableObject private(set) var binding: Binding
   let output: Output
-  private let audioHandler: DurationSettingAudioHandler
+  private let audioHandler: ReciteSettingAudioHandler
 
   private var cancellables: Set<AnyCancellable> = []
   
@@ -32,7 +32,7 @@ final class VolumeSettingViewModel: ViewModelObject {
     let input = Input()
     let binding = Binding()
     let output = Output()
-    let audioHandler = DurationSettingAudioHandler(
+    let audioHandler = ReciteSettingAudioHandler(
       halfPoem1: .h001a, halfPoem2: .h001b, folderPath: singer.path
     )
     

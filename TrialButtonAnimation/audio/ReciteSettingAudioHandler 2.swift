@@ -1,5 +1,5 @@
 //
-//  DurationSettingAudioHandler.swift
+//  ReciteSettingAudioHandler.swift
 //  Shuffle100
 //
 //  Created by Yoshifumi Sato on 2024/11/17.
@@ -7,7 +7,7 @@
 
 import AVFoundation
 
-final class DurationSettingAudioHandler: NSObject,  AVAudioPlayerDelegate  {
+final class ReciteSettingAudioHandler: NSObject,  AVAudioPlayerDelegate  {
     let player1: AVAudioPlayer
     let player2: AVAudioPlayer
     let folderPath: String
