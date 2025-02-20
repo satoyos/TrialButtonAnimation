@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "39E1C758-7A9E-4975-AA54-91D50E74BF30",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:TrialButtonAnimation.xcodeproj",
+      "identifier" : "928FEB7C2BF77C01001E28E2",
+      "name" : "TrialButtonAnimation"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : false,
+      "target" : {
+        "containerPath" : "container:TrialButtonAnimation.xcodeproj",
+        "identifier" : "928FEB8C2BF77C02001E28E2",
+        "name" : "TrialButtonAnimationTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:TrialButtonAnimation.xcodeproj",
+        "identifier" : "92C0DA2D2C674971004C8966",
+        "name" : "TrialButtonAnimationUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

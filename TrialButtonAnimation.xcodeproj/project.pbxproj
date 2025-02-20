@@ -125,6 +125,7 @@
 		925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModel.swift; sourceTree = "<group>"; };
 		925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModelTests.swift; sourceTree = "<group>"; };
 		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
+		9282CF682D67402F00516FDE /* TrialButtonAnimation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TrialButtonAnimation.xctestplan; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationApp.swift; sourceTree = "<group>"; };
 		928FEB822BF77C01001E28E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 		928FEB742BF77C01001E28E2 = {
 			isa = PBXGroup;
 			children = (
+				9282CF682D67402F00516FDE /* TrialButtonAnimation.xctestplan */,
 				929A60232C98014D00D17EFD /* TrialButtonAnimation.xcodeproj */,
 				928FEB7F2BF77C01001E28E2 /* TrialButtonAnimation */,
 				928FEB902BF77C02001E28E2 /* TrialButtonAnimationTests */,
