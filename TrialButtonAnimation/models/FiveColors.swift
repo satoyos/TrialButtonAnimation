@@ -9,12 +9,24 @@
 import Foundation
 import UIKit
 
-enum FiveColors: String {
-    case blue   = "青"
-    case yellow = "黄"
-    case green  = "緑"
-    case pink   = "桃(ピンク)"
-    case orange = "橙(オレンジ)"
+enum FiveColors {
+    case blue
+    case yellow
+    case green
+    case pink
+    case orange
+}
+
+extension FiveColors: CustomStringConvertible {
+  var description: String {
+    switch self {
+    case .blue: "青"
+    case .yellow: "黄"
+    case .green: "緑"
+    case .pink: "桃(ピンク)"
+    case .orange: "橙(オレンジ)"
+    }
+  }
 }
 
 struct FiveColorData {
