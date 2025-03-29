@@ -11,6 +11,9 @@
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
 		924275D72D574F45001D5940 /* VolumeSettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924275D62D574F45001D5940 /* VolumeSettingUITests.swift */; };
+		924463202D97D08E00F562B2 /* FiveColorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9244631F2D97D08E00F562B2 /* FiveColorsUITests.swift */; };
+		924463222D97D6A800F562B2 /* FiveColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924463212D97D6A800F562B2 /* FiveColorButton.swift */; };
+		924463242D97D71500F562B2 /* 5colors in Resources */ = {isa = PBXBuildFile; fileRef = 924463232D97D71500F562B2 /* 5colors */; };
 		925648B92D2BC24B00688D8B /* InterPoemDurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648B72D2BC24B00688D8B /* InterPoemDurationSetting.swift */; };
 		925648BA2D2BC24B00688D8B /* KamiShimoDurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648B82D2BC24B00688D8B /* KamiShimoDurationSetting.swift */; };
 		925648BD2D2BC27E00688D8B /* DurationSettingViewModel 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */; };
@@ -110,6 +113,9 @@
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
 		924275D62D574F45001D5940 /* VolumeSettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingUITests.swift; sourceTree = "<group>"; };
+		9244631F2D97D08E00F562B2 /* FiveColorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsUITests.swift; sourceTree = "<group>"; };
+		924463212D97D6A800F562B2 /* FiveColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorButton.swift; sourceTree = "<group>"; };
+		924463232D97D71500F562B2 /* 5colors */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 5colors; sourceTree = "<group>"; };
 		925648B72D2BC24B00688D8B /* InterPoemDurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPoemDurationSetting.swift; sourceTree = "<group>"; };
 		925648B82D2BC24B00688D8B /* KamiShimoDurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamiShimoDurationSetting.swift; sourceTree = "<group>"; };
 		925648BB2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReciteSettingAudioHandler 2.swift"; sourceTree = "<group>"; };
@@ -339,6 +345,7 @@
 				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
 				92FDCC202C7497DF00B77262 /* Sec2F.swift */,
 				92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */,
+				924463212D97D6A800F562B2 /* FiveColorButton.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -446,6 +453,7 @@
 		92C0DA232C662955004C8966 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				924463232D97D71500F562B2 /* 5colors */,
 				925648C42D2BC63300688D8B /* Singers.json */,
 				92C0DA282C6629EF004C8966 /* audio */,
 			);
@@ -462,6 +470,7 @@
 				9296800C2C97FB3E00493989 /* LaunchPageUITests.swift */,
 				925648CF2D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift */,
 				924275D62D574F45001D5940 /* VolumeSettingUITests.swift */,
+				9244631F2D97D08E00F562B2 /* FiveColorsUITests.swift */,
 			);
 			path = TrialButtonAnimationUITests;
 			sourceTree = "<group>";
@@ -577,6 +586,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924463242D97D71500F562B2 /* 5colors in Resources */,
 				9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */,
 				928FEB882BF77C02001E28E2 /* Preview Assets.xcassets in Resources */,
 				925648C52D2BC63300688D8B /* Singers.json in Resources */,
@@ -642,6 +652,7 @@
 				929DB8742CD60C2B00609B7B /* BindableObject.swift in Sources */,
 				92967FEF2C8D403100493989 /* MenuItem.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,
+				924463222D97D6A800F562B2 /* FiveColorButton.swift in Sources */,
 				92967FE52C8D366A00493989 /* UIFontExtension.swift in Sources */,
 				92967FDA2C8D359300493989 /* DigitsNumberFactory.swift in Sources */,
 				925648B92D2BC24B00688D8B /* InterPoemDurationSetting.swift in Sources */,
@@ -694,6 +705,7 @@
 				925648D02D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift in Sources */,
 				924275D72D574F45001D5940 /* VolumeSettingUITests.swift in Sources */,
 				9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */,
+				924463202D97D08E00F562B2 /* FiveColorsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
