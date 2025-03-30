@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct FiveColorButton: View {
+struct FiveColorButton {
+  let ofColor: FiveColors
+}
+
+extension FiveColorButton: View {
     var body: some View {
       Button(action: {print("押されたし！")}) {
         HStack(spacing: 20){
           Image("5ColorHalf")
             .renderingMode(.template)
-            .foregroundColor(.pink)
-          Text("桃(ピンク)")
+            .foregroundColor(ofColor.color)
+          Text(ofColor.description)
             .font(.title2)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -25,5 +29,5 @@ struct FiveColorButton: View {
 }
 
 #Preview {
-    FiveColorButton()
+  FiveColorButton(ofColor: .yellow)
 }

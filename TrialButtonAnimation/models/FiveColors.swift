@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
 enum FiveColors {
     case blue
@@ -42,32 +42,24 @@ fileprivate let greenSetNumbers =  [ 8,  9, 11, 15, 17, 20, 23, 26, 29, 35, 36, 
 fileprivate let pinkSetNumbers =   [ 1,  4, 13, 16, 22, 28, 34, 40, 48, 51, 58, 65, 66, 72, 73, 80, 83, 84, 86, 97]
 fileprivate let orangeSetNumbers = [19, 21, 25, 27, 43, 44, 45, 49, 52, 53, 56, 63, 64, 67, 77, 88, 90, 95, 98, 99]
 
-struct FiveColorsDataHolder {
-    static let sharedDic: [FiveColors: FiveColorData] = [
-        .blue: FiveColorData(
-                    type: .blue,
-                    poemNumbers: blueSetNumbers,
-                    name: FiveColors.blue.rawValue,
-                    uicolor: .systemBlue),
-        .yellow: FiveColorData(
-                    type: .yellow,
-                    poemNumbers: yellowSetNumbers,
-                    name: FiveColors.yellow.rawValue,
-                    uicolor: .systemYellow),
-        .green: FiveColorData(
-                    type: .green,
-                    poemNumbers: greenSetNumbers,
-                    name: FiveColors.green.rawValue,
-                    uicolor: .systemGreen),
-        .pink: FiveColorData(
-                    type: .pink,
-                    poemNumbers: pinkSetNumbers,
-                    name: FiveColors.pink.rawValue,
-                    uicolor: .systemPink),
-        .orange: FiveColorData(
-                    type: .orange,
-                    poemNumbers: orangeSetNumbers,
-                    name: FiveColors.orange.rawValue,
-                    uicolor: .systemOrange)
-    ]
+extension FiveColors {
+  var poemNumbers: [Int] {
+    switch self {
+    case .blue:    return blueSetNumbers
+    case .yellow:  return yellowSetNumbers
+    case .green:   return greenSetNumbers
+    case .pink:    return pinkSetNumbers
+    case .orange:  return orangeSetNumbers
+    }
+  }
+  
+  var color: Color {
+    switch self {
+    case .blue:    return .blue
+    case .yellow:  return .yellow
+    case .green:   return .green
+    case .pink:    return .pink
+    case .orange:  return .orange
+    }
+  }
 }
