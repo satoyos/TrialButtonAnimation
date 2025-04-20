@@ -7,12 +7,29 @@
 
 import SwiftUI
 
-struct FiveColorsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct FiveColorsView {
+  let settings: Settings
+  @ObservedObject private var viewModel: FiveColorsViewModel
+  @EnvironmentObject var screenSizeStore: ScreenSizeStore
+  
+  init(settings: Settings) {
+    self.settings = settings
+    self.viewModel = .init(state100: settings.state100)
+  }
+}
+
+extension FiveColorsView: View {
+  var body: some View {
+    List {
+      ForEach(FiveColors.all) { color in
+        FiveColorButton(ofColor: color, fillType: viewModel.fillType(of: color))
+      }
     }
+  }
+  
 }
 
 #Preview {
-    FiveColorsView()
+  FiveColorsView(settings: Settings())
+    .environmentObject(ScreenSizeStore())
 }

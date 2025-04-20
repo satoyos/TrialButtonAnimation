@@ -29,11 +29,10 @@ extension FiveColors: CustomStringConvertible {
   }
 }
 
-struct FiveColorData {
-    let type: FiveColors
-    let poemNumbers: [Int]
-    let name: String
-    let uicolor: UIColor
+extension FiveColors: Identifiable {
+  var id: Self {
+    self
+  }
 }
 
 fileprivate let blueSetNumbers =   [ 3,  5,  6, 12, 14, 24, 30, 31, 50, 57, 61, 62, 69, 70, 74, 75, 76, 82, 91, 100]
@@ -62,4 +61,8 @@ extension FiveColors {
     case .orange:  return .orange
     }
   }
+}
+
+extension FiveColors {
+  static let all: [FiveColors] = [.blue, .yellow, .green, .pink, .orange]
 }

@@ -9,25 +9,35 @@ import SwiftUI
 
 struct FiveColorButton {
   let ofColor: FiveColors
+  let fillType: FillType
+  @EnvironmentObject var screenSizeStore: ScreenSizeStore
 }
 
 extension FiveColorButton: View {
-    var body: some View {
-      Button(action: {print("押されたし！")}) {
-        HStack(spacing: 20){
-          Image("5ColorHalf")
-            .renderingMode(.template)
-            .foregroundColor(ofColor.color)
-          Text(ofColor.description)
-            .font(.title2)
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
+  var body: some View {
+    Button(action: {print("押されたし！")}) {
+      HStack(spacing: 20){
+        Image(fillType.imageName)
+          .resizable()
+          .renderingMode(.template)
+          .foregroundColor(ofColor.color)
+          .frame(width: imageHeight, height: imageHeight)
+        Text(ofColor.description)
+          .font(.title2)
+          .frame(maxWidth: .infinity, alignment: .leading)
       }
-      .padding(.horizontal, 50)
-      
     }
+    .padding(.horizontal, 50)
+//    .background(Color.cyan)
+    
+
+  }
+  private var imageHeight: CGFloat {
+    screenSizeStore.screenHeight / 10.0
+  }
 }
 
 #Preview {
-  FiveColorButton(ofColor: .yellow)
+  FiveColorButton(ofColor: .yellow, fillType: .full)
+    .environmentObject(ScreenSizeStore())
 }

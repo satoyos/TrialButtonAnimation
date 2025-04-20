@@ -88,6 +88,11 @@
 		92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
+		92DC382A2D9BE7FF000AEBF8 /* FiveColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */; };
+		92FA42512DB3A621004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */; };
+		92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */; };
+		92FA42552DB47B7D004BE2C1 /* FillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42542DB47B71004BE2C1 /* FillType.swift */; };
+		92FA42572DB4AB01004BE2C1 /* FillTypeHandlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +200,11 @@
 		92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModelFixture.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
+		92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsView.swift; sourceTree = "<group>"; };
+		92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
+		92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
+		92FA42542DB47B71004BE2C1 /* FillType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillType.swift; sourceTree = "<group>"; };
+		92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTypeHandlable.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -346,6 +356,7 @@
 				92FDCC202C7497DF00B77262 /* Sec2F.swift */,
 				92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */,
 				924463212D97D6A800F562B2 /* FiveColorButton.swift */,
+				92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -365,6 +376,8 @@
 		92967FBC2C8C4B9400493989 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */,
+				92FA42542DB47B71004BE2C1 /* FillType.swift */,
 				92967FC92C8D359300493989 /* Bool100.swift */,
 				92967FCA2C8D359300493989 /* DigitsNumberFactory.swift */,
 				92967FC02C8D359200493989 /* FiveColors.swift */,
@@ -421,6 +434,7 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */,
 				925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */,
 				929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */,
 				925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */,
@@ -433,6 +447,7 @@
 		929DB8BA2CDF49A700609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */,
 				925648C62D2BC84200688D8B /* DurationSettingViewModelTests.swift */,
 				925648C72D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift */,
 				929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */,
@@ -649,13 +664,17 @@
 				92967FF92C8D8FBA00493989 /* MenuDataSource.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
+				92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */,
 				929DB8742CD60C2B00609B7B /* BindableObject.swift in Sources */,
 				92967FEF2C8D403100493989 /* MenuItem.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,
 				924463222D97D6A800F562B2 /* FiveColorButton.swift in Sources */,
+				92DC382A2D9BE7FF000AEBF8 /* FiveColorsView.swift in Sources */,
+				92FA42552DB47B7D004BE2C1 /* FillType.swift in Sources */,
 				92967FE52C8D366A00493989 /* UIFontExtension.swift in Sources */,
 				92967FDA2C8D359300493989 /* DigitsNumberFactory.swift in Sources */,
 				925648B92D2BC24B00688D8B /* InterPoemDurationSetting.swift in Sources */,
+				92FA42572DB4AB01004BE2C1 /* FillTypeHandlable.swift in Sources */,
 				925648BA2D2BC24B00688D8B /* KamiShimoDurationSetting.swift in Sources */,
 				92967FE72C8D366A00493989 /* String-extension.swift in Sources */,
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,
@@ -681,6 +700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FA42512DB3A621004BE2C1 /* FiveColorsViewModel.swift in Sources */,
 				925648CC2D2BC86E00688D8B /* DurationSettingViewModel+Fixtures.swift in Sources */,
 				92A9B54F2C54DB3A00BEF03B /* MemorizeTimerViewModelTests.swift in Sources */,
 				92A9B5492C54872C00BEF03B /* MinSecViewModelTests.swift in Sources */,
