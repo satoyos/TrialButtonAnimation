@@ -20,9 +20,19 @@ struct FiveColorsView {
 
 extension FiveColorsView: View {
   var body: some View {
-    List {
-      ForEach(FiveColors.all) { color in
-        FiveColorButton(ofColor: color, fillType: viewModel.fillType(of: color))
+    NavigationView {
+      List {
+        ForEach(FiveColors.all) { color in
+          FiveColorButton(ofColor: color, fillType: viewModel.fillType(of: color))
+        }
+      }
+      .toolbar {
+        ToolbarItem(placement: .confirmationAction) {
+          BadgeView(number: viewModel.output.state100.selectedNum)
+        }
+        ToolbarItem(placement: .principal) {
+          Text("五色百人一首")
+        }
       }
     }
   }

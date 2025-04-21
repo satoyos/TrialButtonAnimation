@@ -93,6 +93,8 @@
 		92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */; };
 		92FA42552DB47B7D004BE2C1 /* FillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42542DB47B71004BE2C1 /* FillType.swift */; };
 		92FA42572DB4AB01004BE2C1 /* FillTypeHandlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */; };
+		92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */; };
+		92FA425C2DB4E3D3004BE2C1 /* BadgeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,8 @@
 		92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
 		92FA42542DB47B71004BE2C1 /* FillType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillType.swift; sourceTree = "<group>"; };
 		92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTypeHandlable.swift; sourceTree = "<group>"; };
+		92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTestView.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -357,6 +361,8 @@
 				92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */,
 				924463212D97D6A800F562B2 /* FiveColorButton.swift */,
 				92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */,
+				92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */,
+				92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				92967FE62C8D366A00493989 /* Array+Shuffled.swift in Sources */,
 				929DB8722CD5F5C700609B7B /* ViewModelObject.swift in Sources */,
 				92967FD92C8D359300493989 /* Bool100.swift in Sources */,
+				92FA425C2DB4E3D3004BE2C1 /* BadgeTestView.swift in Sources */,
 				92967FCE2C8D359300493989 /* GameConfig.swift in Sources */,
 				92967FF12C8D484B00493989 /* MenuRow.swift in Sources */,
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
@@ -680,6 +687,7 @@
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,
 				92967FF72C8D8C1300493989 /* MenuSection.swift in Sources */,
 				92967FCF2C8D359300493989 /* StandardColor.swift in Sources */,
+				92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */,
 				92967FE32C8D366A00493989 /* UIColorExtention.swift in Sources */,
 				92967FD82C8D359300493989 /* NgramDataFactory.swift in Sources */,
 				929DB8B82CDEF98300609B7B /* MemorizeTimerViewModel.swift in Sources */,
