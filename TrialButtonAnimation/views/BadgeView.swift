@@ -18,10 +18,10 @@ struct BadgeView {
 
 extension BadgeView: View {
   var body: some View {
-    Text(number.description)
+    Text("\(number)首")
       .font(.body)
       .foregroundColor(.white)
-      .padding(EdgeInsets(top: 2, leading: 8, bottom: 2, trailing: 8))
+      .padding(5)
       .background(Color.red)
       .clipShape(RoundedRectangle(cornerRadius: 100))
       .scaleEffect(scale)
