@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FiveColorsView {
   let settings: Settings
+  @State private var showActionSheet = false
+  @State private var selectedColor: FiveColors = .blue
   @ObservedObject private var viewModel: FiveColorsViewModel
   @EnvironmentObject var screenSizeStore: ScreenSizeStore
   
@@ -23,7 +25,21 @@ extension FiveColorsView: View {
     NavigationView {
       List {
         ForEach(FiveColors.all) { color in
-          FiveColorButton(ofColor: color, fillType: viewModel.fillType(of: color))
+          FiveColorButton(ofColor: color, fillType: viewModel.fillType(of: color)) {
+            showActionSheet = true
+            selectedColor = color
+          }
+          .actionSheet(isPresented: $showActionSheet) {
+            ActionSheet(
+              title: Text("\(selectedColor)色の20首をどうしますか？"),
+              message: nil,
+              buttons: [
+                .default(Text("この20首だけを選ぶ")) { print("\(selectedColor)だけを選ぶ")},
+                .default(Text("今選んでいる札に加える")) { print("\(selectedColor)分を追加する")},
+                .cancel()
+              ]
+            )
+          }
         }
       }
       .toolbar {

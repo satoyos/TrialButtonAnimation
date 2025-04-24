@@ -10,12 +10,13 @@ import SwiftUI
 struct FiveColorButton {
   let ofColor: FiveColors
   let fillType: FillType
+  let action: () -> Void
   @EnvironmentObject var screenSizeStore: ScreenSizeStore
 }
 
 extension FiveColorButton: View {
   var body: some View {
-    Button(action: {print("押されたし！")}) {
+    Button(action: action) {
       HStack(spacing: 20){
         Image(fillType.imageName)
           .resizable()
@@ -38,6 +39,8 @@ extension FiveColorButton: View {
 }
 
 #Preview {
-  FiveColorButton(ofColor: .yellow, fillType: .full)
+  FiveColorButton(ofColor: .yellow, fillType: .full) {
+    print("押されたよん")
+  }
     .environmentObject(ScreenSizeStore())
 }
