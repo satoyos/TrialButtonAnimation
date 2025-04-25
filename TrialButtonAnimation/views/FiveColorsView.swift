@@ -34,7 +34,8 @@ extension FiveColorsView: View {
               title: Text("\(selectedColor)色の20首をどうしますか？"),
               message: nil,
               buttons: [
-                .default(Text("この20首だけを選ぶ")) { print("\(selectedColor)だけを選ぶ")},
+                .default(Text("この20首だけを選ぶ")) { print("\(selectedColor)だけを選ぶ")
+                },
                 .default(Text("今選んでいる札に加える")) { print("\(selectedColor)分を追加する")},
                 .cancel()
               ]
