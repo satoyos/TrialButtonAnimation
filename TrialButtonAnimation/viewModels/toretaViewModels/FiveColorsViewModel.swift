@@ -7,9 +7,13 @@
 
 import Combine
 
-final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
+fileprivate let blueButtonViewModel = FiveColorButtonViewModel(color: .blue)
+fileprivate let yellowButtonViewModel = FiveColorButtonViewModel(color: .yellow)
+fileprivate let pinButtonViewModel = FiveColorButtonViewModel(color: .pink)
+fileprivate let greenButtonViewModel = FiveColorButtonViewModel(color: .green)
+fileprivate let orangeButtonViewModel = FiveColorButtonViewModel(color: .orange)
 
-  
+final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
 
   final class Input: InputObject {
     let colorButtonTapped = PassthroughSubject<FiveColors, Never>()
@@ -30,10 +34,18 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
   private let state100: SelectedState100
   var cancellables: Set<AnyCancellable> = []
   
+  
+
+  
   init(state100: SelectedState100) {
     let input = Input()
     let binding = Binding()
     let output = Output()
+    
+    FiveColors.all.forEach { color in
+      let fillType = Self.fillType(of: color, for: state100)
+      color.buttonViewModel.input.setFillType.send(fillType)
+    }
     
     input.selectJust20OfColor
       .sink{ color in
@@ -44,16 +56,39 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
       }
       .store(in: &cancellables)
     
+    output.$state100
+      .sink { st100 in
+        FiveColors.all.forEach { color in
+          let fillType = Self.fillType(of: color, for: st100)
+          color.buttonViewModel.input.setFillType.send(fillType)
+        }
+      }
+      .store(in: &cancellables)
+    
     self.input = input
     self.binding = binding
     self.output = output
     self.state100 = state100
+    
+
   }
 }
 
 extension FiveColorsViewModel {
-  func fillType(of color: FiveColors) -> FillType {
+  static func fillType(of color: FiveColors, for state100: SelectedState100) -> FillType {
     fillType(of: state100.allSelectedNumbers,
              in: color.poemNumbers)
+  }
+}
+
+extension FiveColors {
+  var buttonViewModel: FiveColorButtonViewModel {
+    switch self {
+    case .blue:   blueButtonViewModel
+    case .yellow: yellowButtonViewModel
+    case .pink:   pinButtonViewModel
+    case .green:  greenButtonViewModel
+    case .orange: orangeButtonViewModel
+    }
   }
 }

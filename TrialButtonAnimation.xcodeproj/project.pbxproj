@@ -28,6 +28,8 @@
 		925648D52D32518200688D8B /* DurationSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648D42D32518200688D8B /* DurationSetting.swift */; };
 		925648E12D3BA52B00688D8B /* VolumeSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */; };
 		925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */; };
+		92656EDC2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656EDB2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift */; };
+		92656EDE2DBC739F006E04DC /* FiveColorButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */; };
 		926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
@@ -137,6 +139,8 @@
 		925648D42D32518200688D8B /* DurationSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSetting.swift; sourceTree = "<group>"; };
 		925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModel.swift; sourceTree = "<group>"; };
 		925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModelTests.swift; sourceTree = "<group>"; };
+		92656EDB2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorButtonViewModelTests.swift; sourceTree = "<group>"; };
+		92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorButtonViewModel.swift; sourceTree = "<group>"; };
 		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
 		9282CF682D67402F00516FDE /* TrialButtonAnimation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TrialButtonAnimation.xctestplan; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -440,6 +444,7 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */,
 				92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */,
 				925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */,
 				929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */,
@@ -458,6 +463,7 @@
 				925648C72D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift */,
 				929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */,
 				925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */,
+				92656EDB2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift */,
 			);
 			path = toretaViewModels;
 			sourceTree = "<group>";
@@ -648,6 +654,7 @@
 				92967FF12C8D484B00493989 /* MenuRow.swift in Sources */,
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
 				92A9B54B2C5487EA00BEF03B /* MinSec.ViewModel.swift in Sources */,
+				92656EDE2DBC739F006E04DC /* FiveColorButtonViewModel.swift in Sources */,
 				92967FD22C8D359300493989 /* RecitingConfig.swift in Sources */,
 				92967FFB2C8D91D800493989 /* MenuList.swift in Sources */,
 				92967FE42C8D366A00493989 /* Array+Diff.swift in Sources */,
@@ -719,6 +726,7 @@
 				92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */,
 				925648C92D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
+				92656EDC2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift in Sources */,
 				925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

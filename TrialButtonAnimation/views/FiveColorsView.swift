@@ -25,7 +25,7 @@ extension FiveColorsView: View {
     NavigationView {
       List {
         ForEach(FiveColors.all) { color in
-          FiveColorButton(ofColor: color, fillType: viewModel.fillType(of: color)) {
+          FiveColorButton(viewModel: color.buttonViewModel) {
             showActionSheet = true
             selectedColor = color
           }
@@ -34,7 +34,10 @@ extension FiveColorsView: View {
               title: Text("\(selectedColor)色の20首をどうしますか？"),
               message: nil,
               buttons: [
-                .default(Text("この20首だけを選ぶ")) { print("\(selectedColor)だけを選ぶ")
+                .default(Text("この20首だけを選ぶ")) {
+                  print("\(selectedColor)だけを選ぶ")
+                  viewModel.input.selectJust20OfColor
+                    .send(selectedColor)
                 },
                 .default(Text("今選んでいる札に加える")) { print("\(selectedColor)分を追加する")},
                 .cancel()
