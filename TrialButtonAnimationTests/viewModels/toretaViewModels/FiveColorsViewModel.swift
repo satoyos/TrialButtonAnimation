@@ -20,7 +20,7 @@ final class FiveColorsViewModelTests: XCTestCase {
     // then
     XCTAssertNotNil(viewModel)
     for color in FiveColors.all {
-      XCTAssertEqual(viewModel.fillType(of: color), .full)
+      XCTAssertEqual(color.buttonViewModel.output.fillType, .full)
     }
   }
   
@@ -28,11 +28,9 @@ final class FiveColorsViewModelTests: XCTestCase {
     // given
     let state100 = SelectedState100()
       .cancelOf(number: 1)
-    // when
-    let viewModel = FiveColorsViewModel(state100: state100)
     // then
-    XCTAssertEqual(viewModel.fillType(of: .pink), .partial)
-    XCTAssertEqual(viewModel.fillType(of: .green), .full)
+    XCTAssertEqual(FiveColorsViewModel.fillType(of: .pink, for: state100), .partial)
+    XCTAssertEqual(FiveColorsViewModel.fillType(of: .green, for: state100), .full)
   }
   
   func testSelectJust20OfColor() {

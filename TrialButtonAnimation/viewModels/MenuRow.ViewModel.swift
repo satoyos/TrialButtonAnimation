@@ -17,7 +17,7 @@ extension MenuRow {
         
         var valueText: String {
             if let value = item.value {
-                return String(format: "%.2F", value)
+                return value
             } else {
                 return ""
             }

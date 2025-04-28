@@ -13,33 +13,47 @@ struct MenuList {
 
 extension MenuList: View {
 
-    var body: some View {
-        List {
-            // 複雑なことはやめて、メニューの中身はここに書く！
-            Section(header: Text("画面")) {
-                navLinkToMemorizeTimer
-                navLinkToInterPoemDurationSetting
-                NavLinkToKamiShimoDurationSetting
-                NavLinkToVolumeSetting
-            }
-        }
+  var body: some View {
+    List {
+      // 複雑なことはやめて、メニューの中身はここに書く！
+      Section(header: Text("画面")) {
+        navLinkFiveColorsPicker
+        navLinkToMemorizeTimer
+        navLinkToInterPoemDurationSetting
+        NavLinkToKamiShimoDurationSetting
+        NavLinkToVolumeSetting
+      }
     }
+  }
+  
+  private var navLinkFiveColorsPicker: NavigationLink
+  <MenuRow, FiveColorsView> {
+    NavigationLink (
+      destination: FiveColorsView(settings: settings),
+      label: {
+        let item = MenuItem(
+          title: "五色百人一首の色で選ぶ",
+          value: "\(settings.state100.selectedNum)首")
+          MenuRow(viewModel: .init(item: item))
+      })
+  }
+  
     
-    private var navLinkToMemorizeTimer: NavigationLink<MenuRow, MemorizeTimer> {
-        NavigationLink(
-            destination: MemorizeTimer(viewModel: .init(minutes: 3)),
-            label: {
-                let item = MenuItem(title: "暗記時間タイマー")
-                MenuRow(viewModel: .init(item: item))
-            }
-        )
-    }
+  private var navLinkToMemorizeTimer: NavigationLink<MenuRow, MemorizeTimer> {
+    NavigationLink(
+      destination: MemorizeTimer(viewModel: .init(minutes: 3)),
+      label: {
+        let item = MenuItem(title: "暗記時間タイマー")
+        MenuRow(viewModel: .init(item: item))
+      }
+    )
+  }
     
     private var navLinkToInterPoemDurationSetting: NavigationLink<MenuRow, InterPoemDurationSetting> {
         NavigationLink(
             destination: InterPoemDurationSetting(settings: settings),
             label: {
-                let item = MenuItem(title: "歌の間隔", value: Double(settings.interval))
+                let item = MenuItem(title: "歌の間隔", value: String(format: "%.2F", settings.interval) + "秒")
                 MenuRow(viewModel: .init(item: item))
             }
         )
@@ -49,16 +63,20 @@ extension MenuList: View {
         NavigationLink(
             destination: KamiShimoDurationSetting(  settings: settings),
             label: {
-                let item = MenuItem(title: "上の句と下の句の間隔", value: Double(settings.kamiShimoInterval))
+                let item = MenuItem(
+                  title: "上の句と下の句の間隔",
+                  value: String(format: "%.2F", settings.kamiShimoInterval) + "秒")
                 MenuRow(viewModel: .init(item: item))
             })
     }
   
   private var NavLinkToVolumeSetting: NavigationLink<MenuRow, VolumeSetting> {
     NavigationLink(
-      destination: VolumeSetting(                settings: settings),
+      destination: VolumeSetting(settings: settings),
       label: {
-        let item = MenuItem(title: "音量調整", value: Double(settings.volume))
+        let item = MenuItem(
+          title: "音量調整",
+          value: "\(Int(settings.volume * 100))%")
         MenuRow(viewModel: .init(item: item))
       })
   }
