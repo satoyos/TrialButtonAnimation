@@ -11,7 +11,7 @@ import XCTest
 final class MenuRowViewModelTests: XCTestCase {
     func testInitViewModelWithValue() {
         // given
-        let item = MenuItem(title: "aaa", value: 2.1111)
+        let item = MenuItem(title: "aaa", value: "2.11")
         let viewModel = MenuRow.ViewModel(item: item)
         // then
         XCTAssertEqual(viewModel.text, "aaa")

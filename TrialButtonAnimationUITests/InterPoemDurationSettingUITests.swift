@@ -52,7 +52,7 @@ final class InterPoemDurationSettingUITests: XCTestCase {
         backButton.tap()
         // then
         XCTAssert(cell.exists)
-        let durationLabel = app.staticTexts["0.50"]
+        let durationLabel = app.staticTexts["0.50秒"]
         XCTAssert(durationLabel.exists)
     }
     

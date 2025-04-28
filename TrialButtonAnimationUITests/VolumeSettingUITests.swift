@@ -34,7 +34,7 @@ final class VolumeSettingUITests: XCTestCase {
     let backButton = app.buttons["Back"].firstMatch
     backButton.tap()
     // then
-    XCTAssert(app.staticTexts["0.49"].exists)
+    XCTAssert(app.staticTexts["49%"].exists)
     
   }
 

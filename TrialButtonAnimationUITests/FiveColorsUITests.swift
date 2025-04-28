@@ -30,7 +30,8 @@ class FiveColorsUITest: XCTestCase {
 //    }
     
     func test_goto5ColorsScreenWork() {
-      XCTAssert(app.cells["五色百人一首の色で選ぶ"].exists)
+      let cell = app.cells.staticTexts["五色百人一首の色で選ぶ"].firstMatch
+      XCTAssert(cell.exists)
 //        // when
 //        let pickerPage = homePage.goToPoemPickerPage()
 //        let fiveColorsPage = pickerPage.gotoFiveColorsPage()

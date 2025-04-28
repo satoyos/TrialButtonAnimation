@@ -52,7 +52,7 @@ final class KamiShimoDurationSettingUITests: XCTestCase {
         backButton.tap()
         // then
         XCTAssert(cell.exists)
-        let durationLabel = app.staticTexts["2.00"]
+        let durationLabel = app.staticTexts["2.00秒"]
         XCTAssert(durationLabel.exists)
     }
     
