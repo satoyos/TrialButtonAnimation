@@ -16,7 +16,7 @@ final class FiveColorsPage: PageObjectable {
     }
     
     var pageTitle: XCUIElement {
-        app.navigationBars[A11y.title].firstMatch
+        app.staticTexts[A11y.title].firstMatch
     }
     
     var backButton: XCUIElement {

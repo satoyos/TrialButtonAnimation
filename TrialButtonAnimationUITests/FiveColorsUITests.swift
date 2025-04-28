@@ -5,6 +5,7 @@
 //  Created by Yoshifumi Sato on 2025/03/29.
 //
 
+@testable import TrialButtonAnimation
 import XCTest
 
 class FiveColorsUITest: XCTestCase {
@@ -19,61 +20,43 @@ class FiveColorsUITest: XCTestCase {
         app.launch()
     }
 
-
-//    func test_selectByGroupActionsIncludsActionFor5Colors() throws {
-//        // when
-//        let pickerPage = homePage.goToPoemPickerPage()
-//        let sheet = pickerPage.showSelectByGroupActionSheet()
-//        // then
-//        XCTAssert(sheet.exists)
-//        XCTAssert(sheet.selectByColorButton.exists)
-//    }
+  private func gotoFiveColorsPage() {
+    let cell = app.cells.staticTexts["五色百人一首の色で選ぶ"].firstMatch
+    cell.tap()
+  }
     
     func test_goto5ColorsScreenWork() {
+      // given
       let cell = app.cells.staticTexts["五色百人一首の色で選ぶ"].firstMatch
+      // then
       XCTAssert(cell.exists)
-//        // when
-//        let pickerPage = homePage.goToPoemPickerPage()
-//        let fiveColorsPage = pickerPage.gotoFiveColorsPage()
-//        // then
-//        XCTAssert(fiveColorsPage.exists, "五色百人一首の画面に到達")
+      // when
+      cell.tap()
+      // then
+      let colorPage = FiveColorsPage(app: app)
+      XCTAssert(colorPage.exists)
     }
     
-//    func test_whenColorButtonTapped_actionSheetAppears() {
-//        // when
-//        let pickerPage = homePage.goToPoemPickerPage()
-//        pickerPage.cancelAllButton.tap()
-//        let colorsPage = pickerPage.gotoFiveColorsPage()
-//        // then
-//        XCTAssert(colorsPage.exists)
-//        // when
-//        let sheet = colorsPage.tapColorButton(of: .blue)
-//        // then
-//        XCTAssert(sheet.exists)
-//    }
-//    
-//    func test_selectJust20ofColor() {
-//        // given
-//        XCTAssert(homePage.numberOfSelecttedPoems(is: 100), "デフォルトでは100首が選ばれている")
-//        // when
-//        let pickerPage = homePage.goToPoemPickerPage()
-//        let colorPage = pickerPage.gotoFiveColorsPage()
-//        // then
-//        XCTAssert(colorPage.exists)
-//        // when
-//        let sheet = colorPage.tapColorButton(of: .green)
-//        // then
-//        XCTAssert(sheet.exists)
-//        // when
-//        sheet.selectOnlyThese20Button.tap()
-//        // then
-//        XCTAssert(colorPage.badge(of: 20).exists)
-//        // when
-//        colorPage.backButton.tap()
-//        pickerPage.backToTopPage()
-//        // then
-//        XCTAssert(homePage.numberOfSelecttedPoems(is: 20))
-//    }
+    func test_selectJust20ofColor() {
+      // given
+      gotoFiveColorsPage()
+      // then
+      let colorPage = FiveColorsPage(app: app)
+      XCTAssert(colorPage.exists)
+      // when
+      let sheet = colorPage.tapColorButton(of: .green)
+      // then
+      XCTAssert(sheet.exists)
+//      // when
+//      sheet.selectOnlyThese20Button.tap()
+//      // then
+//      XCTAssert(colorPage.badge(of: 20).exists)
+//      // when
+//      colorPage.backButton.tap()
+//      pickerPage.backToTopPage()
+//      // then
+//      XCTAssert(homePage.numberOfSelecttedPoems(is: 20))
+    }
 //    
 //    func test_add20ofColor() {
 //        // given
