@@ -10,9 +10,9 @@
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
+		921D56B22DC0A7E3008AA985 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D56B12DC0A7E3008AA985 /* HomePage.swift */; };
 		92347F4D2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F4C2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift */; };
 		92347F4F2DBF80F0001C77A8 /* AlertObjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F4E2DBF80F0001C77A8 /* AlertObjectable.swift */; };
-		92347F542DBF8444001C77A8 /* AllPoemRecitedPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F532DBF8444001C77A8 /* AllPoemRecitedPage.swift */; };
 		92347F562DBF8462001C77A8 /* FiveColorsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F552DBF8462001C77A8 /* FiveColorsPage.swift */; };
 		92347F582DBF8476001C77A8 /* PageObjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F572DBF8476001C77A8 /* PageObjectable.swift */; };
 		924275D72D574F45001D5940 /* VolumeSettingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924275D62D574F45001D5940 /* VolumeSettingUITests.swift */; };
@@ -125,9 +125,9 @@
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
+		921D56B12DC0A7E3008AA985 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		92347F4C2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColorHandlingSheet.swift; sourceTree = "<group>"; };
 		92347F4E2DBF80F0001C77A8 /* AlertObjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertObjectable.swift; sourceTree = "<group>"; };
-		92347F532DBF8444001C77A8 /* AllPoemRecitedPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPoemRecitedPage.swift; sourceTree = "<group>"; };
 		92347F552DBF8462001C77A8 /* FiveColorsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsPage.swift; sourceTree = "<group>"; };
 		92347F572DBF8476001C77A8 /* PageObjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageObjectable.swift; sourceTree = "<group>"; };
 		924275D62D574F45001D5940 /* VolumeSettingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingUITests.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				924951382DBF86F50097D675 /* enum */,
-				92347F532DBF8444001C77A8 /* AllPoemRecitedPage.swift */,
+				921D56B12DC0A7E3008AA985 /* HomePage.swift */,
 				92347F552DBF8462001C77A8 /* FiveColorsPage.swift */,
 			);
 			path = pages;
@@ -774,9 +774,9 @@
 				92967FB72C85CB7B00493989 /* WaitInUITest.swift in Sources */,
 				92347F582DBF8476001C77A8 /* PageObjectable.swift in Sources */,
 				92347F4D2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift in Sources */,
+				921D56B22DC0A7E3008AA985 /* HomePage.swift in Sources */,
 				92967FB42C85C92800493989 /* InterPoemDurationSettingUITests.swift in Sources */,
 				925648D02D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift in Sources */,
-				92347F542DBF8444001C77A8 /* AllPoemRecitedPage.swift in Sources */,
 				92347F562DBF8462001C77A8 /* FiveColorsPage.swift in Sources */,
 				924275D72D574F45001D5940 /* VolumeSettingUITests.swift in Sources */,
 				9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */,

@@ -48,7 +48,7 @@ final class InterPoemDurationSettingUITests: XCTestCase {
         // then
         XCTAssert(app.staticTexts["0.50"].exists)
         // when
-        let backButton = app.buttons["Back"]
+        let backButton = app.buttons["トップ"]
         backButton.tap()
         // then
         XCTAssert(cell.exists)

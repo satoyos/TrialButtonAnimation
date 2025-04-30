@@ -9,11 +9,15 @@
 import Foundation
 
 final class Settings: Codable, ObservableObject {
-    static let userDefaultKey = "Settings"
-    var mode: GameConfig
-    var recitingConfig: RecitingConfig
-    var state100: SelectedState100
-    var savedFudaSets: [SavedFudaSet]
+  static let userDefaultKey = "Settings"
+  var mode: GameConfig
+  var recitingConfig: RecitingConfig
+  var state100: SelectedState100 {
+    willSet {
+      objectWillChange.send()
+    }
+  }
+  var savedFudaSets: [SavedFudaSet]
     
     init(mode: GameConfig = GameConfig(), recitingConfig: RecitingConfig = RecitingConfig(), bool100: Bool100 = Bool100.allSelected, savedFudaSets: [SavedFudaSet] = []){
         self.mode = mode

@@ -48,7 +48,7 @@ final class KamiShimoDurationSettingUITests: XCTestCase {
         // then
         XCTAssert(app.staticTexts["2.00"].exists)
         // when
-        let backButton = app.buttons["Back"]
+        let backButton = app.buttons["トップ"]
         backButton.tap()
         // then
         XCTAssert(cell.exists)

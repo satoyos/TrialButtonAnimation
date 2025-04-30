@@ -9,36 +9,37 @@
 import XCTest
 
 final class FiveColorsPage: PageObjectable {
-    let app: XCUIApplication
+  let app: XCUIApplication
+  
+  init(app: XCUIApplication) {
+    self.app = app
+  }
+  
+  var pageTitle: XCUIElement {
+    app.staticTexts[A11y.title].firstMatch
+  }
+  
+  var backButton: XCUIElement {
+    app.navigationBars.buttons[A11y.back].firstMatch
+  }
+  
+  enum A11y {
+    static let title = "五色百人一首"
+    static let back = "トップ"
     
-    init(app: XCUIApplication) {
-        self.app = app
-    }
-    
-    var pageTitle: XCUIElement {
-        app.staticTexts[A11y.title].firstMatch
-    }
-    
-    var backButton: XCUIElement {
-        app.navigationBars.buttons[A11y.back].firstMatch
-    }
-    
-    enum A11y {
-        static let title = "五色百人一首"
-        static let back = "歌を選ぶ"
-    }
-    
-    func badge(of number: Int) -> XCUIElement {
-        app.navigationBars.staticTexts["\(number)首"]
-    }
-    
-    private func colorButton(of color: FiveColors) -> XCUIElement {
-        app.buttons[color.rawValue].firstMatch
-    }
-    
-    @discardableResult
-    func tapColorButton(of color: FiveColors) -> SelectedColorHanlingSheet {
-        colorButton(of: color).tap()
-        return  SelectedColorHanlingSheet(app: app)
-    }
+  }
+  
+  func badge(of number: Int) -> XCUIElement {
+    app.navigationBars.staticTexts["\(number)首"]
+  }
+  
+  private func colorButton(of color: FiveColors) -> XCUIElement {
+    app.buttons[color.rawValue].firstMatch
+  }
+  
+  @discardableResult
+  func tapColorButton(of color: FiveColors) -> SelectedColorHanlingSheet {
+    colorButton(of: color).tap()
+    return  SelectedColorHanlingSheet(app: app)
+  }
 }

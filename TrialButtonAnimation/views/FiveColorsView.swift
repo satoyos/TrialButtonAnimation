@@ -13,6 +13,7 @@ struct FiveColorsView {
   @State private var selectedColor: FiveColors = .blue
   @ObservedObject private var viewModel: FiveColorsViewModel
   @EnvironmentObject var screenSizeStore: ScreenSizeStore
+  @Environment(\.isPresented) private var isPresented
   
   init(settings: Settings) {
     self.settings = settings
@@ -55,6 +56,14 @@ extension FiveColorsView: View {
         }
       }
     }
+    .onChange(of: isPresented) {
+      guard !isPresented else { return }
+      tasksForLeavingThisVIew()
+    }
+  }
+  
+  func tasksForLeavingThisVIew() {
+    settings.state100 = viewModel.output.state100
   }
   
 }
