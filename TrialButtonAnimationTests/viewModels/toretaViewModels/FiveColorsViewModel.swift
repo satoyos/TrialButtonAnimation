@@ -47,4 +47,19 @@ final class FiveColorsViewModelTests: XCTestCase {
     XCTAssert(viewModel.output.state100.allSelectedNumbers.contains(1))
     XCTAssertFalse(viewModel.output.state100.allSelectedNumbers.contains(14))
   }
+  
+  func testAdd20OfColor() {
+    // given
+    let state100 = SelectedState100()
+      .cancelAll()
+      .selectInNumbers([2, 4, 7])
+    let viewModel = FiveColorsViewModel(state100: state100)
+    XCTAssertEqual(viewModel.output.state100.selectedNum, 3)
+    // when
+    viewModel.input.add20OfColor.send(.yellow)
+    // then
+    // 既に選ばれている歌と黄色グループは2枚かぶるので、
+    // 選ばれている歌の数は21になる
+    XCTAssertEqual(viewModel.output.state100.selectedNum, 21)
+  }
 }

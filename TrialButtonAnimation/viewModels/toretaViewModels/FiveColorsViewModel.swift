@@ -18,7 +18,7 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
   final class Input: InputObject {
     let colorButtonTapped = PassthroughSubject<FiveColors, Never>()
     let selectJust20OfColor = PassthroughSubject<FiveColors, Never>()
-      
+    let add20OfColor = PassthroughSubject<FiveColors, Never>()
   }
   
   final class Binding: BindingObject {
@@ -31,16 +31,15 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
   let input: Input
   @BindableObject private(set) var binding:  Binding
   let output: Output
-  private let state100: SelectedState100
   var cancellables: Set<AnyCancellable> = []
   
-  
-
-  
+    
   init(state100: SelectedState100) {
     let input = Input()
     let binding = Binding()
     let output = Output()
+    
+    output.state100 = state100
     
     FiveColors.all.forEach { color in
       let fillType = Self.fillType(of: color, for: state100)
@@ -52,6 +51,13 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
         let newState100 = SelectedState100()
           .cancelAll()
           .selectInNumbers(color.poemNumbers)
+        output.state100 = newState100
+      }
+      .store(in: &cancellables)
+    
+    input.add20OfColor
+      .sink { color in
+        let newState100 = state100.selectInNumbers(color.poemNumbers)
         output.state100 = newState100
       }
       .store(in: &cancellables)
@@ -68,8 +74,6 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
     self.input = input
     self.binding = binding
     self.output = output
-    self.state100 = state100
-    
 
   }
 }
