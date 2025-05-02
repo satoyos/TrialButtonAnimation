@@ -32,7 +32,6 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
   @BindableObject private(set) var binding:  Binding
   let output: Output
   var cancellables: Set<AnyCancellable> = []
-  
     
   init(state100: SelectedState100) {
     let input = Input()
@@ -75,7 +74,6 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
     self.input = input
     self.binding = binding
     self.output = output
-
   }
 }
 
