@@ -30,22 +30,8 @@ extension FiveColorsView: View {
             showActionSheet = true
             selectedColor = color
           }
-          .actionSheet(isPresented: $showActionSheet) {
-            ActionSheet(
-              title: Text("\(selectedColor)色の20首をどうしますか？"),
-              message: nil,
-              buttons: [
-                .default(Text("この20首だけを選ぶ")) {
-                  viewModel.input.selectJust20OfColor
-                    .send(selectedColor)
-                },
-                .default(Text("今選んでいる札に加える")) {
-                  viewModel.input.add20OfColor.send(selectedColor)
-                },
-                .cancel()
-              ]
-            )
-          }
+          .actionSheet(isPresented: $showActionSheet,
+                       content: fiveColorsActionSheet)
         }
       }
       .toolbar {
@@ -61,6 +47,22 @@ extension FiveColorsView: View {
       guard !isPresented else { return }
       tasksForLeavingThisVIew()
     }
+  }
+  
+  private func fiveColorsActionSheet() -> ActionSheet {
+    ActionSheet(
+      title: Text("\(selectedColor)色の20首をどうしますか？"),
+      message: nil,
+      buttons: [
+        .default(Text("この20首だけを選ぶ")) {
+          viewModel.input.selectJust20OfColor.send(selectedColor)
+        },
+        .default(Text("今選んでいる札に加える")) {
+          viewModel.input.add20OfColor.send(selectedColor)
+        },
+        .cancel()
+      ]
+    )
   }
   
   func tasksForLeavingThisVIew() {
