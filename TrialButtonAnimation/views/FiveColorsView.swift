@@ -36,11 +36,12 @@ extension FiveColorsView: View {
               message: nil,
               buttons: [
                 .default(Text("この20首だけを選ぶ")) {
-                  print("\(selectedColor)だけを選ぶ")
                   viewModel.input.selectJust20OfColor
                     .send(selectedColor)
                 },
-                .default(Text("今選んでいる札に加える")) { print("\(selectedColor)分を追加する")},
+                .default(Text("今選んでいる札に加える")) {
+                  viewModel.input.add20OfColor.send(selectedColor)
+                },
                 .cancel()
               ]
             )

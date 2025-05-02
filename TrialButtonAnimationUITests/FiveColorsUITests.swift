@@ -55,49 +55,26 @@ class FiveColorsUITest: XCTestCase {
       let button = homePage.fiveColorsButton
       XCTAssert(button.staticTexts["20首"].exists)
     }
-//    
-//    func test_add20ofColor() {
-//        // given
-//        let pickPage = homePage.goToPoemPickerPage()
-//        XCTContext.runActivity(named: "1字決まりの札を選んでおく") { _ in
-//            pickPage.cancelAllButton.tap()
-//            let ngramPage = pickPage.gotoNgramPickerPage()
-//            ngramPage
-//                .tapCell(type: .justOne)
-//                .backToPickerButton.tap()
-//        }
-//        // when
-//        XCTContext.runActivity(named: "そこに、五色百人一首の黄色セットを追加する") { _ in
-//            let colorsPage = pickPage.gotoFiveColorsPage()
-//            let sheet = colorsPage.tapColorButton(of: .yellow)
-//            sheet.addThese20Button.tap()
-//            // then
-//            XCTAssert(colorsPage.badge(of: 24).exists)
-//            // when
-//            colorsPage.backButton.tap()
-//            pickPage.backToTopPage()
-//        }
-//        // then
-//        XCTAssert(homePage.numberOfSelecttedPoems(is: 24), "黄色の20枚には一字決まりの歌が3首含まれているので、足すと27枚ではなく24枚になる")
-//    }
-//    
-//    func test_select2colors() {
-//        // given
-//        let pickerPage = homePage.goToPoemPickerPage()
-//        let colorsPage = pickerPage.gotoFiveColorsPage()
-//        // when
-//        let sheet1 = colorsPage.tapColorButton(of: .green)
-//        sheet1.selectOnlyThese20Button.tap()
-//        let sheet2 = colorsPage.tapColorButton(of: .pink)
-//        sheet2.addThese20Button.tap()
-//        // then
-//        XCTAssert(colorsPage.badge(of: 40).exists)
-//        // when
-//        colorsPage.backButton.tap()
-//        pickerPage.backToTopPage()
-//        // then
-//        XCTAssert(homePage.numberOfSelecttedPoems(is: 40))
-//    }
-//
   
+  func test_add20ofColor() {
+    // given
+    let colorPage = homePage.gotoFiveColorsPage()
+    XCTContext.runActivity(named: "まず、青の20首を選んでおく") { _ in
+      let sheet = colorPage.tapColorButton(of: .blue)
+      sheet.selectOnlyThese20Button.tap()
+      // then
+      XCTAssert(colorPage.badge(of: 20).exists)
+    }
+    // when
+    XCTContext.runActivity(named: "そこに、五色百人一首の黄色セットを追加する") { _ in
+      let sheet = colorPage.tapColorButton(of: .yellow)
+      sheet.addThese20Button.tap()
+      // then
+      XCTAssert(colorPage.badge(of: 40).exists)
+      // when
+      colorPage.backButton.tap()
+      let theButton = homePage.fiveColorsButton
+      XCTAssert(theButton.staticTexts["40首"].exists)
+    }
+  }
 }

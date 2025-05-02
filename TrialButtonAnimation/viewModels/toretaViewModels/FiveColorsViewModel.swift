@@ -57,7 +57,8 @@ final class FiveColorsViewModel: ViewModelObject, FillTypeHandlable {
     
     input.add20OfColor
       .sink { color in
-        let newState100 = state100.selectInNumbers(color.poemNumbers)
+        let newState100 = output.state100
+          .selectInNumbers(color.poemNumbers)
         output.state100 = newState100
       }
       .store(in: &cancellables)
