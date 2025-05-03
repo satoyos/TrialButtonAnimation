@@ -14,7 +14,7 @@ enum FillType {
 }
 
 extension FillType {
-  var imageName: String {
+  var fiveColorsImageName: String {
     switch self {
     case .empty:   "5ColorEmpty"
     case .partial: "5ColorHalf"
