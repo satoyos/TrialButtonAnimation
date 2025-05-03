@@ -23,7 +23,8 @@ struct FiveColorsView {
 
 extension FiveColorsView: View {
   var body: some View {
-    NavigationView {
+    NavigationStack {
+      Spacer()
       List {
         ForEach(FiveColors.all) { color in
           FiveColorButton(viewModel: color.buttonViewModel) {
