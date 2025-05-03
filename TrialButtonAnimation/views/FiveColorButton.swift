@@ -20,7 +20,7 @@ extension FiveColorButton: View {
   var body: some View {
     Button(action: action) {
       HStack(spacing: 20){
-        Image(viewModel.output.fillType.imageName)
+        Image(viewModel.output.fillType.fiveColorsImageName)
           .resizable()
           .renderingMode(.template)
           .foregroundColor(viewModel.color.color)
