@@ -36,6 +36,8 @@
 		925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */; };
 		92656EDC2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656EDB2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift */; };
 		92656EDE2DBC739F006E04DC /* FiveColorButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */; };
+		926D781F2DCE1D11003844B0 /* FirstCharTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D781E2DCE1D11003844B0 /* FirstCharTests.swift */; };
+		926D78212DCE1DDE003844B0 /* FirstChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D78202DCE1DD0003844B0 /* FirstChar.swift */; };
 		926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */; };
 		928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB802BF77C01001E28E2 /* TrialButtonAnimationApp.swift */; };
 		928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928FEB822BF77C01001E28E2 /* ContentView.swift */; };
@@ -151,6 +153,8 @@
 		925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModelTests.swift; sourceTree = "<group>"; };
 		92656EDB2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorButtonViewModelTests.swift; sourceTree = "<group>"; };
 		92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorButtonViewModel.swift; sourceTree = "<group>"; };
+		926D781E2DCE1D11003844B0 /* FirstCharTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCharTests.swift; sourceTree = "<group>"; };
+		926D78202DCE1DD0003844B0 /* FirstChar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstChar.swift; sourceTree = "<group>"; };
 		926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewButtonStyle.swift; sourceTree = "<group>"; };
 		9282CF682D67402F00516FDE /* TrialButtonAnimation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TrialButtonAnimation.xctestplan; sourceTree = "<group>"; };
 		928FEB7D2BF77C01001E28E2 /* TrialButtonAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrialButtonAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */,
+				926D781E2DCE1D11003844B0 /* FirstCharTests.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 			children = (
 				92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */,
 				92FA42542DB47B71004BE2C1 /* FillType.swift */,
+				926D78202DCE1DD0003844B0 /* FirstChar.swift */,
 				92967FC92C8D359300493989 /* Bool100.swift */,
 				92967FCA2C8D359300493989 /* DigitsNumberFactory.swift */,
 				92967FC02C8D359200493989 /* FiveColors.swift */,
@@ -727,6 +733,7 @@
 				92967FE72C8D366A00493989 /* String-extension.swift in Sources */,
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,
 				92967FF72C8D8C1300493989 /* MenuSection.swift in Sources */,
+				926D78212DCE1DDE003844B0 /* FirstChar.swift in Sources */,
 				92967FCF2C8D359300493989 /* StandardColor.swift in Sources */,
 				92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */,
 				92967FE32C8D366A00493989 /* UIColorExtention.swift in Sources */,
@@ -759,6 +766,7 @@
 				925648C82D2BC84200688D8B /* DurationSettingViewModelTests.swift in Sources */,
 				92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */,
 				925648C92D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift in Sources */,
+				926D781F2DCE1D11003844B0 /* FirstCharTests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
 				92656EDC2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift in Sources */,
 				925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */,
