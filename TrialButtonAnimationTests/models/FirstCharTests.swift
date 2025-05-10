@@ -10,7 +10,22 @@ import XCTest
 
 final class FirstCharTests: XCTestCase {
   func testCorrectNumbers() {
-    XCTAssertEqual(FirstChar.justOne.poemNumbers, [18, 22, 57, 70, 77, 81, 87])
+    FirstChar.allCases.forEach { char in
+      if char == .justOne {
+        XCTAssertEqual(char.poemNumbers, [18, 22, 57, 70, 77, 81, 87])
+
+      } else {
+        XCTAssertEqual(char.poemNumbers,
+                          poemNumbersFor(char: char))
+      }
+    }
   }
   
+  func poemNumbersFor(char: FirstChar) -> [Int] {
+    guard char != .justOne else { return [] }
+    return PoemSupplier.originalPoems
+      .filter {
+        $0.kimari_ji.first == Character(char.description)}
+      .map(\.number)
+  }
 }

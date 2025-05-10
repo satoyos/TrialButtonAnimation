@@ -9,7 +9,10 @@ enum FirstChar {
   case justOne
   case u
   case tsu
+  case shi
 }
+
+extension FirstChar: CaseIterable {}
 
 extension FirstChar: CustomStringConvertible {
   var description: String {
@@ -17,6 +20,7 @@ extension FirstChar: CustomStringConvertible {
     case .justOne: "一字決まり"
     case .u:       "う"
     case .tsu:     "つ"
+    case .shi:     "し"
     }
   }
 }
@@ -36,6 +40,7 @@ extension FirstChar {
     case .justOne: [18, 22, 57, 70, 77, 81, 87]
     case .u:       [65, 74]
     case .tsu:     [13, 23]
+    case .shi:     [37, 40]
     }
   }
 }
