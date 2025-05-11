@@ -92,6 +92,12 @@
 		92A9B5512C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */; };
 		92AA24C42DD0894600D6E8F7 /* NgramSectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA24C32DD0894600D6E8F7 /* NgramSectionTests.swift */; };
 		92AA24C62DD089B800D6E8F7 /* NgramSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA24C52DD089B400D6E8F7 /* NgramSection.swift */; };
+		92AA24C92DD0ACC000D6E8F7 /* full_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AA24C82DD0ACC000D6E8F7 /* full_circle.png */; };
+		92AA24CB2DD0ACCD00D6E8F7 /* half_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AA24CA2DD0ACCD00D6E8F7 /* half_circle.png */; };
+		92AA24CD2DD0ACD900D6E8F7 /* empty_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 92AA24CC2DD0ACD900D6E8F7 /* empty_circle.png */; };
+		92AA24CF2DD0B9F700D6E8F7 /* NgramButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA24CE2DD0B9F700D6E8F7 /* NgramButtonView.swift */; };
+		92AA24D12DD0BA4A00D6E8F7 /* NgramButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA24D02DD0BA4A00D6E8F7 /* NgramButtonViewModelTests.swift */; };
+		92AA24D32DD0BAB500D6E8F7 /* NgramButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */; };
 		92C0DA182C660DC1004C8966 /* AudioPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */; };
 		92C0DA292C6629EF004C8966 /* audio in Resources */ = {isa = PBXBuildFile; fileRef = 92C0DA282C6629EF004C8966 /* audio */; };
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
@@ -216,6 +222,12 @@
 		92A9B5502C54DC4F00BEF03B /* MemorizeTimer.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTimer.ViewModel.swift; sourceTree = "<group>"; };
 		92AA24C32DD0894600D6E8F7 /* NgramSectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramSectionTests.swift; sourceTree = "<group>"; };
 		92AA24C52DD089B400D6E8F7 /* NgramSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramSection.swift; sourceTree = "<group>"; };
+		92AA24C82DD0ACC000D6E8F7 /* full_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full_circle.png; sourceTree = "<group>"; };
+		92AA24CA2DD0ACCD00D6E8F7 /* half_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = half_circle.png; sourceTree = "<group>"; };
+		92AA24CC2DD0ACD900D6E8F7 /* empty_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty_circle.png; sourceTree = "<group>"; };
+		92AA24CE2DD0B9F700D6E8F7 /* NgramButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramButtonView.swift; sourceTree = "<group>"; };
+		92AA24D02DD0BA4A00D6E8F7 /* NgramButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramButtonViewModelTests.swift; sourceTree = "<group>"; };
+		92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramButtonViewModel.swift; sourceTree = "<group>"; };
 		92C0DA172C660DC1004C8966 /* AudioPlayerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerFactory.swift; sourceTree = "<group>"; };
 		92C0DA282C6629EF004C8966 /* audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio; sourceTree = "<group>"; };
 		92C0DA2E2C674971004C8966 /* TrialButtonAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrialButtonAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -496,10 +508,12 @@
 				92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */,
 				92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */,
 				925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */,
+				92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */,
 				929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */,
 				925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */,
 				929DB8702CD5F5AB00609B7B /* protocols */,
 				929DB8B72CDEF95700609B7B /* MemorizeTimerViewModel.swift */,
+				92AA24CE2DD0B9F700D6E8F7 /* NgramButtonView.swift */,
 			);
 			path = toretaViewModels;
 			sourceTree = "<group>";
@@ -513,8 +527,19 @@
 				929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */,
 				925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */,
 				92656EDB2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift */,
+				92AA24D02DD0BA4A00D6E8F7 /* NgramButtonViewModelTests.swift */,
 			);
 			path = toretaViewModels;
+			sourceTree = "<group>";
+		};
+		92AA24C72DD0AC7900D6E8F7 /* Ngram */ = {
+			isa = PBXGroup;
+			children = (
+				92AA24C82DD0ACC000D6E8F7 /* full_circle.png */,
+				92AA24CA2DD0ACCD00D6E8F7 /* half_circle.png */,
+				92AA24CC2DD0ACD900D6E8F7 /* empty_circle.png */,
+			);
+			path = Ngram;
 			sourceTree = "<group>";
 		};
 		92C0DA162C660CD6004C8966 /* audio */ = {
@@ -530,8 +555,9 @@
 			isa = PBXGroup;
 			children = (
 				924463232D97D71500F562B2 /* 5colors */,
-				925648C42D2BC63300688D8B /* Singers.json */,
+				92AA24C72DD0AC7900D6E8F7 /* Ngram */,
 				9222A8102DCF54AC00D208EE /* 100.json */,
+				925648C42D2BC63300688D8B /* Singers.json */,
 				92C0DA282C6629EF004C8966 /* audio */,
 			);
 			path = resources;
@@ -670,7 +696,10 @@
 				925648C52D2BC63300688D8B /* Singers.json in Resources */,
 				9222A8112DCF54AC00D208EE /* 100.json in Resources */,
 				928FEB852BF77C02001E28E2 /* Assets.xcassets in Resources */,
+				92AA24C92DD0ACC000D6E8F7 /* full_circle.png in Resources */,
+				92AA24CB2DD0ACCD00D6E8F7 /* half_circle.png in Resources */,
 				92C0DA292C6629EF004C8966 /* audio in Resources */,
+				92AA24CD2DD0ACD900D6E8F7 /* empty_circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +733,7 @@
 				92FA425C2DB4E3D3004BE2C1 /* BadgeTestView.swift in Sources */,
 				92967FCE2C8D359300493989 /* GameConfig.swift in Sources */,
 				92967FF12C8D484B00493989 /* MenuRow.swift in Sources */,
+				92AA24D32DD0BAB500D6E8F7 /* NgramButtonViewModel.swift in Sources */,
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
 				92A9B54B2C5487EA00BEF03B /* MinSec.ViewModel.swift in Sources */,
 				92656EDE2DBC739F006E04DC /* FiveColorButtonViewModel.swift in Sources */,
@@ -755,6 +785,7 @@
 				925648E12D3BA52B00688D8B /* VolumeSettingViewModel.swift in Sources */,
 				92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */,
 				925648C12D2BC32700688D8B /* DurationSettingType.swift in Sources */,
+				92AA24CF2DD0B9F700D6E8F7 /* NgramButtonView.swift in Sources */,
 				925648BD2D2BC27E00688D8B /* DurationSettingViewModel 2.swift in Sources */,
 				925648BE2D2BC27E00688D8B /* ReciteSettingAudioHandler 2.swift in Sources */,
 				92A9B5452C53BE4900BEF03B /* CountDownTimer.swift in Sources */,
@@ -777,6 +808,7 @@
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
 				925648C82D2BC84200688D8B /* DurationSettingViewModelTests.swift in Sources */,
 				92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */,
+				92AA24D12DD0BA4A00D6E8F7 /* NgramButtonViewModelTests.swift in Sources */,
 				925648C92D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift in Sources */,
 				926D781F2DCE1D11003844B0 /* FirstCharTests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
