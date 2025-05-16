@@ -108,6 +108,7 @@
 		92DC382A2D9BE7FF000AEBF8 /* FiveColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */; };
 		92E0A94F2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A94E2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift */; };
 		92E0A9512DD499D100D5BAA5 /* NgramPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */; };
+		92E0A9532DD74E8A00D5BAA5 /* NgramButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */; };
 		92FA42512DB3A621004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */; };
 		92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */; };
 		92FA42552DB47B7D004BE2C1 /* FillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42542DB47B71004BE2C1 /* FillType.swift */; };
@@ -241,6 +242,7 @@
 		92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsView.swift; sourceTree = "<group>"; };
 		92E0A94E2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerViewModelTests.swift; sourceTree = "<group>"; };
 		92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerViewModel.swift; sourceTree = "<group>"; };
+		92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramButton.swift; sourceTree = "<group>"; };
 		92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
 		92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
 		92FA42542DB47B71004BE2C1 /* FillType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillType.swift; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */,
 				92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */,
 				92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */,
+				92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				926D78212DCE1DDE003844B0 /* FirstChar.swift in Sources */,
 				92967FCF2C8D359300493989 /* StandardColor.swift in Sources */,
 				92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */,
+				92E0A9532DD74E8A00D5BAA5 /* NgramButton.swift in Sources */,
 				92967FE32C8D366A00493989 /* UIColorExtention.swift in Sources */,
 				92967FD82C8D359300493989 /* NgramDataFactory.swift in Sources */,
 				929DB8B82CDEF98300609B7B /* MemorizeTimerViewModel.swift in Sources */,
