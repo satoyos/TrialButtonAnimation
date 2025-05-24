@@ -20,7 +20,7 @@ extension NgramButton: View {
       HStack(spacing: 20) {
         Image(viewModel.output.fillType.ngramImageName)
           .resizable()
-          .frame(width: 70, height: 70)
+          .frame(width: 50, height: 50)
 
         Text(viewModel.firstChar.title)
           .font(.title2)

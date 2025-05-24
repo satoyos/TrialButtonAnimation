@@ -31,6 +31,12 @@ enum FirstChar {
 
 extension FirstChar: CaseIterable {}
 
+extension FirstChar: Identifiable {
+  var id: Self {
+    self
+  }
+}
+
 extension FirstChar: CustomStringConvertible {
   var description: String {
     switch self {

@@ -10,6 +10,12 @@ struct NgramSection {
   let firstChars: [FirstChar]
 }
 
+extension NgramSection: Identifiable {
+  var id: String {
+    title
+  }
+}
+
 struct NgramSections {
   static let `default`: [NgramSection] = [
     .init(title: "一枚札",
