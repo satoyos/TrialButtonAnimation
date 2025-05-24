@@ -37,6 +37,21 @@ final class NgramPickerViewModel: ObservableObject, FillTypeHandlable {
       firstChar.buttonViewModel.input.setFillType.send(fillType)
     }
     
+    input.chrButotnTapped
+      .sink { firstChar in
+        let currentFillType = firstChar.buttonViewModel.output.fillType
+        let currentState100 = output.state100
+        switch currentFillType {
+        case .full:
+          output.state100 = currentState100.cancelInNumbers(firstChar.poemNumbers)
+          firstChar.buttonViewModel.input.setFillType.send(.empty)
+        default:
+          output.state100 = currentState100.selectInNumbers(firstChar.poemNumbers)
+          firstChar.buttonViewModel.input.setFillType.send(.full)
+        }
+      }
+      .store(in: &cancellables)
+    
     self.input = input
     self.binding = binding
     self.output = output

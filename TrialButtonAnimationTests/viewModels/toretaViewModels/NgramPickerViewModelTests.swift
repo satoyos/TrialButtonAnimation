@@ -34,6 +34,29 @@ final class NgramPickerViewModelTests: XCTestCase {
     XCTAssertEqual(FirstChar.tsu.buttonViewModel.output.fillType, .partial)
   }
   
+  func testTapPartialMakesFull() {
+    // given
+    let state100 = SelectedState100()
+      .cancelOf(number: 13) // 「つくばねの」を選択から外す
+    // when
+    let viewModel = NgramPickerViewModel(state100: state100)
+    // then
+    XCTAssertEqual(FirstChar.tsu.buttonViewModel.output.fillType, .partial)
+    // when
+    viewModel.input.chrButotnTapped.send(.tsu)
+    // then
+    XCTAssertEqual(FirstChar.tsu.buttonViewModel.output.fillType, .full)
+    XCTAssertEqual(viewModel.selectedNum, 100)
+  }
 
-
+  func testTapFullMakesEmpty() {
+    // given
+    let state100 = SelectedState100()
+    let viewModel = NgramPickerViewModel(state100: state100)
+    // when
+    viewModel.input.chrButotnTapped.send(.shi)
+    // then
+    XCTAssertEqual(FirstChar.shi.buttonViewModel.output.fillType, .empty)
+    XCTAssertEqual(viewModel.selectedNum, 98)
+  }
 }
