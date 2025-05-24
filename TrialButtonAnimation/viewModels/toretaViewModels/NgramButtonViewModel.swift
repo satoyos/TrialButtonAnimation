@@ -32,9 +32,12 @@ class NgramButtonViewModel: ViewModelObject {
     let input = Input()
     let binding = Binding()
     let output = Output()
-    
-    
     self.firstChar = firstChar
+    
+    input.setFillType
+      .assign(to: \.fillType, on: output)
+      .store(in: &cancellables)
+    
     self.input = input
     self.binding = binding
     self.output = output

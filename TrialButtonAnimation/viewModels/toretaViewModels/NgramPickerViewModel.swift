@@ -10,7 +10,7 @@ import Combine
 final class NgramPickerViewModel: ObservableObject, FillTypeHandlable {
   
   final class Input: InputObject {
-    let firtCharButtonTapped = PassthroughSubject<FirstChar, Never>()
+    let chrButotnTapped = PassthroughSubject<FirstChar, Never>()
   }
   
   final class Binding: BindingObject {
@@ -40,6 +40,12 @@ final class NgramPickerViewModel: ObservableObject, FillTypeHandlable {
     self.input = input
     self.binding = binding
     self.output = output
+  }
+}
+
+extension NgramPickerViewModel {
+  var selectedNum: Int {
+    output.state100.selectedNum
   }
 }
 
