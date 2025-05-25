@@ -23,4 +23,21 @@ final class NgramPickerUITests: XCTestCase {
     // then
     XCTAssert(ngramPage.exists)
   }
+  
+  func testTapFullSelectedCell() {
+    // given
+    let ngramPage = homePage.gotoNgramPickerPage()
+    // when
+    ngramPage.tapCell(type: .justOne) // 一字決まりの歌をタップ
+    // then
+    XCTAssert(ngramPage.badge(of: 93).exists)
+    // when
+    ngramPage.backButton.tap()
+    // then
+    let theButton = homePage.ngramPickerButton
+    XCTAssert(theButton.staticTexts["93首"].exists)
+  }
+
+  
 }
+

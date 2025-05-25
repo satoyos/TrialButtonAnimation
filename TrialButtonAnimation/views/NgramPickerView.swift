@@ -11,6 +11,7 @@ struct NgramPickerView {
   let settings: Settings
   @ObservedObject private var viewModel: NgramPickerViewModel
   @EnvironmentObject var screenSizeStore: ScreenSizeStore
+  @Environment(\.isPresented) private var isPresented
   
   init(settings: Settings) {
     self.settings = settings
@@ -42,6 +43,14 @@ extension NgramPickerView: View {
         }
       }
     }
+    .onChange(of: isPresented) {
+      guard !isPresented else { return }
+      tasksForLeavingThisView()
+    }
+  }
+  
+  func tasksForLeavingThisView() {
+    settings.state100 = viewModel.output.state100
   }
 }
 

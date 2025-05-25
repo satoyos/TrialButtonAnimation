@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 
 enum NgramCellType: String {
-    case justOne = "just_one"
+    case justOne = "一字決まりの歌"
     case u = "u"
     case tsu = "tsu"
     case shi = "shi"
@@ -29,13 +29,13 @@ final class NgramPickerPage: PageObjectable {
         return app.staticTexts[A11y.title].firstMatch
     }
     
-    var backToPickerButton: XCUIElement {
-        return app.navigationBars.buttons[A11y.backToPicker].firstMatch
+    var backButton: XCUIElement {
+        app.navigationBars.buttons[A11y.backToTop].firstMatch
     }
     
     enum A11y {
         static let title = "1字目で選ぶ"
-        static let backToPicker = "歌を選ぶ"
+        static let backToTop = "トップ"
     }
     
     func badge(of number: Int) -> XCUIElement {
@@ -49,6 +49,6 @@ final class NgramPickerPage: PageObjectable {
     }
     
     private func cell(type: NgramCellType) -> XCUIElement {
-        return app.cells[type.rawValue].firstMatch
+        return app.buttons[type.rawValue].firstMatch
     }
 }
