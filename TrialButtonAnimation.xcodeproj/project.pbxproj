@@ -427,6 +427,7 @@
 				92967FF02C8D484B00493989 /* MenuRow.swift */,
 				9213884B2C4A96E70025F2E0 /* MinSec.swift */,
 				92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */,
+				92E0A9542DD881E600D5BAA5 /* NgremPickerView.swift */,
 				92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */,
 				92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */,
 				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
@@ -436,7 +437,6 @@
 				92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */,
 				92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */,
 				92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */,
-				92E0A9542DD881E600D5BAA5 /* NgremPickerView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";

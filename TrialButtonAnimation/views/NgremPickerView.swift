@@ -20,15 +20,26 @@ struct NgremPickerView {
 
 extension NgremPickerView: View {
   var body: some View {
-    List {
-      ForEach(NgramSections.default) { section in
-        Section(header: Text(section.title)) {
-          ForEach(section.firstChars) { char in
-            NgramButton(viewModel: .init(firstChar: char)) {
-              print("[\(char.description)]が押された！")
+    NavigationStack {
+      List {
+        ForEach(NgramSections.default) { section in
+          Section(header: Text(section.title)) {
+            ForEach(section.firstChars) { char in
+              NgramButton(viewModel: char.buttonViewModel) {
+                print("「\(char)」が押されたよ！")
+                viewModel.input.chrButotnTapped.send(char)
+              }
             }
           }
         }
+      }
+      .safeAreaInset(edge: .top) {
+        HStack {
+          Spacer()
+          BadgeView(number: viewModel.selectedNum)
+            .padding()
+        }
+        .frame(height: 30)
       }
     }
   }

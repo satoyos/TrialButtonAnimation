@@ -7,7 +7,7 @@
 
 import Combine
 
-final class NgramPickerViewModel: ObservableObject, FillTypeHandlable {
+final class NgramPickerViewModel: ViewModelObject, FillTypeHandlable {
   
   final class Input: InputObject {
     let chrButotnTapped = PassthroughSubject<FirstChar, Never>()
