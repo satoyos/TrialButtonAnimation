@@ -64,6 +64,7 @@ final class HomePage: PageObjectable, WaitInUITest {
     static let title = "トップ"
     
     static let fiveColors = "五色百人一首の色で選ぶ"
+    static let ngramPicker = "1字目で選ぶ"
     static let timer = "暗記時間タイマー"
     static let interval = "歌と歌の間隔"
     static let kamiShimoInterval = "上の句と下の句の間隔"
@@ -119,9 +120,18 @@ final class HomePage: PageObjectable, WaitInUITest {
     app.buttons[A11y.fiveColors].firstMatch
   }
   
+  var ngramPickerButton: XCUIElement {
+    app.buttons[A11y.ngramPicker].firstMatch
+  }
+  
   func gotoFiveColorsPage() -> FiveColorsPage {
     fiveColorsButton.tap()
     return FiveColorsPage(app: app)
+  }
+  
+  func gotoNgramPickerPage() -> NgramPickerPage {
+    ngramPickerButton.tap()
+    return NgramPickerPage(app: app)
   }
   
 //  func numberOfSelecttedPoems(is number: Int) -> Bool {

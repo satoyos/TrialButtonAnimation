@@ -18,6 +18,7 @@ extension MenuList: View {
       List {
         // 複雑なことはやめて、メニューの中身はここに書く！
         Section(header: Text("画面")) {
+          navLinkNgramPicker
           navLinkFiveColorsPicker
           navLinkToMemorizeTimer
           navLinkToInterPoemDurationSetting
@@ -31,6 +32,19 @@ extension MenuList: View {
   
   typealias ModifiedNavLink<Label: View, Modifier: ViewModifier> = ModifiedContent<NavigationLink<MenuRow, Label>, Modifier>
 
+  private var navLinkNgramPicker: ModifiedNavLink<some View, some ViewModifier>{
+    let title = "1字目で選ぶ"
+    return NavigationLink(
+      destination: NgramPickerView(settings: settings),
+      label: {
+        let item = MenuItem(
+          title: title,
+          value: "\(settings.state100.selectedNum)首")
+        MenuRow(viewModel: .init(item: item))
+      })
+    .accessibilityIdentifier(title)
+  }
+  
   private var navLinkFiveColorsPicker: ModifiedNavLink<some View, some ViewModifier>{
     let title = "五色百人一首の色で選ぶ"
     return NavigationLink (

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NgremPickerView {
+struct NgramPickerView {
   let settings: Settings
   @ObservedObject private var viewModel: NgramPickerViewModel
   @EnvironmentObject var screenSizeStore: ScreenSizeStore
@@ -18,7 +18,7 @@ struct NgremPickerView {
   }
 }
 
-extension NgremPickerView: View {
+extension NgramPickerView: View {
   var body: some View {
     NavigationStack {
       List {
@@ -33,19 +33,19 @@ extension NgremPickerView: View {
           }
         }
       }
-      .safeAreaInset(edge: .top) {
-        HStack {
-          Spacer()
+      .toolbar {
+        ToolbarItem(placement: .confirmationAction) {
           BadgeView(number: viewModel.selectedNum)
-            .padding()
         }
-        .frame(height: 30)
+        ToolbarItem(placement: .principal) {
+          Text("1字目で選ぶ")
+        }
       }
     }
   }
 }
 
 #Preview {
-  NgremPickerView(settings: Settings())
+  NgramPickerView(settings: Settings())
     .environmentObject(ScreenSizeStore())
 }

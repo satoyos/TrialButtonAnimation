@@ -109,7 +109,9 @@
 		92E0A94F2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A94E2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift */; };
 		92E0A9512DD499D100D5BAA5 /* NgramPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */; };
 		92E0A9532DD74E8A00D5BAA5 /* NgramButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */; };
-		92E0A9552DD881E600D5BAA5 /* NgremPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9542DD881E600D5BAA5 /* NgremPickerView.swift */; };
+		92E0A9552DD881E600D5BAA5 /* NgramPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9542DD881E600D5BAA5 /* NgramPickerView.swift */; };
+		92E0A9582DE30D6A00D5BAA5 /* NgramPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9572DE30D6A00D5BAA5 /* NgramPickerUITests.swift */; };
+		92E0A95A2DE310CB00D5BAA5 /* NgramPickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E0A9592DE310CB00D5BAA5 /* NgramPickerPage.swift */; };
 		92FA42512DB3A621004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */; };
 		92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */; };
 		92FA42552DB47B7D004BE2C1 /* FillType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42542DB47B71004BE2C1 /* FillType.swift */; };
@@ -244,7 +246,9 @@
 		92E0A94E2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerViewModelTests.swift; sourceTree = "<group>"; };
 		92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerViewModel.swift; sourceTree = "<group>"; };
 		92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramButton.swift; sourceTree = "<group>"; };
-		92E0A9542DD881E600D5BAA5 /* NgremPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgremPickerView.swift; sourceTree = "<group>"; };
+		92E0A9542DD881E600D5BAA5 /* NgramPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerView.swift; sourceTree = "<group>"; };
+		92E0A9572DE30D6A00D5BAA5 /* NgramPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerUITests.swift; sourceTree = "<group>"; };
+		92E0A9592DE310CB00D5BAA5 /* NgramPickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NgramPickerPage.swift; sourceTree = "<group>"; };
 		92FA42502DB3A610004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
 		92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsViewModel.swift; sourceTree = "<group>"; };
 		92FA42542DB47B71004BE2C1 /* FillType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillType.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				924951382DBF86F50097D675 /* enum */,
 				921D56B12DC0A7E3008AA985 /* HomePage.swift */,
 				92347F552DBF8462001C77A8 /* FiveColorsPage.swift */,
+				92E0A9592DE310CB00D5BAA5 /* NgramPickerPage.swift */,
 			);
 			path = pages;
 			sourceTree = "<group>";
@@ -427,7 +432,7 @@
 				92967FF02C8D484B00493989 /* MenuRow.swift */,
 				9213884B2C4A96E70025F2E0 /* MinSec.swift */,
 				92E0A9522DD74E8A00D5BAA5 /* NgramButton.swift */,
-				92E0A9542DD881E600D5BAA5 /* NgremPickerView.swift */,
+				92E0A9542DD881E600D5BAA5 /* NgramPickerView.swift */,
 				92A9B53A2C4E6FB300BEF03B /* RecitePlayButton.swift */,
 				92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */,
 				926DD6512C6CAF4500516674 /* ReciteViewButtonStyle.swift */,
@@ -587,6 +592,7 @@
 				925648CF2D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift */,
 				924275D62D574F45001D5940 /* VolumeSettingUITests.swift */,
 				9244631F2D97D08E00F562B2 /* FiveColorsUITests.swift */,
+				92E0A9572DE30D6A00D5BAA5 /* NgramPickerUITests.swift */,
 			);
 			path = TrialButtonAnimationUITests;
 			sourceTree = "<group>";
@@ -790,7 +796,7 @@
 				926D78212DCE1DDE003844B0 /* FirstChar.swift in Sources */,
 				92967FCF2C8D359300493989 /* StandardColor.swift in Sources */,
 				92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */,
-				92E0A9552DD881E600D5BAA5 /* NgremPickerView.swift in Sources */,
+				92E0A9552DD881E600D5BAA5 /* NgramPickerView.swift in Sources */,
 				92E0A9532DD74E8A00D5BAA5 /* NgramButton.swift in Sources */,
 				92967FE32C8D366A00493989 /* UIColorExtention.swift in Sources */,
 				92967FD82C8D359300493989 /* NgramDataFactory.swift in Sources */,
@@ -842,9 +848,11 @@
 				92967FB72C85CB7B00493989 /* WaitInUITest.swift in Sources */,
 				92347F582DBF8476001C77A8 /* PageObjectable.swift in Sources */,
 				92347F4D2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift in Sources */,
+				92E0A9582DE30D6A00D5BAA5 /* NgramPickerUITests.swift in Sources */,
 				921D56B22DC0A7E3008AA985 /* HomePage.swift in Sources */,
 				92967FB42C85C92800493989 /* InterPoemDurationSettingUITests.swift in Sources */,
 				925648D02D2BD1D600688D8B /* KamiShimoDurationSettingUITests.swift in Sources */,
+				92E0A95A2DE310CB00D5BAA5 /* NgramPickerPage.swift in Sources */,
 				92347F562DBF8462001C77A8 /* FiveColorsPage.swift in Sources */,
 				924275D72D574F45001D5940 /* VolumeSettingUITests.swift in Sources */,
 				9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */,
