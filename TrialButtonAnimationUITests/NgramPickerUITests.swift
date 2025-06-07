@@ -38,6 +38,17 @@ final class NgramPickerUITests: XCTestCase {
     XCTAssert(theButton.staticTexts["93首"].exists)
   }
 
-  
+  func testTapEmptSelectedCell() {
+    // given
+    let ngramPage = homePage.gotoNgramPickerPage()
+    // when
+    ngramPage.tapCell(type: .justOne)
+    // then
+    XCTAssert(ngramPage.badge(of: 93).exists)
+    // when
+    ngramPage.tapCell(type: .justOne)
+    // then
+    XCTAssert(ngramPage.badge(of: 100).exists)
+  }
 }
 
