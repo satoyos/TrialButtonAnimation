@@ -44,6 +44,7 @@ class CountDownTimer: ObservableObject {
     
     func stop() {
         stopAneEraseTimer()
+        isRunning = false
     }
     
     func reset(to newTime: Double) {
