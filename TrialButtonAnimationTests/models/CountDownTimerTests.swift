@@ -85,4 +85,22 @@ final class CountDownTimerTests: XCTestCase {
         // then
         XCTAssertEqual(timer.remainTime, 1.0)
     }
+
+    func testStoppingTimerMakesRunningFlagFalse() {
+        // given
+        let timer = CountDownTimer(startTime: 1.0, intarval: 0.1)
+        timer.start()
+        let expectation = XCTestExpectation(description: "Timer running")
+        timer.$isRunning
+            .dropFirst()
+            .sink { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+        wait(for: [expectation], timeout: 0.2)
+        // when
+        timer.stop()
+        // then
+        XCTAssertFalse(timer.isRunning)
+    }
 }
