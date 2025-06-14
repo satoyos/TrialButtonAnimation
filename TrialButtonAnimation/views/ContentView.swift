@@ -6,18 +6,14 @@
 //
 import SwiftUI
 
-
 struct ContentView: View {
-
-    var body: some View {
-        NavigationView {
-            MenuList(settings: Settings())
-        }
-        .navigationTitle("画面一覧")
-        .environmentObject(ScreenSizeStore())
-    }
+  
+  var body: some View {
+    MenuList(settings: Settings())
+      .environmentObject(ScreenSizeStore())
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
