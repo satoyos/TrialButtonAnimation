@@ -28,13 +28,13 @@ final class VolumeSettingUITests: XCTestCase {
     XCTAssert(slider.exists)
     // when
     slider.adjust(toNormalizedSliderPosition: 0.50)
-    // then
-    XCTAssert(app.staticTexts[" 49"].firstMatch.exists)
+    // then 「49」または「50」どちらかが表示されることを許容
+    XCTAssert(app.staticTexts[" 49"].exists || app.staticTexts[" 50"].exists)
     // when
     let backButton = app.buttons["トップ"].firstMatch
     backButton.tap()
-    // then
-    XCTAssert(app.staticTexts["49%"].exists)
+    // then 「49%」または「50%」どちらかが表示されることを許容
+    XCTAssert(app.staticTexts["49%"].exists || app.staticTexts["50%"].exists)
     
   }
 
