@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9205DA6C2E06A4BD0098CE3B /* Digits01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA6B2E06A4A60098CE3B /* Digits01.swift */; };
 		9205DA6E2E06A7E80098CE3B /* Digits01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */; };
+		9205DA712E06C9830098CE3B /* Digits01ButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA702E06C9830098CE3B /* Digits01ButtonViewModelTests.swift */; };
+		9205DA732E06CA0E0098CE3B /* Digits01ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */; };
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
@@ -143,6 +145,8 @@
 /* Begin PBXFileReference section */
 		9205DA6B2E06A4A60098CE3B /* Digits01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01.swift; sourceTree = "<group>"; };
 		9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01Tests.swift; sourceTree = "<group>"; };
+		9205DA702E06C9830098CE3B /* Digits01ButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01ButtonViewModelTests.swift; sourceTree = "<group>"; };
+		9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01ButtonViewModel.swift; sourceTree = "<group>"; };
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
@@ -534,6 +538,7 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */,
 				92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */,
 				92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */,
 				92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */,
@@ -559,6 +564,7 @@
 				925648C72D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift */,
 				929DB8BB2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift */,
 				925648E22D3BA58200688D8B /* VolumeSettingViewModelTests.swift */,
+				9205DA702E06C9830098CE3B /* Digits01ButtonViewModelTests.swift */,
 			);
 			path = toretaViewModels;
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
 				92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */,
+				9205DA732E06CA0E0098CE3B /* Digits01ButtonViewModel.swift in Sources */,
 				929DB8742CD60C2B00609B7B /* BindableObject.swift in Sources */,
 				92967FEF2C8D403100493989 /* MenuItem.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,
@@ -842,6 +849,7 @@
 				92A9B53F2C4FC39B00BEF03B /* RecitePlayButtonViewModelTests.swift in Sources */,
 				92967FF32C8D48FF00493989 /* MenuRowViewModelTests.swift in Sources */,
 				92E0A94F2DD498F200D5BAA5 /* NgramPickerViewModelTests.swift in Sources */,
+				9205DA712E06C9830098CE3B /* Digits01ButtonViewModelTests.swift in Sources */,
 				92A9B5472C53C0AF00BEF03B /* CountDownTimerTests.swift in Sources */,
 				925648C82D2BC84200688D8B /* DurationSettingViewModelTests.swift in Sources */,
 				92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */,
