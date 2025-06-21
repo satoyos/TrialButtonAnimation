@@ -283,6 +283,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9205DA6A2E069CCE0098CE3B /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				92FA42542DB47B71004BE2C1 /* FillType.swift */,
+				926D78202DCE1DD0003844B0 /* FirstChar.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
 		92347F4B2DBF80AC001C77A8 /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,10 +470,9 @@
 		92967FBC2C8C4B9400493989 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				9205DA6A2E069CCE0098CE3B /* enums */,
 				92AA24C52DD089B400D6E8F7 /* NgramSection.swift */,
 				92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */,
-				92FA42542DB47B71004BE2C1 /* FillType.swift */,
-				926D78202DCE1DD0003844B0 /* FirstChar.swift */,
 				92967FC92C8D359300493989 /* Bool100.swift */,
 				92967FCA2C8D359300493989 /* DigitsNumberFactory.swift */,
 				92967FC02C8D359200493989 /* FiveColors.swift */,
