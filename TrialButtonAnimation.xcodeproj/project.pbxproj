@@ -288,6 +288,7 @@
 			children = (
 				92FA42542DB47B71004BE2C1 /* FillType.swift */,
 				926D78202DCE1DD0003844B0 /* FirstChar.swift */,
+				92967FC02C8D359200493989 /* FiveColors.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -475,7 +476,6 @@
 				92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */,
 				92967FC92C8D359300493989 /* Bool100.swift */,
 				92967FCA2C8D359300493989 /* DigitsNumberFactory.swift */,
-				92967FC02C8D359200493989 /* FiveColors.swift */,
 				92967FBE2C8D359200493989 /* GameConfig.swift */,
 				92967FEE2C8D403100493989 /* MenuItem.swift */,
 				92967FF62C8D8C1300493989 /* MenuSection.swift */,
