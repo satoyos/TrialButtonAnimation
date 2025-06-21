@@ -21,10 +21,12 @@ extension MenuList: View {
           navLinkFiveColorsPicker
         }
         Section(header: Text("いろいろな設定")) {
-          navLinkToMemorizeTimer
           navLinkToInterPoemDurationSetting
           NavLinkToKamiShimoDurationSetting
           NavLinkToVolumeSetting
+        }
+        Section(header: Text("機能呼び出し")){
+          navLinkToMemorizeTimer
         }
       }
       .navigationBarTitle("トップ")
