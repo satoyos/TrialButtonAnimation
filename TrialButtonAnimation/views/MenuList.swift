@@ -16,10 +16,11 @@ extension MenuList: View {
   var body: some View {
     NavigationStack {
       List {
-        // 複雑なことはやめて、メニューの中身はここに書く！
-        Section(header: Text("画面")) {
+        Section(header: Text("歌を選ぶ")) {
           navLinkNgramPicker
           navLinkFiveColorsPicker
+        }
+        Section(header: Text("いろいろな設定")) {
           navLinkToMemorizeTimer
           navLinkToInterPoemDurationSetting
           NavLinkToKamiShimoDurationSetting
