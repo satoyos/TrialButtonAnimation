@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9205DA6C2E06A4BD0098CE3B /* Digits01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA6B2E06A4A60098CE3B /* Digits01.swift */; };
+		9205DA6E2E06A7E80098CE3B /* Digits01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */; };
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
@@ -139,6 +141,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9205DA6B2E06A4A60098CE3B /* Digits01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01.swift; sourceTree = "<group>"; };
+		9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01Tests.swift; sourceTree = "<group>"; };
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
@@ -286,6 +290,7 @@
 		9205DA6A2E069CCE0098CE3B /* enums */ = {
 			isa = PBXGroup;
 			children = (
+				9205DA6B2E06A4A60098CE3B /* Digits01.swift */,
 				92FA42542DB47B71004BE2C1 /* FillType.swift */,
 				926D78202DCE1DD0003844B0 /* FirstChar.swift */,
 				92967FC02C8D359200493989 /* FiveColors.swift */,
@@ -413,6 +418,7 @@
 				92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */,
 				926D781E2DCE1D11003844B0 /* FirstCharTests.swift */,
 				92AA24C32DD0894600D6E8F7 /* NgramSectionTests.swift */,
+				9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -528,11 +534,11 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */,
 				92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */,
 				92656EDD2DBC739F006E04DC /* FiveColorButtonViewModel.swift */,
 				92FA42522DB3A779004BE2C1 /* FiveColorsViewModel.swift */,
 				925648BC2D2BC27E00688D8B /* DurationSettingViewModel 2.swift */,
-				92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */,
 				929DB8BD2CDF4AA100609B7B /* Sec2FViewModel.swift */,
 				925648E02D3BA52300688D8B /* VolumeSettingViewModel.swift */,
 				929DB8702CD5F5AB00609B7B /* protocols */,
@@ -798,6 +804,7 @@
 				925648B92D2BC24B00688D8B /* InterPoemDurationSetting.swift in Sources */,
 				92FA42572DB4AB01004BE2C1 /* FillTypeHandlable.swift in Sources */,
 				925648BA2D2BC24B00688D8B /* KamiShimoDurationSetting.swift in Sources */,
+				9205DA6C2E06A4BD0098CE3B /* Digits01.swift in Sources */,
 				92967FE72C8D366A00493989 /* String-extension.swift in Sources */,
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,
 				92967FF72C8D8C1300493989 /* MenuSection.swift in Sources */,
@@ -841,6 +848,7 @@
 				92AA24D12DD0BA4A00D6E8F7 /* NgramButtonViewModelTests.swift in Sources */,
 				925648C92D2BC84200688D8B /* ReciteSettingAudioHandlerTests.swift in Sources */,
 				926D781F2DCE1D11003844B0 /* FirstCharTests.swift in Sources */,
+				9205DA6E2E06A7E80098CE3B /* Digits01Tests.swift in Sources */,
 				929DB8BC2CDF49F200609B7B /* Sec2FViewModelTests_toreta.swift in Sources */,
 				92656EDC2DBC7238006E04DC /* FiveColorButtonViewModelTests.swift in Sources */,
 				925648E32D3BA58200688D8B /* VolumeSettingViewModelTests.swift in Sources */,
