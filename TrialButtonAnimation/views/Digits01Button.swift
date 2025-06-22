@@ -7,12 +7,38 @@
 
 import SwiftUI
 
-struct Digits01Button: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct Digits01Button {
+  @ObservedObject var viewModel: Digits01ButtonViewModel
+  
+  let action: () -> Void
+  @EnvironmentObject var screensizeStore: ScreenSizeStore
+}
+
+extension Digits01Button: View {
+  var body: some View {
+    Button(action: action) {
+          HStack(spacing: 20) {
+            Image(viewModel.output.fillType.ngramImageName)
+              .resizable()
+              .frame(width: 50, height: 50)
+
+            VStack (alignment: .leading) {
+              Text("\(viewModel.digit01.rawValue)")
+                .frame(maxWidth: .infinity,
+                       alignment: .leading)
+              Text("歌番号: " +
+                   viewModel.digit01.numbersDescription)
+                .font(.caption)
+            }
+          }
+        }
+        .padding(.horizontal, 30)
+  }
 }
 
 #Preview {
-    Digits01Button()
+  Digits01Button(viewModel: .init(digit01: .eight),
+                 action: {
+    print("押されました！")
+  })
 }
