@@ -26,8 +26,7 @@ extension Digits01Button: View {
               Text("\(viewModel.digit01.rawValue)")
                 .frame(maxWidth: .infinity,
                        alignment: .leading)
-              Text("歌番号: " +
-                   viewModel.digit01.numbersDescription)
+              Text(viewModel.numbersDescription)
                 .font(.caption)
             }
           }

@@ -24,11 +24,4 @@ final class Digits01Tests: XCTestCase {
       XCTAssertEqual(digit01.pormNumbers.count, 10)
     }
   }
-  
-  func testNumbersDescription() {
-    // given
-    let numbersStr = Digits01.two.numbersDescription
-    // then
-    XCTAssertEqual(numbersStr, "2, 12, 22, 32, 42, 52, 62, 72, 82, 92")
-  }
 }

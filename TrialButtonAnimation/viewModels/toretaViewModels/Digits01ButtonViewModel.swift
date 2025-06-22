@@ -43,3 +43,12 @@ final class Digits01ButtonViewModel: ViewModelObject {
     self.output = output
   }
 }
+
+extension Digits01ButtonViewModel {
+  var numbersDescription: String {
+    "歌番号: " +
+    digit01.pormNumbers.description
+      .dropFirst()
+      .dropLast()
+  }
+}

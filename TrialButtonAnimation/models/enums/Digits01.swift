@@ -31,11 +31,3 @@ extension Digits01 {
     }
   }
 }
-
-extension Digits01 {
-  var numbersDescription: Substring {
-    self.pormNumbers.description
-      .dropFirst()
-      .dropLast()
-  }
-}
