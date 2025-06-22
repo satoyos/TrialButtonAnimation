@@ -25,6 +25,10 @@ final class Digits01Tests: XCTestCase {
     }
   }
   
-  
-  
+  func testNumbersDescription() {
+    // given
+    let numbersStr = Digits01.two.numbersDescription
+    // then
+    XCTAssertEqual(numbersStr, "2, 12, 22, 32, 42, 52, 62, 72, 82, 92")
+  }
 }
