@@ -9,7 +9,7 @@ import Combine
 
 final class Digits01PickerViewModel: ViewModelObject, FillTypeHandlable {
   final class Input: InputObject {
-    let setFillType = PassthroughSubject<FillType, Never>()
+    let digitButtonTapped = PassthroughSubject<Digits01, Never>()
   }
   
   final class Binding: BindingObject {
@@ -35,6 +35,21 @@ final class Digits01PickerViewModel: ViewModelObject, FillTypeHandlable {
       let fillType = Self.fillType(of: digit01, for: state100)
       digit01.buttonViewModel.input.setFillType.send(fillType)
     }
+    
+    input.digitButtonTapped
+      .sink { digit in
+        let currentFillType = digit.buttonViewModel.output.fillType
+        let currentState100 = output.state100
+        switch currentFillType {
+        case .full:
+          output.state100 = currentState100.cancelInNumbers(digit.pormNumbers)
+          digit.buttonViewModel.input.setFillType.send(.empty)
+        default:
+          output.state100 = currentState100.selectInNumbers(digit.pormNumbers)
+          digit.buttonViewModel.input.setFillType.send(.full)
+        }
+      }
+      .store(in: &cancellables)
     
     self.input = input
     self.binding = binding
