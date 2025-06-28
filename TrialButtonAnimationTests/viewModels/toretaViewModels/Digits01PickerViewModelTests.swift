@@ -45,4 +45,15 @@ final class Digits01PickerViewModelTests: XCTestCase {
     XCTAssertEqual(digit.buttonViewModel.output.fillType, .full)
     XCTAssertEqual(viewModel.selectedNum, 100)
   }
+  
+  func testTapFullMakesEmpty() {
+    // given
+    let state100 = SelectedState100()
+    let viewModel = Digits01PickerViewModel(state100: state100)
+    let digit = Digits01.two
+    // when
+    viewModel.input.digitButtonTapped.send(digit)
+    XCTAssertEqual(digit                 .buttonViewModel.output.fillType, .empty)
+    XCTAssertEqual(viewModel.selectedNum, 90)
+    }
 }
