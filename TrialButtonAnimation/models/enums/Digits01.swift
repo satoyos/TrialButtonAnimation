@@ -20,6 +20,12 @@ enum Digits01: Int {
 
 extension Digits01: CaseIterable {}
 
+extension Digits01: Identifiable {
+  var id: Self {
+    self
+  }
+}
+
 extension Digits01 {
   var pormNumbers: [Int] {
     switch self {
