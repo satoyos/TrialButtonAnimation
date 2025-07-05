@@ -26,6 +26,12 @@ extension Digits01: Identifiable {
   }
 }
 
+extension Digits01: CustomStringConvertible {
+  var description: String {
+    String(rawValue)
+  }
+}
+
 extension Digits01 {
   var pormNumbers: [Int] {
     switch self {

@@ -10,6 +10,7 @@ import SwiftUI
 struct Digits01Picker {
   let settings: Settings
   @ObservedObject private var viewModel: Digits01PickerViewModel
+  @Environment(\.isPresented) private var isPresented
   
   init(settings: Settings) {
     self.settings = settings
@@ -25,6 +26,7 @@ extension Digits01Picker: View {
           Digits01Button(viewModel: digit.buttonViewModel) {
             viewModel.input.digitButtonTapped.send(digit)
           }
+          .accessibilityIdentifier(digit.description)
         }
       }
         .toolbar {
@@ -36,6 +38,14 @@ extension Digits01Picker: View {
           }
         }
     }
+    .onChange(of: isPresented) {
+      guard !isPresented else { return }
+      tasksForLeavingThisView()
+    }
+  }
+  
+  func tasksForLeavingThisView() {
+      settings.state100 = viewModel.output.state100
   }
 }
 
