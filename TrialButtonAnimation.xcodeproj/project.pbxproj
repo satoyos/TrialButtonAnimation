@@ -107,6 +107,8 @@
 		92C0DA312C674971004C8966 /* TrialButtonAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */; };
 		92CD114E2D44D9BC007788D2 /* VolumeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */; };
 		92CD11602D4A22A7007788D2 /* VolumeSettingViewModelFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */; };
+		92D660CF2E1916220081D277 /* Digits10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660CE2E1916220081D277 /* Digits10Tests.swift */; };
+		92D660D12E1916970081D277 /* Digits10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D02E19168D0081D277 /* Digits10.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
 		92DC382A2D9BE7FF000AEBF8 /* FiveColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */; };
@@ -254,6 +256,8 @@
 		92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialButtonAnimationUITests.swift; sourceTree = "<group>"; };
 		92CD114D2D44D9BC007788D2 /* VolumeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSetting.swift; sourceTree = "<group>"; };
 		92CD115F2D4A22A1007788D2 /* VolumeSettingViewModelFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeSettingViewModelFixture.swift; sourceTree = "<group>"; };
+		92D660CE2E1916220081D277 /* Digits10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10Tests.swift; sourceTree = "<group>"; };
+		92D660D02E19168D0081D277 /* Digits10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
 		92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsView.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 		9205DA6A2E069CCE0098CE3B /* enums */ = {
 			isa = PBXGroup;
 			children = (
+				92D660D02E19168D0081D277 /* Digits10.swift */,
 				9205DA6B2E06A4A60098CE3B /* Digits01.swift */,
 				92FA42542DB47B71004BE2C1 /* FillType.swift */,
 				926D78202DCE1DD0003844B0 /* FirstChar.swift */,
@@ -433,9 +438,10 @@
 			isa = PBXGroup;
 			children = (
 				92A9B5462C53C0AF00BEF03B /* CountDownTimerTests.swift */,
+				9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */,
 				926D781E2DCE1D11003844B0 /* FirstCharTests.swift */,
 				92AA24C32DD0894600D6E8F7 /* NgramSectionTests.swift */,
-				9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */,
+				92D660CE2E1916220081D277 /* Digits10Tests.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -798,6 +804,7 @@
 				92967FFB2C8D91D800493989 /* MenuList.swift in Sources */,
 				92967FE42C8D366A00493989 /* Array+Diff.swift in Sources */,
 				92E0A9512DD499D100D5BAA5 /* NgramPickerViewModel.swift in Sources */,
+				92D660D12E1916970081D277 /* Digits10.swift in Sources */,
 				92CD114E2D44D9BC007788D2 /* VolumeSetting.swift in Sources */,
 				92967FCD2C8D359300493989 /* SelectedState100.swift in Sources */,
 				92967FD62C8D359300493989 /* PoemSupplier.swift in Sources */,
@@ -862,6 +869,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D660CF2E1916220081D277 /* Digits10Tests.swift in Sources */,
 				92AA24C42DD0894600D6E8F7 /* NgramSectionTests.swift in Sources */,
 				92FA42512DB3A621004BE2C1 /* FiveColorsViewModel.swift in Sources */,
 				925648CC2D2BC86E00688D8B /* DurationSettingViewModel+Fixtures.swift in Sources */,
