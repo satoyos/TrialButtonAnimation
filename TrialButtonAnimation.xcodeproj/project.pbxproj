@@ -114,6 +114,7 @@
 		92D660D72E1A47CB0081D277 /* Digits10Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D62E1A47CB0081D277 /* Digits10Button.swift */; };
 		92D660D92E1A61DC0081D277 /* Digits10PickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D82E1A61DC0081D277 /* Digits10PickerViewModelTests.swift */; };
 		92D660DB2E1A62720081D277 /* Digits10PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660DA2E1A626D0081D277 /* Digits10PickerViewModel.swift */; };
+		92D660DD2E1A72DF0081D277 /* Digits10Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660DC2E1A72DF0081D277 /* Digits10Picker.swift */; };
 		92D934132C42131900E3B9E5 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934122C42131900E3B9E5 /* CircleView.swift */; };
 		92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */; };
 		92DC382A2D9BE7FF000AEBF8 /* FiveColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */; };
@@ -268,6 +269,7 @@
 		92D660D62E1A47CB0081D277 /* Digits10Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10Button.swift; sourceTree = "<group>"; };
 		92D660D82E1A61DC0081D277 /* Digits10PickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10PickerViewModelTests.swift; sourceTree = "<group>"; };
 		92D660DA2E1A626D0081D277 /* Digits10PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10PickerViewModel.swift; sourceTree = "<group>"; };
+		92D660DC2E1A72DF0081D277 /* Digits10Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10Picker.swift; sourceTree = "<group>"; };
 		92D934122C42131900E3B9E5 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		92D934142C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciteViewGeneralButton.swift; sourceTree = "<group>"; };
 		92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveColorsView.swift; sourceTree = "<group>"; };
@@ -472,7 +474,10 @@
 			isa = PBXGroup;
 			children = (
 				92ED20AF2E07895600C46BDB /* Digits01Button.swift */,
+				92ED20BE2E1000F500C46BDB /* Digits01Picker.swift */,
+				92D660D62E1A47CB0081D277 /* Digits10Button.swift */,
 				925648D42D32518200688D8B /* DurationSetting.swift */,
+				92D660DC2E1A72DF0081D277 /* Digits10Picker.swift */,
 				925648B72D2BC24B00688D8B /* InterPoemDurationSetting.swift */,
 				925648B82D2BC24B00688D8B /* KamiShimoDurationSetting.swift */,
 				92D934122C42131900E3B9E5 /* CircleView.swift */,
@@ -492,8 +497,6 @@
 				92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */,
 				92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */,
 				92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */,
-				92ED20BE2E1000F500C46BDB /* Digits01Picker.swift */,
-				92D660D62E1A47CB0081D277 /* Digits10Button.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -803,6 +806,7 @@
 			files = (
 				9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */,
 				92967FD42C8D359300493989 /* StoreManager.swift in Sources */,
+				92D660DD2E1A72DF0081D277 /* Digits10Picker.swift in Sources */,
 				92967FE62C8D366A00493989 /* Array+Shuffled.swift in Sources */,
 				92ED20B92E07E8C400C46BDB /* Digits01PickerViewModel.swift in Sources */,
 				92AA24C62DD089B800D6E8F7 /* NgramSection.swift in Sources */,
