@@ -1,15 +1,15 @@
 //
-//  Digits01PickerViewModel.swift
+//  Digits10PickerViewModel.swift
 //  TrialButtonAnimation
 //
-//  Created by Yoshifumi Sato on 2025/06/22.
+//  Created by Yoshifumi Sato on 2025/07/06.
 //
 
 import Combine
 
-final class Digits01PickerViewModel: ViewModelObject, FillTypeHandlable {
+final class Digits10PickerViewModel: ViewModelObject, FillTypeHandlable {
   final class Input: InputObject {
-    let digitButtonTapped = PassthroughSubject<Digits01, Never>()
+    let digitButtonTapped = PassthroughSubject<Digits10, Never>()
   }
   
   final class Binding: BindingObject {
@@ -31,9 +31,9 @@ final class Digits01PickerViewModel: ViewModelObject, FillTypeHandlable {
     
     output.state100 = state100
     
-    Digits01.allCases.forEach { digit01 in
-      let fillType = Self.fillType(of: digit01, for: state100)
-      digit01.buttonViewModel.input.setFillType.send(fillType)
+    Digits10.allCases.forEach { digit in
+      let fillType = Self.fillType(of: digit, for: state100)
+      digit.buttonViewModel.input.setFillType.send(fillType)
     }
     
     input.digitButtonTapped
@@ -57,34 +57,36 @@ final class Digits01PickerViewModel: ViewModelObject, FillTypeHandlable {
   }
 }
 
-extension Digits01PickerViewModel {
+extension Digits10PickerViewModel {
   var selectedNum: Int {
     output.state100.selectedNum
   }
 }
 
-extension Digits01PickerViewModel {
-  static func fillType(of digts01: Digits01,
+extension Digits10PickerViewModel {
+  static func fillType(of digit: Digits10,
                        for state100: SelectedState100) -> FillType {
     fillType(of: state100.allSelectedNumbers,
-             in: digts01.poemNumbers)
+             in: digit.poemNumbers)
   }
 }
 
-fileprivate let oneButtonViewModel = Digits01ButtonViewModel(digit: .one)
-fileprivate let twoButtonViewModel = Digits01ButtonViewModel(digit: .two)
-fileprivate let threeButtonViewModel = Digits01ButtonViewModel(digit: .three)
-fileprivate let fourButtonViewModel = Digits01ButtonViewModel(digit: .four)
-fileprivate let fiveButtonViewModel = Digits01ButtonViewModel(digit: .five)
-fileprivate let sixButtonViewModel = Digits01ButtonViewModel(digit: .six)
-fileprivate let sevenButtonViewModel = Digits01ButtonViewModel(digit: .seven)
-fileprivate let eightButtonViewModel = Digits01ButtonViewModel(digit: .eight)
-fileprivate let nineButtonViewModel = Digits01ButtonViewModel(digit: .nine)
-fileprivate let zeroButtonViewModel = Digits01ButtonViewModel(digit: .zero)
+fileprivate let zeroButtonViewModel = Digits10ButtonViewModel(digit: .zero)
+fileprivate let oneButtonViewModel = Digits10ButtonViewModel(digit: .one)
+fileprivate let twoButtonViewModel = Digits10ButtonViewModel(digit: .two)
+fileprivate let threeButtonViewModel = Digits10ButtonViewModel(digit: .three)
+fileprivate let fourButtonViewModel = Digits10ButtonViewModel(digit: .four)
+fileprivate let fiveButtonViewModel = Digits10ButtonViewModel(digit: .five)
+fileprivate let sixButtonViewModel = Digits10ButtonViewModel(digit: .six)
+fileprivate let sevenButtonViewModel = Digits10ButtonViewModel(digit: .seven)
+fileprivate let eightButtonViewModel = Digits10ButtonViewModel(digit: .eight)
+fileprivate let nineButtonViewModel = Digits10ButtonViewModel(digit: .nine)
+fileprivate let tenButtonViewModel = Digits10ButtonViewModel(digit: .ten)
 
-extension Digits01 {
-  var buttonViewModel: Digits01ButtonViewModel {
+extension Digits10 {
+  var buttonViewModel: Digits10ButtonViewModel {
     switch self {
+    case .zero:  zeroButtonViewModel
     case .one:   oneButtonViewModel
     case .two:   twoButtonViewModel
     case .three: threeButtonViewModel
@@ -94,7 +96,7 @@ extension Digits01 {
     case .seven: sevenButtonViewModel
     case .eight: eightButtonViewModel
     case .nine:  nineButtonViewModel
-    case .zero:  zeroButtonViewModel
+    case .ten:   tenButtonViewModel
     }
   }
 }

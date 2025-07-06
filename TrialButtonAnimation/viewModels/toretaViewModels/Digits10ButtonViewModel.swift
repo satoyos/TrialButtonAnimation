@@ -32,6 +32,10 @@ final class Digits10ButtonViewModel: ViewModelObject, FillTypeHandlable {
     let binding = Binding()
     let output = Output()
     
+    input.setFillType
+      .assign(to: \.fillType, on: output)
+      .store(in: &cancellables)
+    
     self.digit = digit
     self.input = input
     self.binding = binding
