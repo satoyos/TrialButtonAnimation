@@ -19,4 +19,13 @@ final class Digits10ButtonViewModelTests: XCTestCase {
     XCTAssertEqual(viewModel.digit, theDigit)
     XCTAssertEqual(viewModel.output.fillType, .full)
   }
+  
+  func testNumbersDescription() {
+      // given
+      let viewModel = Digits10ButtonViewModel(digit: .two)
+      // when
+      let strToDisplay = viewModel.numbersDescription
+      // then
+      XCTAssertEqual(strToDisplay, "歌番号: 20, 21, 22, 23, 24, 25, 26, 27, 28, 29")
+    }
 }

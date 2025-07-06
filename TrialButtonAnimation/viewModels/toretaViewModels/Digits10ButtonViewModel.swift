@@ -38,3 +38,12 @@ final class Digits10ButtonViewModel: ViewModelObject, FillTypeHandlable {
     self.output = output
   }
 }
+
+extension Digits10ButtonViewModel {
+  var numbersDescription: String {
+    "歌番号: " +
+    digit.poemNumbers.description
+      .dropFirst()
+      .dropLast()
+  }
+}

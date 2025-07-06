@@ -42,10 +42,10 @@ final class Digits01PickerViewModel: ViewModelObject, FillTypeHandlable {
         let currentState100 = output.state100
         switch currentFillType {
         case .full:
-          output.state100 = currentState100.cancelInNumbers(digit.pormNumbers)
+          output.state100 = currentState100.cancelInNumbers(digit.poemNumbers)
           digit.buttonViewModel.input.setFillType.send(.empty)
         default:
-          output.state100 = currentState100.selectInNumbers(digit.pormNumbers)
+          output.state100 = currentState100.selectInNumbers(digit.poemNumbers)
           digit.buttonViewModel.input.setFillType.send(.full)
         }
       }
@@ -67,7 +67,7 @@ extension Digits01PickerViewModel {
   static func fillType(of digts01: Digits01,
                        for state100: SelectedState100) -> FillType {
     fillType(of: state100.allSelectedNumbers,
-             in: digts01.pormNumbers)
+             in: digts01.poemNumbers)
   }
 }
 

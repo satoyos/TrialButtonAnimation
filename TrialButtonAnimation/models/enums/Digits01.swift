@@ -33,7 +33,7 @@ extension Digits01: CustomStringConvertible {
 }
 
 extension Digits01 {
-  var pormNumbers: [Int] {
+  var poemNumbers: [Int] {
     switch self {
     case .zero:
       return Array(1...10).map {$0 * 10}
