@@ -12,16 +12,16 @@ final class Digits01ButtonViewModelTests: XCTestCase {
   
   func testInit() throws {
     // given
-    let viewModel = Digits01ButtonViewModel(digit01: Digits01.three)
+    let viewModel = Digits01ButtonViewModel(digit: Digits01.three)
     // then
     XCTAssertNotNil(viewModel)
-    XCTAssertEqual(viewModel.digit01, .three)
+    XCTAssertEqual(viewModel.digit, .three)
     XCTAssertEqual(viewModel.output.fillType, .full)
   }
   
   func testNumbersDescription() {
     // given
-    let viewModel = Digits01ButtonViewModel(digit01: Digits01.two)
+    let viewModel = Digits01ButtonViewModel(digit: Digits01.two)
     // when
     let strToDisplay = viewModel.numbersDescription
     // then

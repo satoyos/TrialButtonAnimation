@@ -1,13 +1,14 @@
 //
-//  Digits01ButtonViewModel.swift
+//  Digits10ButtonViewModel.swift
 //  TrialButtonAnimation
 //
-//  Created by Yoshifumi Sato on 2025/06/21.
+//  Created by Yoshifumi Sato on 2025/07/06.
 //
 
 import Combine
 
-final class Digits01ButtonViewModel: ViewModelObject {
+final class Digits10ButtonViewModel: ViewModelObject, FillTypeHandlable {
+  
   final class Input: InputObject {
     let setFillType = PassthroughSubject<FillType, Never>()
   }
@@ -22,33 +23,18 @@ final class Digits01ButtonViewModel: ViewModelObject {
   let input: Input
   @BindableObject private(set) var binding: Binding
   let output: Output
-  
-  let digit: Digits01
   private var cancellables: Set<AnyCancellable> = []
   
-  init(digit: Digits01) {
+  let digit: Digits10
+
+  init(digit: Digits10) {
     let input = Input()
     let binding = Binding()
     let output = Output()
-    
-    output.fillType = .full
-    
-    input.setFillType
-      .assign(to: \.fillType, on: output)
-      .store(in: &cancellables)
     
     self.digit = digit
     self.input = input
     self.binding = binding
     self.output = output
-  }
-}
-
-extension Digits01ButtonViewModel {
-  var numbersDescription: String {
-    "歌番号: " +
-    digit.pormNumbers.description
-      .dropFirst()
-      .dropLast()
   }
 }

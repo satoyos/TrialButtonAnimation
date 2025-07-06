@@ -23,7 +23,7 @@ extension Digits01Button: View {
               .frame(width: 50, height: 50)
 
             VStack (alignment: .leading) {
-              Text("\(viewModel.digit01.rawValue)")
+              Text("\(viewModel.digit.rawValue)")
                 .frame(maxWidth: .infinity,
                        alignment: .leading)
               Text(viewModel.numbersDescription)
@@ -36,7 +36,7 @@ extension Digits01Button: View {
 }
 
 #Preview {
-  Digits01Button(viewModel: .init(digit01: .eight),
+  Digits01Button(viewModel: .init(digit: .eight),
                  action: {
     print("押されました！")
   })
