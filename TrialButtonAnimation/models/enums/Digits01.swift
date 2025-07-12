@@ -5,7 +5,7 @@
 //  Created by Yoshifumi Sato on 2025/06/21.
 //
 
-enum Digits01: Int {
+enum Digits01: Int, Digits {
   case one   = 1
   case two   = 2
   case three = 3
@@ -16,20 +16,6 @@ enum Digits01: Int {
   case eight = 8
   case nine  = 9
   case zero  = 0
-}
-
-extension Digits01: CaseIterable {}
-
-extension Digits01: Identifiable {
-  var id: Self {
-    self
-  }
-}
-
-extension Digits01: CustomStringConvertible {
-  var description: String {
-    String(rawValue)
-  }
 }
 
 extension Digits01 {

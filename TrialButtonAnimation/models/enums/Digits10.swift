@@ -6,7 +6,7 @@
 //
 
 
-enum Digits10: Int {
+enum Digits10: Int, Digits {
   case zero  = 0
   case one   = 1
   case two   = 2
@@ -18,20 +18,6 @@ enum Digits10: Int {
   case eight = 8
   case nine  = 9
   case ten   = 10
-}
-
-extension Digits10: CaseIterable {}
-
-extension Digits10: Identifiable {
-  var id: Self {
-    self
-  }
-}
-
-extension Digits10: CustomStringConvertible {
-  var description: String {
-    String(rawValue)
-  }
 }
 
 extension Digits10 {
