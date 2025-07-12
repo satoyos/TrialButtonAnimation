@@ -10,6 +10,7 @@ import SwiftUI
 struct Digits10Picker {
   let settings: Settings
   @ObservedObject private var viewModel: Digits10PickerViewModel
+  @Environment(\.isPresented) var isPresented
   
   init(settings: Settings) {
     self.settings = settings
@@ -37,10 +38,10 @@ extension Digits10Picker: View {
         }
       }
     }
-//    .onChange(of: isPresented) {
-//      guard !isPresented else { return }
-//      tasksForLeavingThisView()
-//    }
+    .onChange(of: isPresented) {
+      guard !isPresented else { return }
+      tasksForLeavingThisView()
+    }
   }
   
   func tasksForLeavingThisView() {
