@@ -19,14 +19,14 @@ final class Digits01PickerUITests: XCTestCase {
    
   func testOpenDigitsPicker() throws {
     // when
-    let digitsPage = homePage.gotoDigitPickerPage01()
+    let digitsPage = homePage.gotoDigits01PickerPage()
     // then
     XCTAssert(digitsPage.exists)
   }
   
   func testTapFullChangesItToEmpy() {
     // when
-    let digitsPage = homePage.gotoDigitPickerPage01()
+    let digitsPage = homePage.gotoDigits01PickerPage()
     // then
     XCTAssert(digitsPage.exists)
     XCTAssert(digitsPage.badge(of: 100).exists)
@@ -43,7 +43,7 @@ final class Digits01PickerUITests: XCTestCase {
 
   func testTapEmptyChangesItToFull() {
     // given
-    let digitsPage = homePage.gotoDigitPickerPage01()
+    let digitsPage = homePage.gotoDigits01PickerPage()
     XCTAssert(digitsPage.badge(of: 100).exists)
     digitsPage.tapCell(number: 2)
     XCTAssert(digitsPage.badge(of: 90).exists)
@@ -60,7 +60,7 @@ final class Digits01PickerUITests: XCTestCase {
   
   func testTapSeveralCells() {
     // given
-    let digitsPage = homePage.gotoDigitPickerPage01()
+    let digitsPage = homePage.gotoDigits01PickerPage()
     XCTAssert(digitsPage.badge(of: 100).exists)
     // when
     digitsPage

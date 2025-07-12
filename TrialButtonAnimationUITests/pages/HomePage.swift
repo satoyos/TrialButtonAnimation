@@ -139,7 +139,7 @@ final class HomePage: PageObjectable, WaitInUITest {
     return NgramPickerPage(app: app)
   }
   
-  func gotoDigitPickerPage01() -> Digits01PickerPage {
+  func gotoDigits01PickerPage() -> Digits01PickerPage {
     digitPicker01Button.tap()
     return Digits01PickerPage(app: app)
     
