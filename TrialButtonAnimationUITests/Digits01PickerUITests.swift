@@ -37,7 +37,7 @@ final class Digits01PickerUITests: XCTestCase {
     // when
     digitsPage.backToTopButton.tap()
     // then
-    let theButton = homePage.digitPicker01Button
+    let theButton = homePage.digits01PickerButton
     XCTAssert(theButton.staticTexts["90首"].exists)
   }
 
@@ -54,7 +54,7 @@ final class Digits01PickerUITests: XCTestCase {
     // when
     digitsPage.backToTopButton.tap()
     // then
-    let theButton = homePage.digitPicker01Button
+    let theButton = homePage.digits01PickerButton
     XCTAssert(theButton.staticTexts["100首"].exists)
   }
   
@@ -72,7 +72,7 @@ final class Digits01PickerUITests: XCTestCase {
     XCTAssert(digitsPage.badge(of: 60).exists)
     // when
     digitsPage.backToTopButton.tap()
-    let theButton = homePage.digitPicker01Button
+    let theButton = homePage.digits01PickerButton
     XCTAssert(theButton.staticTexts["60首"].exists)
   }
 }

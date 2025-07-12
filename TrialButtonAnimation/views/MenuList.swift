@@ -19,7 +19,8 @@ extension MenuList: View {
         Section(header: Text("歌を選ぶ")) {
           navLinkNgramPicker
           navLinkFiveColorsPicker
-          navLinkDigitsPicker01
+          navLinkDigits01Picker
+          navLinkDigits10Picker
         }
         Section(header: Text("いろいろな設定")) {
           navLinkToInterPoemDurationSetting
@@ -62,10 +63,23 @@ extension MenuList: View {
     .accessibilityIdentifier(title)
   }
   
-  private var navLinkDigitsPicker01: ModifiedNavLink<some View, some ViewModifier>{
+  private var navLinkDigits01Picker: ModifiedNavLink<some View, some ViewModifier>{
     let title = "1の位の数で選ぶ"
     return NavigationLink (
       destination: Digits01Picker(settings: settings),
+      label: {
+        let item = MenuItem(
+          title: title,
+          value: "\(settings.state100.selectedNum)首")
+          MenuRow(viewModel: .init(item: item))
+      })
+    .accessibilityIdentifier(title)
+  }
+  
+  private var navLinkDigits10Picker: ModifiedNavLink<some View, some ViewModifier>{
+    let title = "10の位の数で選ぶ"
+    return NavigationLink (
+      destination: Digits10Picker(settings: settings),
       label: {
         let item = MenuItem(
           title: title,

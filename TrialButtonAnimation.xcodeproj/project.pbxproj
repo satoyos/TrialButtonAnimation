@@ -15,6 +15,8 @@
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
 		921D56B22DC0A7E3008AA985 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921D56B12DC0A7E3008AA985 /* HomePage.swift */; };
+		9220349E2E221D8500E6EA32 /* Digits10PickerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220349D2E221D7900E6EA32 /* Digits10PickerPage.swift */; };
+		922034A02E221E2900E6EA32 /* Digits10PickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220349F2E221E2900E6EA32 /* Digits10PickerUITests.swift */; };
 		9222A8112DCF54AC00D208EE /* 100.json in Resources */ = {isa = PBXBuildFile; fileRef = 9222A8102DCF54AC00D208EE /* 100.json */; };
 		92347F4D2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F4C2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift */; };
 		92347F4F2DBF80F0001C77A8 /* AlertObjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347F4E2DBF80F0001C77A8 /* AlertObjectable.swift */; };
@@ -165,6 +167,8 @@
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
 		921D56B12DC0A7E3008AA985 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		9220349D2E221D7900E6EA32 /* Digits10PickerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10PickerPage.swift; sourceTree = "<group>"; };
+		9220349F2E221E2900E6EA32 /* Digits10PickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10PickerUITests.swift; sourceTree = "<group>"; };
 		9222A8102DCF54AC00D208EE /* 100.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = 100.json; sourceTree = "<group>"; };
 		92347F4C2DBF80CE001C77A8 /* SelectedColorHandlingSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColorHandlingSheet.swift; sourceTree = "<group>"; };
 		92347F4E2DBF80F0001C77A8 /* AlertObjectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertObjectable.swift; sourceTree = "<group>"; };
@@ -345,6 +349,7 @@
 			children = (
 				924951382DBF86F50097D675 /* enum */,
 				92ED20BC2E0FF0C300C46BDB /* Digits01PickerPage.swift */,
+				9220349D2E221D7900E6EA32 /* Digits10PickerPage.swift */,
 				921D56B12DC0A7E3008AA985 /* HomePage.swift */,
 				92347F552DBF8462001C77A8 /* FiveColorsPage.swift */,
 				92E0A9592DE310CB00D5BAA5 /* NgramPickerPage.swift */,
@@ -648,6 +653,7 @@
 				92347F4B2DBF80AC001C77A8 /* Sheets */,
 				92967FB52C85CB4D00493989 /* protocols */,
 				92ED20BA2E0FEEE900C46BDB /* Digits01PickerUITests.swift */,
+				9220349F2E221E2900E6EA32 /* Digits10PickerUITests.swift */,
 				92C0DA302C674971004C8966 /* TrialButtonAnimationUITests.swift */,
 				92967FB32C85C92800493989 /* InterPoemDurationSettingUITests.swift */,
 				9296800C2C97FB3E00493989 /* LaunchPageUITests.swift */,
@@ -934,8 +940,10 @@
 				92E0A95A2DE310CB00D5BAA5 /* NgramPickerPage.swift in Sources */,
 				92ED20BB2E0FEEE900C46BDB /* Digits01PickerUITests.swift in Sources */,
 				92347F562DBF8462001C77A8 /* FiveColorsPage.swift in Sources */,
+				922034A02E221E2900E6EA32 /* Digits10PickerUITests.swift in Sources */,
 				924275D72D574F45001D5940 /* VolumeSettingUITests.swift in Sources */,
 				9296800D2C97FB3E00493989 /* LaunchPageUITests.swift in Sources */,
+				9220349E2E221D8500E6EA32 /* Digits10PickerPage.swift in Sources */,
 				924463202D97D08E00F562B2 /* FiveColorsUITests.swift in Sources */,
 				9249513A2DBF871B0097D675 /* FiveColors.swift in Sources */,
 			);
