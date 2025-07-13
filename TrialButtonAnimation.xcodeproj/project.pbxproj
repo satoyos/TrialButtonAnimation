@@ -140,6 +140,7 @@
 		92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */; };
 		92FA425C2DB4E3D3004BE2C1 /* BadgeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */; };
 		92FD6F932E2348C300BB6725 /* PoemNumbersProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */; };
+		92FD6F952E234A0C00BB6725 /* DigitsButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -299,6 +300,7 @@
 		92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTestView.swift; sourceTree = "<group>"; };
 		92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemNumbersProvidable.swift; sourceTree = "<group>"; };
+		92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsButtonViewModel.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -592,6 +594,7 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */,
 				9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */,
 				92ED20B82E07E8B700C46BDB /* Digits01PickerViewModel.swift */,
 				92D660D42E19F3420081D277 /* Digits10ButtonViewModel.swift */,
@@ -862,6 +865,7 @@
 				928FEB832BF77C01001E28E2 /* ContentView.swift in Sources */,
 				92967FF52C8D49A900493989 /* MenuRow.ViewModel.swift in Sources */,
 				926DD6522C6CAF4500516674 /* ReciteViewButtonStyle.swift in Sources */,
+				92FD6F952E234A0C00BB6725 /* DigitsButtonViewModel.swift in Sources */,
 				92D934152C42A7B800E3B9E5 /* ReciteViewGeneralButton.swift in Sources */,
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
