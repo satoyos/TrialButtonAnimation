@@ -5,10 +5,9 @@
 //  Created by Yoshifumi Sato on 2025/07/12.
 //
 
-protocol Digits: RawRepresentable, CaseIterable, Identifiable, CustomStringConvertible
+protocol Digits: RawRepresentable, CaseIterable, Identifiable, CustomStringConvertible, PoemNumbersProvidable
 where RawValue == Int {
   
-  var poemNumbers: [Int] { get }
 }
 
 extension Digits {

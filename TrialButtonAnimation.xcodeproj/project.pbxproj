@@ -139,6 +139,7 @@
 		92FA42572DB4AB01004BE2C1 /* FillTypeHandlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */; };
 		92FA42592DB4DE1B004BE2C1 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */; };
 		92FA425C2DB4E3D3004BE2C1 /* BadgeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */; };
+		92FD6F932E2348C300BB6725 /* PoemNumbersProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -297,6 +298,7 @@
 		92FA42562DB4AAF3004BE2C1 /* FillTypeHandlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTypeHandlable.swift; sourceTree = "<group>"; };
 		92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTestView.swift; sourceTree = "<group>"; };
+		92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemNumbersProvidable.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				922034A42E22661000E6EA32 /* Digits.swift */,
+				92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				92656EDE2DBC739F006E04DC /* FiveColorButtonViewModel.swift in Sources */,
 				92967FD22C8D359300493989 /* RecitingConfig.swift in Sources */,
 				92967FFB2C8D91D800493989 /* MenuList.swift in Sources */,
+				92FD6F932E2348C300BB6725 /* PoemNumbersProvidable.swift in Sources */,
 				92967FE42C8D366A00493989 /* Array+Diff.swift in Sources */,
 				92E0A9512DD499D100D5BAA5 /* NgramPickerViewModel.swift in Sources */,
 				92D660D12E1916970081D277 /* Digits10.swift in Sources */,
