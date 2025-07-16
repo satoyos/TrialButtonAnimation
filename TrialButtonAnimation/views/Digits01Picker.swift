@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Digits01Picker {
   let settings: Settings
-  @ObservedObject private var viewModel: Digits01PickerViewModel
+  @ObservedObject private var viewModel: DigitsPickerViewModel<Digits01>
   @Environment(\.isPresented) private var isPresented
   
   init(settings: Settings) {

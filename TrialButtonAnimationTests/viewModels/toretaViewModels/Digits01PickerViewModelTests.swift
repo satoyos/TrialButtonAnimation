@@ -13,7 +13,7 @@ final class Digits01PickerViewModelTests: XCTestCase {
     // given
     let state100 = SelectedState100()
     // when
-    let viewModel = Digits01PickerViewModel(state100: state100)
+    let viewModel = DigitsPickerViewModel<Digits01>(state100: state100)
     // then
     XCTAssertNotNil(viewModel)
   }
@@ -23,7 +23,7 @@ final class Digits01PickerViewModelTests: XCTestCase {
       let state100 = SelectedState100()
         .cancelOf(number: 13) // 「つくばねの」を選択から外す
       // when
-      let viewModel = Digits01PickerViewModel(state100: state100)
+      let viewModel = DigitsPickerViewModel<Digits01>(state100: state100)
       // then
       XCTAssertEqual(viewModel.selectedNum, 99)
     XCTAssertEqual(Digits01.three.buttonViewModel.output.fillType, .partial)
@@ -36,7 +36,7 @@ final class Digits01PickerViewModelTests: XCTestCase {
     let digit: Digits01 = .three
     
     // when
-    let viewModel = Digits01PickerViewModel(state100: state100)
+    let viewModel = DigitsPickerViewModel<Digits01>(state100: state100)
     // then
     XCTAssertEqual(digit.buttonViewModel.output.fillType, .partial)
     // when
@@ -49,7 +49,7 @@ final class Digits01PickerViewModelTests: XCTestCase {
   func testTapFullMakesEmpty() {
     // given
     let state100 = SelectedState100()
-    let viewModel = Digits01PickerViewModel(state100: state100)
+    let viewModel = DigitsPickerViewModel<Digits01>(state100: state100)
     let digit = Digits01.two
     // when
     viewModel.input.digitButtonTapped.send(digit)

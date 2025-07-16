@@ -140,6 +140,7 @@
 		92FD6F932E2348C300BB6725 /* PoemNumbersProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */; };
 		92FD6F952E234A0C00BB6725 /* DigitsButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */; };
 		92FD6F972E2727A700BB6725 /* DigitsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F962E2727A700BB6725 /* DigitsButton.swift */; };
+		92FD6F9C2E2761EF00BB6725 /* DigitsPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F9B2E2761E000BB6725 /* DigitsPickerViewModel.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -299,6 +300,7 @@
 		92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemNumbersProvidable.swift; sourceTree = "<group>"; };
 		92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsButtonViewModel.swift; sourceTree = "<group>"; };
 		92FD6F962E2727A700BB6725 /* DigitsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsButton.swift; sourceTree = "<group>"; };
+		92FD6F9B2E2761E000BB6725 /* DigitsPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsPickerViewModel.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -593,6 +595,7 @@
 		929DB8B92CDF494A00609B7B /* toretaViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				92FD6F9B2E2761E000BB6725 /* DigitsPickerViewModel.swift */,
 				92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */,
 				92ED20B82E07E8B700C46BDB /* Digits01PickerViewModel.swift */,
 				92D660DA2E1A626D0081D277 /* Digits10PickerViewModel.swift */,
@@ -837,6 +840,7 @@
 				92967FF12C8D484B00493989 /* MenuRow.swift in Sources */,
 				92AA24D32DD0BAB500D6E8F7 /* NgramButtonViewModel.swift in Sources */,
 				92D934132C42131900E3B9E5 /* CircleView.swift in Sources */,
+				92FD6F9C2E2761EF00BB6725 /* DigitsPickerViewModel.swift in Sources */,
 				92A9B54B2C5487EA00BEF03B /* MinSec.ViewModel.swift in Sources */,
 				92656EDE2DBC739F006E04DC /* FiveColorButtonViewModel.swift in Sources */,
 				92967FD22C8D359300493989 /* RecitingConfig.swift in Sources */,

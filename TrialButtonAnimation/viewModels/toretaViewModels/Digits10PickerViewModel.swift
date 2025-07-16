@@ -71,32 +71,3 @@ extension Digits10PickerViewModel {
   }
 }
 
-fileprivate let zeroButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .zero)
-fileprivate let oneButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .one)
-fileprivate let twoButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .two)
-fileprivate let threeButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .three)
-fileprivate let fourButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .four)
-fileprivate let fiveButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .five)
-fileprivate let sixButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .six)
-fileprivate let sevenButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .seven)
-fileprivate let eightButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .eight)
-fileprivate let nineButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .nine)
-fileprivate let tenButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .ten)
-
-extension Digits10 {
-  var buttonViewModel: DigitsButtonViewModel<Digits10> {
-    switch self {
-    case .zero:  zeroButtonViewModel
-    case .one:   oneButtonViewModel
-    case .two:   twoButtonViewModel
-    case .three: threeButtonViewModel
-    case .four:  fourButtonViewModel
-    case .five:  fiveButtonViewModel
-    case .six:   sixButtonViewModel
-    case .seven: sevenButtonViewModel
-    case .eight: eightButtonViewModel
-    case .nine:  nineButtonViewModel
-    case .ten:   tenButtonViewModel
-    }
-  }
-}
