@@ -141,6 +141,7 @@
 		92FA425C2DB4E3D3004BE2C1 /* BadgeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */; };
 		92FD6F932E2348C300BB6725 /* PoemNumbersProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */; };
 		92FD6F952E234A0C00BB6725 /* DigitsButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */; };
+		92FD6F972E2727A700BB6725 /* DigitsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FD6F962E2727A700BB6725 /* DigitsButton.swift */; };
 		92FDCC212C7497DF00B77262 /* Sec2F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FDCC202C7497DF00B77262 /* Sec2F.swift */; };
 /* End PBXBuildFile section */
 
@@ -301,6 +302,7 @@
 		92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeTestView.swift; sourceTree = "<group>"; };
 		92FD6F922E2348B000BB6725 /* PoemNumbersProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoemNumbersProvidable.swift; sourceTree = "<group>"; };
 		92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsButtonViewModel.swift; sourceTree = "<group>"; };
+		92FD6F962E2727A700BB6725 /* DigitsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsButton.swift; sourceTree = "<group>"; };
 		92FDCC202C7497DF00B77262 /* Sec2F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sec2F.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -518,6 +520,7 @@
 				92DC38292D9BE7FF000AEBF8 /* FiveColorsView.swift */,
 				92FA42582DB4DE1B004BE2C1 /* BadgeView.swift */,
 				92FA425B2DB4E3D3004BE2C1 /* BadgeTestView.swift */,
+				92FD6F962E2727A700BB6725 /* DigitsButton.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -896,6 +899,7 @@
 				92E0A9532DD74E8A00D5BAA5 /* NgramButton.swift in Sources */,
 				92967FE32C8D366A00493989 /* UIColorExtention.swift in Sources */,
 				92967FD82C8D359300493989 /* NgramDataFactory.swift in Sources */,
+				92FD6F972E2727A700BB6725 /* DigitsButton.swift in Sources */,
 				929DB8B82CDEF98300609B7B /* MemorizeTimerViewModel.swift in Sources */,
 				92967FD32C8D359300493989 /* Poem.swift in Sources */,
 				92967FDC2C8D359300493989 /* Poem100.swift in Sources */,

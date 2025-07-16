@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Digits01Button {
-  @ObservedObject var viewModel: Digits01ButtonViewModel
+  @ObservedObject var viewModel: DigitsButtonViewModel<Digits01>
   
   let action: () -> Void
   @EnvironmentObject var screensizeStore: ScreenSizeStore

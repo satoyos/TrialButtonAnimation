@@ -71,19 +71,19 @@ extension Digits01PickerViewModel {
   }
 }
 
-fileprivate let oneButtonViewModel = Digits01ButtonViewModel(digit: .one)
-fileprivate let twoButtonViewModel = Digits01ButtonViewModel(digit: .two)
-fileprivate let threeButtonViewModel = Digits01ButtonViewModel(digit: .three)
-fileprivate let fourButtonViewModel = Digits01ButtonViewModel(digit: .four)
-fileprivate let fiveButtonViewModel = Digits01ButtonViewModel(digit: .five)
-fileprivate let sixButtonViewModel = Digits01ButtonViewModel(digit: .six)
-fileprivate let sevenButtonViewModel = Digits01ButtonViewModel(digit: .seven)
-fileprivate let eightButtonViewModel = Digits01ButtonViewModel(digit: .eight)
-fileprivate let nineButtonViewModel = Digits01ButtonViewModel(digit: .nine)
-fileprivate let zeroButtonViewModel = Digits01ButtonViewModel(digit: .zero)
+fileprivate let oneButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .one)
+fileprivate let twoButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .two)
+fileprivate let threeButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .three)
+fileprivate let fourButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .four)
+fileprivate let fiveButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .five)
+fileprivate let sixButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .six)
+fileprivate let sevenButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .seven)
+fileprivate let eightButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .eight)
+fileprivate let nineButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .nine)
+fileprivate let zeroButtonViewModel = DigitsButtonViewModel<Digits01>(digit: .zero)
 
 extension Digits01 {
-  var buttonViewModel: Digits01ButtonViewModel {
+  var buttonViewModel: DigitsButtonViewModel<Digits01> {
     switch self {
     case .one:   oneButtonViewModel
     case .two:   twoButtonViewModel
