@@ -10,7 +10,6 @@
 		9205DA6C2E06A4BD0098CE3B /* Digits01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA6B2E06A4A60098CE3B /* Digits01.swift */; };
 		9205DA6E2E06A7E80098CE3B /* Digits01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */; };
 		9205DA712E06C9830098CE3B /* Digits01ButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA702E06C9830098CE3B /* Digits01ButtonViewModelTests.swift */; };
-		9205DA732E06CA0E0098CE3B /* Digits01ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */; };
 		9213884A2C452FC80025F2E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 921388492C452FC80025F2E0 /* Colors.xcassets */; };
 		9213884D2C4AA2750025F2E0 /* MinSec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884B2C4A96E70025F2E0 /* MinSec.swift */; };
 		9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */; };
@@ -113,7 +112,6 @@
 		92D660CF2E1916220081D277 /* Digits10Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660CE2E1916220081D277 /* Digits10Tests.swift */; };
 		92D660D12E1916970081D277 /* Digits10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D02E19168D0081D277 /* Digits10.swift */; };
 		92D660D32E19F2940081D277 /* Digits10ButtonViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D22E19F2940081D277 /* Digits10ButtonViewModelTests.swift */; };
-		92D660D52E19F34B0081D277 /* Digits10ButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D42E19F3420081D277 /* Digits10ButtonViewModel.swift */; };
 		92D660D72E1A47CB0081D277 /* Digits10Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D62E1A47CB0081D277 /* Digits10Button.swift */; };
 		92D660D92E1A61DC0081D277 /* Digits10PickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660D82E1A61DC0081D277 /* Digits10PickerViewModelTests.swift */; };
 		92D660DB2E1A62720081D277 /* Digits10PickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D660DA2E1A626D0081D277 /* Digits10PickerViewModel.swift */; };
@@ -166,7 +164,6 @@
 		9205DA6B2E06A4A60098CE3B /* Digits01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01.swift; sourceTree = "<group>"; };
 		9205DA6D2E06A7E80098CE3B /* Digits01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01Tests.swift; sourceTree = "<group>"; };
 		9205DA702E06C9830098CE3B /* Digits01ButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01ButtonViewModelTests.swift; sourceTree = "<group>"; };
-		9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits01ButtonViewModel.swift; sourceTree = "<group>"; };
 		921388492C452FC80025F2E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9213884B2C4A96E70025F2E0 /* MinSec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinSec.swift; sourceTree = "<group>"; };
 		9213884E2C4AA2F90025F2E0 /* ScreenSizeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeStore.swift; sourceTree = "<group>"; };
@@ -274,7 +271,6 @@
 		92D660CE2E1916220081D277 /* Digits10Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10Tests.swift; sourceTree = "<group>"; };
 		92D660D02E19168D0081D277 /* Digits10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10.swift; sourceTree = "<group>"; };
 		92D660D22E19F2940081D277 /* Digits10ButtonViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10ButtonViewModelTests.swift; sourceTree = "<group>"; };
-		92D660D42E19F3420081D277 /* Digits10ButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10ButtonViewModel.swift; sourceTree = "<group>"; };
 		92D660D62E1A47CB0081D277 /* Digits10Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10Button.swift; sourceTree = "<group>"; };
 		92D660D82E1A61DC0081D277 /* Digits10PickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10PickerViewModelTests.swift; sourceTree = "<group>"; };
 		92D660DA2E1A626D0081D277 /* Digits10PickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digits10PickerViewModel.swift; sourceTree = "<group>"; };
@@ -598,9 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				92FD6F942E234A0100BB6725 /* DigitsButtonViewModel.swift */,
-				9205DA722E06CA070098CE3B /* Digits01ButtonViewModel.swift */,
 				92ED20B82E07E8B700C46BDB /* Digits01PickerViewModel.swift */,
-				92D660D42E19F3420081D277 /* Digits10ButtonViewModel.swift */,
 				92D660DA2E1A626D0081D277 /* Digits10PickerViewModel.swift */,
 				92AA24D22DD0BAB000D6E8F7 /* NgramButtonViewModel.swift */,
 				92E0A9502DD499C900D5BAA5 /* NgramPickerViewModel.swift */,
@@ -873,7 +867,6 @@
 				9213884F2C4AA2F90025F2E0 /* ScreenSizeStore.swift in Sources */,
 				928FEB812BF77C01001E28E2 /* TrialButtonAnimationApp.swift in Sources */,
 				92FA42532DB3A781004BE2C1 /* FiveColorsViewModel.swift in Sources */,
-				9205DA732E06CA0E0098CE3B /* Digits01ButtonViewModel.swift in Sources */,
 				929DB8742CD60C2B00609B7B /* BindableObject.swift in Sources */,
 				92967FEF2C8D403100493989 /* MenuItem.swift in Sources */,
 				92A9B54D2C54D90200BEF03B /* MemorizeTimer.swift in Sources */,
@@ -887,7 +880,6 @@
 				925648B92D2BC24B00688D8B /* InterPoemDurationSetting.swift in Sources */,
 				92FA42572DB4AB01004BE2C1 /* FillTypeHandlable.swift in Sources */,
 				925648BA2D2BC24B00688D8B /* KamiShimoDurationSetting.swift in Sources */,
-				92D660D52E19F34B0081D277 /* Digits10ButtonViewModel.swift in Sources */,
 				9205DA6C2E06A4BD0098CE3B /* Digits01.swift in Sources */,
 				92967FE72C8D366A00493989 /* String-extension.swift in Sources */,
 				92A9B5412C4FC4BC00BEF03B /* RecitePlayButton.ViewModel.swift in Sources */,

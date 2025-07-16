@@ -7,7 +7,7 @@
 
 import Combine
 
-class DigitsButtonViewModel<D: Digits>: ViewModelObject {
+final class DigitsButtonViewModel<D: Digits>: ViewModelObject {
   
   // Input, Output, Binding
   final class Input: InputObject {
