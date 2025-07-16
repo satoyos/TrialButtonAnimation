@@ -6,5 +6,5 @@
 //
 
 
-final class Digits10ButtonViewModel: DigitsButtonViewModel<Digits10> {}
+//final class Digits10ButtonViewModel: DigitsButtonViewModel<Digits10> {}
 

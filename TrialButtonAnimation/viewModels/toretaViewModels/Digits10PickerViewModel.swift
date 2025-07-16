@@ -71,20 +71,20 @@ extension Digits10PickerViewModel {
   }
 }
 
-fileprivate let zeroButtonViewModel = Digits10ButtonViewModel(digit: .zero)
-fileprivate let oneButtonViewModel = Digits10ButtonViewModel(digit: .one)
-fileprivate let twoButtonViewModel = Digits10ButtonViewModel(digit: .two)
-fileprivate let threeButtonViewModel = Digits10ButtonViewModel(digit: .three)
-fileprivate let fourButtonViewModel = Digits10ButtonViewModel(digit: .four)
-fileprivate let fiveButtonViewModel = Digits10ButtonViewModel(digit: .five)
-fileprivate let sixButtonViewModel = Digits10ButtonViewModel(digit: .six)
-fileprivate let sevenButtonViewModel = Digits10ButtonViewModel(digit: .seven)
-fileprivate let eightButtonViewModel = Digits10ButtonViewModel(digit: .eight)
-fileprivate let nineButtonViewModel = Digits10ButtonViewModel(digit: .nine)
-fileprivate let tenButtonViewModel = Digits10ButtonViewModel(digit: .ten)
+fileprivate let zeroButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .zero)
+fileprivate let oneButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .one)
+fileprivate let twoButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .two)
+fileprivate let threeButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .three)
+fileprivate let fourButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .four)
+fileprivate let fiveButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .five)
+fileprivate let sixButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .six)
+fileprivate let sevenButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .seven)
+fileprivate let eightButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .eight)
+fileprivate let nineButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .nine)
+fileprivate let tenButtonViewModel = DigitsButtonViewModel<Digits10>(digit: .ten)
 
 extension Digits10 {
-  var buttonViewModel: Digits10ButtonViewModel {
+  var buttonViewModel: DigitsButtonViewModel<Digits10> {
     switch self {
     case .zero:  zeroButtonViewModel
     case .one:   oneButtonViewModel

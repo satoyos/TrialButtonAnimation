@@ -13,7 +13,7 @@ final class Digits10ButtonViewModelTests: XCTestCase {
   func testInit() throws {
     // given
     let theDigit = Digits10.three
-    let viewModel = Digits10ButtonViewModel(digit: theDigit)
+    let viewModel = DigitsButtonViewModel<Digits10>(digit: theDigit)
     // then
     XCTAssertNotNil(viewModel)
     XCTAssertEqual(viewModel.digit, theDigit)
@@ -22,7 +22,7 @@ final class Digits10ButtonViewModelTests: XCTestCase {
   
   func testNumbersDescription() {
       // given
-      let viewModel = Digits10ButtonViewModel(digit: .two)
+      let viewModel = DigitsButtonViewModel<Digits10>(digit: .two)
       // when
       let strToDisplay = viewModel.numbersDescription
       // then

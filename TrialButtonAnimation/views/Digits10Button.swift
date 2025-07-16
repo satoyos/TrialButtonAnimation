@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Digits10Button {
-  @ObservedObject var viewModel: Digits10ButtonViewModel
+  @ObservedObject var viewModel: DigitsButtonViewModel<Digits10>
   let action: () -> Void
   
 }
