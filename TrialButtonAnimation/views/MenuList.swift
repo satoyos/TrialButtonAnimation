@@ -64,9 +64,9 @@ extension MenuList: View {
   }
   
   private var navLinkDigits01Picker: ModifiedNavLink<some View, some ViewModifier>{
-    let title = "1の位の数で選ぶ"
+    let title = Digits01.description
     return NavigationLink (
-      destination: Digits01Picker(settings: settings),
+      destination: DigitsPicker<Digits01>(settings: settings),
       label: {
         let item = MenuItem(
           title: title,
@@ -77,9 +77,9 @@ extension MenuList: View {
   }
   
   private var navLinkDigits10Picker: ModifiedNavLink<some View, some ViewModifier>{
-    let title = "10の位の数で選ぶ"
+    let title = Digits10.description
     return NavigationLink (
-      destination: Digits10Picker(settings: settings),
+      destination: DigitsPicker<Digits10>(settings: settings),
       label: {
         let item = MenuItem(
           title: title,
