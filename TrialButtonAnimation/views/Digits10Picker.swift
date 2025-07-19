@@ -23,7 +23,7 @@ extension Digits10Picker: View {
     NavigationStack {
       List {
         ForEach(Digits10.allCases) { digit in
-          Digits10Button(viewModel: digit.buttonViewModel) {
+          DigitsButton<Digits10>(viewModel: digit.buttonViewModel) {
             viewModel.input.digitButtonTapped.send(digit)
           }
           .accessibilityIdentifier(digit.description)
