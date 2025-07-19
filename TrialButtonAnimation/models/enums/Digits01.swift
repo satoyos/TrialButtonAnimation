@@ -29,3 +29,10 @@ extension Digits01 {
     }
   }
 }
+
+extension Digits01 {
+  static var description: String {
+    "1の位の数で選ぶ"
+  }
+}
+

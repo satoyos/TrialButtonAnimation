@@ -31,3 +31,9 @@ extension Digits10 {
     }
   }
 }
+
+extension Digits10 {
+  static var description: String {
+    "10の位の数で選ぶ"
+  }
+}

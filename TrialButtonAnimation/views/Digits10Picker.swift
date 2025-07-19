@@ -34,7 +34,7 @@ extension Digits10Picker: View {
           BadgeView(number: viewModel.selectedNum)
         }
         ToolbarItem(placement: .principal) {
-          Text("10の位の数で選ぶ")
+          Text(Digits10.description)
         }
       }
     }

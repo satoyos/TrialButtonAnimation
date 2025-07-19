@@ -34,7 +34,7 @@ extension Digits01Picker: View {
             BadgeView(number: viewModel.selectedNum)
           }
           ToolbarItem(placement: .principal) {
-            Text("1の位の数で選ぶ")
+            Text(Digits01.description)
           }
         }
     }
