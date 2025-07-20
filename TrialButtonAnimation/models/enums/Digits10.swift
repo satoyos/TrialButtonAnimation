@@ -37,3 +37,12 @@ extension Digits10 {
     "10の位の数で選ぶ"
   }
 }
+
+extension Digits10 {
+  static let _cache: [Digits10: DigitsButtonViewModel<Digits10>] =
+      Dictionary(uniqueKeysWithValues:
+        Digits10.allCases.map { ($0, .init(digit: $0)) })
+  var buttonViewModel: DigitsButtonViewModel<Digits10> {
+    Self._cache[self]!
+  }
+}

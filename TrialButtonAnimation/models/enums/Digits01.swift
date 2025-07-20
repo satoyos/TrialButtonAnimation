@@ -36,3 +36,11 @@ extension Digits01 {
   }
 }
 
+extension Digits01 {
+  var buttonViewModel: DigitsButtonViewModel<Digits01> {
+    Self._cache[self]!
+  }
+  static let _cache: [Digits01: DigitsButtonViewModel<Digits01>] =
+      Dictionary(uniqueKeysWithValues:
+        Digits01.allCases.map { ($0, .init(digit: $0)) })
+}

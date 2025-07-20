@@ -63,21 +63,3 @@ extension DigitsPickerViewModel {
              in: digit.poemNumbers)
   }
 }
-
-extension Digits01 {
-  var buttonViewModel: DigitsButtonViewModel<Digits01> {
-    Self._cache[self]!
-  }
-  static let _cache: [Digits01: DigitsButtonViewModel<Digits01>] =
-      Dictionary(uniqueKeysWithValues:
-        Digits01.allCases.map { ($0, .init(digit: $0)) })
-}
-
-extension Digits10 {
-  static let _cache: [Digits10: DigitsButtonViewModel<Digits10>] =
-      Dictionary(uniqueKeysWithValues:
-        Digits10.allCases.map { ($0, .init(digit: $0)) })
-  var buttonViewModel: DigitsButtonViewModel<Digits10> {
-    Self._cache[self]!
-  }
-}
